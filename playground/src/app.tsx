@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@cmds/ui";
+import { Button } from "@cmdrs/ui";
 
 const App = () => {
   return (

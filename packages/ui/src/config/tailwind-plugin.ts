@@ -100,7 +100,7 @@ export const extendColors = {
   "tag-red-bg-hover": "var(--tag-red-bg-hover)",
 };
 
-export const withCmds: (extendConfig: Config) => Config = (extendConfig) => {
+export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
   return {
     ...extendConfig,
     darkMode: "class",
@@ -108,7 +108,7 @@ export const withCmds: (extendConfig: Config) => Config = (extendConfig) => {
       ...(Array.isArray(extendConfig?.content) ? extendConfig?.content : []),
       "./src/**/*.{tsx,ts}",
       "./index.html",
-      "node_modules/@cmds/ui/**/*.tsx",
+      "node_modules/@cmdrs/ui/**/*.tsx",
     ],
     theme: {
       extend: {

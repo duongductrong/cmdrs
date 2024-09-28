@@ -1,5 +1,5 @@
 {
-  "name": "@cmds/playground",
+  "name": "@cmdrs/playground",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cmds/ui": "workspace:*",
+    "@cmdrs/ui": "workspace:*",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

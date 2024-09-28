@@ -1,17 +1,17 @@
 {
   "type": "module",
-  "name": "@cmds/core",
+  "name": "@cmdrs/core",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "colors": "node scripts/index.js",
-    "ui": "pnpm --filter=@cmds/ui",
-    "ui:dev": "pnpm --filter=@cmds/ui dev",
-    "build:ui": "pnpm --filter=@cmds/ui build",
-    "playground": "pnpm --filter=@cmds/playground",
-    "playground:dev": "pnpm --filter=@cmds/playground dev",
+    "ui": "pnpm --filter=@cmdrs/ui",
+    "ui:dev": "pnpm --filter=@cmdrs/ui dev",
+    "build:ui": "pnpm --filter=@cmdrs/ui build",
+    "playground": "pnpm --filter=@cmdrs/playground",
+    "playground:dev": "pnpm --filter=@cmdrs/playground dev",
     "dev": "npm-run-all --parallel ui:dev playground:dev"
   },
   "keywords": [],

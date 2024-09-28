@@ -1,4 +1,4 @@
-# cmds
+# cmdrs
 
 ⌘s is a ui open source based on [react](https://reactjs.org/).
 

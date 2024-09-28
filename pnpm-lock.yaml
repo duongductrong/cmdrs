@@ -51,7 +51,7 @@ importers:
 
   playground:
     dependencies:
-      '@cmds/ui':
+      '@cmdrs/ui':
         specifier: workspace:*
         version: link:../packages/ui
       '@types/react':

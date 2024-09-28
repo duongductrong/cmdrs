@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsup --watch",
     "build": "tsup"
   },
   "types": "./dist/index.d.ts",
@@ -45,6 +46,7 @@
     "tailwind-merge": "^2.5.2",
     "tailwind-variants": "^0.2.1",
     "tailwindcss": "^3.4.13",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.6.2"
   }
 }

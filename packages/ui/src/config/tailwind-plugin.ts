@@ -1,3 +1,6 @@
+import { Config } from "tailwindcss";
+import twAnimate from "tailwindcss-animate";
+import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export const extendColors = {
@@ -37,16 +40,18 @@ export const extendColors = {
   "border-menu-top": "var(--border-menu-top)",
   "border-menu-bot": "var(--border-menu-bot)",
 
-  "button-inverted": "var(--button-inverted)",
-  "button-inverted-hover": "var(--button-inverted-hover)",
-  "button-inverted-pressed": "var(--button-inverted-pressed)",
-  "button-neutral": "var(--button-neutral)",
-  "button-neutral-hover": "var(--button-neutral-hover)",
-  "button-neutral-pressed": "var(--button-neutral-pressed)",
-  "button-danger": "var(--button-danger)",
-  "button-danger-hover": "var(--button-danger-hover)",
-  "button-danger-pressed": "var(--button-danger-pressed)",
-  "button-transparent": "var(--button-transparent)",
+  "button-inverted": "hsl(var(--button-inverted))",
+  "button-inverted-hover": "hsl(var(--button-inverted-hover))",
+  "button-inverted-pressed": "hsl(var(--button-inverted-pressed))",
+  "button-neutral": "hsl(var(--button-neutral))",
+  "button-neutral-hover": "hsl(var(--button-neutral-hover))",
+  "button-neutral-pressed": "hsl(var(--button-neutral-pressed))",
+  "button-danger": "hsl(var(--button-danger))",
+  "button-danger-hover": "hsl(var(--button-danger-hover))",
+  "button-danger-pressed": "hsl(var(--button-danger-pressed))",
+  "button-transparent": "hsla(var(--button-transparent))",
+  "button-transparent-hover": "hsla(var(--button-transparent-hover))",
+  "button-transparent-pressed": "hsla(var(--button-transparent-pressed))",
 
   "contrast-fg-primary": "var(--contrast-fg-primary)",
   "contrast-fg-secondary": "var(--contrast-fg-secondary)",
@@ -95,15 +100,101 @@ export const extendColors = {
   "tag-red-bg-hover": "var(--tag-red-bg-hover)",
 };
 
-export const createPreset = () => {
-  return plugin(function ({ addComponents }) {
-    addComponents({
-      ".cc": {
-        backgroundColor: "black",
-        color: "black",
+export const withCmds: (extendConfig: Config) => Config = (extendConfig) => {
+  return {
+    ...extendConfig,
+    darkMode: "class",
+    content: [
+      ...(Array.isArray(extendConfig?.content) ? extendConfig?.content : []),
+      "./src/**/*.{tsx,ts}",
+      "./index.html",
+      "node_modules/@cmds/ui/**/*.tsx",
+    ],
+    theme: {
+      extend: {
+        container: {
+          center: true,
+          padding: "2rem",
+          screens: {
+            "2xl": "1400px",
+          },
+        },
+        colors: {
+          ...extendColors,
+          border: "hsl(var(--border))",
+          input: "hsl(var(--input))",
+          ring: "hsl(var(--ring))",
+          background: "hsl(var(--background))",
+          foreground: "hsl(var(--foreground))",
+          primary: {
+            DEFAULT: "hsl(var(--primary))",
+            foreground: "hsl(var(--primary-foreground))",
+          },
+          secondary: {
+            DEFAULT: "hsl(var(--secondary))",
+            foreground: "hsl(var(--secondary-foreground))",
+          },
+          destructive: {
+            DEFAULT: "hsl(var(--destructive))",
+            foreground: "hsl(var(--destructive-foreground))",
+          },
+          muted: {
+            DEFAULT: "hsl(var(--muted))",
+            foreground: "hsl(var(--muted-foreground))",
+          },
+          accent: {
+            DEFAULT: "hsl(var(--accent))",
+            foreground: "hsl(var(--accent-foreground))",
+          },
+          popover: {
+            DEFAULT: "hsl(var(--popover))",
+            foreground: "hsl(var(--popover-foreground))",
+          },
+          card: {
+            DEFAULT: "hsl(var(--card))",
+            foreground: "hsl(var(--card-foreground))",
+          },
+        },
+        borderRadius: {
+          lg: `var(--radius)`,
+          md: `calc(var(--radius) - 2px)`,
+          sm: "calc(var(--radius) - 4px)",
+        },
+        fontFamily: {
+          sans: ["var(--font-sans)", ...fontFamily.sans],
+        },
+        keyframes: {
+          "accordion-down": {
+            from: { height: "0" },
+            to: { height: "var(--radix-accordion-content-height)" },
+          },
+          "accordion-up": {
+            from: { height: "var(--radix-accordion-content-height)" },
+            to: { height: "0" },
+          },
+        },
+        animation: {
+          "accordion-down": "accordion-down 0.2s ease-out",
+          "accordion-up": "accordion-up 0.2s ease-out",
+        },
       },
-    });
-  });
+    },
+    plugins: [...createPreset(), ...(extendConfig?.plugins || [])],
+  };
+};
+
+export const createPreset = () => {
+  return [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".cc": {
+          backgroundColor: "black",
+          color: "black",
+        },
+      });
+    }),
+    twAnimate,
+  ];
 };
 
 export default {};

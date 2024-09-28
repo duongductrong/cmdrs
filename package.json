@@ -8,10 +8,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "colors": "node scripts/index.js",
     "ui": "pnpm --filter=@cmds/ui",
+    "ui:dev": "pnpm --filter=@cmds/ui dev",
     "build:ui": "pnpm --filter=@cmds/ui build",
-    "playground": "pnpm --filter=@cmds/playground"
+    "playground": "pnpm --filter=@cmds/playground",
+    "playground:dev": "pnpm --filter=@cmds/playground dev",
+    "dev": "npm-run-all --parallel ui:dev playground:dev"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }

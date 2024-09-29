@@ -17,9 +17,18 @@ const checkbox = tv({
       "disabled:opacity-50 disabled:cursor-not-allowed",
       "data-[state=checked]:border-fg-on-interactive/50 data-[state=checked]:bg-fg-interactive",
       "data-[state=checked]:text-fg-inverted",
+      "data-[state=indeterminate]:border-fg-on-interactive/50 data-[state=indeterminate]:bg-fg-interactive",
+      "data-[state=indeterminate]:text-fg-inverted",
       "[&[data-state=checked]_path]:[box-shadow:0_0_0_5px_hsl(var(--fg-on-interactive)/50%)]",
     ],
-    indicator: "flex items-center justify-center text-current",
+    indicator: [
+      "flex relative items-center justify-center text-current",
+      "[&[data-state=indeterminate]_svg]:invisible",
+      "[&[data-state=indeterminate]]:after:absolute",
+      "[&[data-state=indeterminate]]:after:w-[65%] [&[data-state=indeterminate]]:after:h-[1.5px]",
+      "[&[data-state=indeterminate]]:after:bg-[currentColor]",
+      "[&[data-state=indeterminate]]:after:rounded-md",
+    ],
   },
   variants: {
     variant: {

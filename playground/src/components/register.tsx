@@ -88,7 +88,8 @@ const Register = () => {
             variant="subtle"
             className="text-2xs flex items-center gap-2 mt-2"
           >
-            <Checkbox />I agree to the terms and conditions
+            <Checkbox defaultChecked="indeterminate" />I agree to the terms and
+            conditions
           </Label>
 
           <Button className="mt-4">Continue</Button>

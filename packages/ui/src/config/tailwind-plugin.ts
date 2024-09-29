@@ -57,19 +57,17 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
               DEFAULT: "hsl(var(--bg-component))",
               hover: "hsl(var(--bg-component-hover))",
             },
+            input: {
+              DEFAULT: "hsl(var(--bg-input))",
+              hover: "hsl(var(--bg-input-hover))",
+            },
+            switch: {
+              off: "hsl(var(--bg-switch-off))",
+              "off-hover": "hsl(var(--bg-switch-off-hover))",
+            },
           },
 
           border: "hsl(var(--border))",
-
-          input: {
-            DEFAULT: "hsl(var(--bg-input))",
-            hover: "hsl(var(--bg-input-hover))",
-          },
-
-          switch: {
-            off: "hsl(var(--bg-switch-off))",
-            "off-hover": "hsl(var(--bg-switch-off-hover))",
-          },
 
           ring: "hsl(var(--ring))",
 

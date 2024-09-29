@@ -18,8 +18,8 @@ const switchInput = tv(
         "disabled:cursor-not-allowed disabled:opacity-50",
         "data-[state=checked]:bg-fg-interactive",
         "data-[state=checked]:border-fg-on-interactive/20",
-        "data-[state=unchecked]:bg-switch-off",
-        "data-[state=unchecked]:hover:bg-switch-off-hover",
+        "data-[state=unchecked]:bg-bg-switch-off",
+        "data-[state=unchecked]:hover:bg-bg-switch-off-hover",
       ],
       thumb: [
         "pointer-events-none block size-3.5 rounded-full bg-bg-base",

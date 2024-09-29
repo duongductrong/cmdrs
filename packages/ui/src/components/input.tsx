@@ -42,9 +42,9 @@ const input = tv(
     variants: {
       variant: {
         default: {
-          base: "bg-input group-hover/input:bg-input-hover hover:bg-input-hover",
+          base: "bg-bg-input group-hover/input:bg-bg-input-hover hover:bg-bg-input-hover",
           password: "",
-          icon: "bg-input group-hover/input:bg-input-hover hover:bg-input-hover",
+          icon: "bg-bg-input group-hover/input:bg-bg-input-hover hover:bg-bg-input-hover",
         },
         component: {
           base: "bg-bg-component hover:bg-bg-component-hover",

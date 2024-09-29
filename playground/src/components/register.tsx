@@ -4,6 +4,7 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
+  Checkbox,
   Input,
   Label,
   Separator,
@@ -81,6 +82,13 @@ const Register = () => {
               variant="default"
               rows={3}
             />
+          </Label>
+
+          <Label
+            variant="subtle"
+            className="text-2xs flex items-center gap-2 mt-2"
+          >
+            <Checkbox />I agree to the terms and conditions
           </Label>
 
           <Button className="mt-4">Continue</Button>

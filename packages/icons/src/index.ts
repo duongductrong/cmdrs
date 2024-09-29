@@ -1,6 +1,7 @@
+import CheckMiniIcon from "./svgrs/check-mini";
 import EyeIcon from "./svgrs/eye-icon";
 import EyeSlashIcon from "./svgrs/eye-slash-icon";
 
-export { EyeIcon, EyeSlashIcon };
+export { CheckMiniIcon, EyeIcon, EyeSlashIcon };
 
 export default {};

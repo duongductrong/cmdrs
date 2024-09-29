@@ -10,6 +10,7 @@ import Input, { PasswordInput } from "./components/input";
 import Label from "./components/label";
 import Separator from "./components/separator";
 import Textarea from "./components/textarea";
+import Checkbox from "./components/checkbox";
 
 export {
   Button,
@@ -25,6 +26,7 @@ export {
   PasswordInput,
   Separator,
   Textarea,
+  Checkbox,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -38,6 +40,7 @@ export type { InputProps, PasswordProps } from "./components/input";
 export type { LabelProps } from "./components/label";
 export type { SeparatorProps } from "./components/separator";
 export type { TextareaProps } from "./components/textarea";
+export type { CheckboxProps } from "./components/checkbox";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";

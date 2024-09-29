@@ -46,6 +46,8 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
             inverted: "hsl(var(--fg-inverted))",
             muted: "hsl(var(--fg-muted))",
             subtle: "hsl(var(--fg-subtle))",
+            interactive: "hsl(var(--fg-interactive))",
+            "on-interactive": "hsl(var(--fg-on-interactive))",
           },
 
           bg: {

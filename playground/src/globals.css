@@ -6,6 +6,8 @@
   :root {
     --bg-base: 0 0% 100%; /** OK */
     --bg-subtle: 0 0% 98%; /** OK */
+    --bg-switch-off: 240 6% 90%;
+    --bg-switch-off-hover: 240 5% 84%;
 
     --fg-base: 240 6% 10%; /** OK */
     --fg-inverted: 0 0% 100%; /** OK */
@@ -71,6 +73,8 @@
   .dark {
     --bg-base: 240 4% 14%; /** OK */
     --bg-subtle: 240 6% 10%; /** OK */
+    --bg-switch-off: 240 5% 26%;
+    --bg-switch-off-hover: 240 5% 34%;
 
     --fg-base: 213 31% 91%; /** OK */
     --fg-inverted: 240 4% 10%; /** OK */
@@ -109,7 +113,7 @@
     --input-component: 240 4% 14%;
     --input-component-hover: 240 4% 16%;
 
-    --section-special-shadow: 0px 8px 16px 0px hsla(0, 0%, 0%, 0.32),
+    --section-shadow: 0px 8px 16px 0px hsla(0, 0%, 0%, 0.32),
       0px 4px 8px 0px hsla(0, 0%, 0%, 0.32),
       0px 0px 0px 1px hsla(0, 0%, 100%, 0.1),
       0px -1px 0px 0px hsla(0, 0%, 100%, 0.04),
@@ -128,11 +132,15 @@
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --ring: 217 91% 60%;
+    --ring: 213 94% 68%;
 
     --radius: 0.5rem;
   }
 }
+
+/* 0px 0px 0px 1px hsla(0, 0%, 0%, 0.08), 0px 1px 2px 0px hsla(0, 0%, 0%, 0.12); */
+
+/* 0px 2px 2px 0px hsla(0, 0%, 0%, 0.24), 0px 0px 1px 1.5px hsla(0, 0%, 0%, 0.24), 0px 0px 0px 1px hsla(240, 4%, 16%, 1), 0px 0px 0px 1px hsla(0, 0%, 100%, 0.06),0px -1px 0px 0px hsla(0, 0%, 100%, 0.06) */
 
 @layer base {
   * {

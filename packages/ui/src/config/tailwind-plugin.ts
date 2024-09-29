@@ -53,6 +53,11 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           bg: {
             base: "hsl(var(--bg-base))",
             subtle: "hsl(var(--bg-subtle))",
+
+            switch: {
+              off: "hsl(var(--bg-switch-off))",
+              "off-hover": "hsl(var(--bg-switch-off-hover))",
+            },
           },
 
           border: "hsl(var(--border))",

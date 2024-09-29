@@ -8,9 +8,11 @@ import {
   Input,
   Label,
   Separator,
+  Switch,
   Textarea,
 } from "@cmdrs/ui";
 import { Link } from "react-router-dom";
+import AcmeLogo from "./logo";
 
 const Register = () => {
   return (
@@ -20,11 +22,7 @@ const Register = () => {
         shadow
       >
         <CardHeader className="text-center mb-4">
-          <div className="size-12 mx-auto grid place-items-center border border-border rounded-lg mb-2 p-px">
-            <div className="border-border size-9 grid place-items-center border rounded-md bg-[#EFEFEF]">
-              <div className="size-6 rounded-full bg-gradient-to-b from-fg-base/80 to-fg-base"></div>
-            </div>
-          </div>
+          <AcmeLogo />
           <p className="font-semibold text-xl mb-2 text-fg-base">
             Register account
           </p>
@@ -90,6 +88,13 @@ const Register = () => {
           >
             <Checkbox defaultChecked="indeterminate" />I agree to the terms and
             conditions
+          </Label>
+
+          <Label
+            variant="subtle"
+            className="text-2xs flex items-center gap-2 mt-2"
+          >
+            <Switch /> Enable collection of analytics data
           </Label>
 
           <Button className="mt-4">Continue</Button>

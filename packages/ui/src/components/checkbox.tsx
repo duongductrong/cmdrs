@@ -15,7 +15,7 @@ const checkbox = tv({
       "focus-visible:ring-2 focus-visible:border-ring focus-visible:ring-ring/20 focus-visible:outline-none",
       "focus:ring-2 focus:border-ring focus:ring-ring/20 focus:outline-none",
       "disabled:opacity-50 disabled:cursor-not-allowed",
-      "data-[state=checked]:border-fg-on-interactive/50 data-[state=checked]:bg-fg-interactive",
+      "data-[state=checked]:border-fg-on-interactive/20 data-[state=checked]:bg-fg-interactive",
       "data-[state=checked]:text-fg-inverted",
       "data-[state=indeterminate]:border-fg-on-interactive/50 data-[state=indeterminate]:bg-fg-interactive",
       "data-[state=indeterminate]:text-fg-inverted",

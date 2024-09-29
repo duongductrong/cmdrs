@@ -8,6 +8,7 @@ import {
   Label,
   Separator,
 } from "@cmdrs/ui";
+import AcmeLogo from "./logo";
 
 const Login = () => {
   return (
@@ -17,11 +18,7 @@ const Login = () => {
         shadow
       >
         <CardHeader className="text-center mb-4">
-          <div className="size-12 mx-auto grid place-items-center border border-border rounded-lg mb-2 p-px">
-            <div className="border-border size-9 grid place-items-center border rounded-md bg-[#EFEFEF]">
-              <div className="size-6 rounded-full bg-gradient-to-b from-fg-base/80 to-fg-base"></div>
-            </div>
-          </div>
+          <AcmeLogo />
           <p className="font-semibold text-xl mb-2 text-fg-base">
             Welcome to ACME
           </p>

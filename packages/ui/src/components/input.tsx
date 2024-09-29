@@ -66,7 +66,7 @@ const input = tv(
           password: ["[&>span[role=button]]:size-10"],
         },
         xl: {
-          base: ["h-12 px-3 py-1.5 text-sm placeholder:text-base"],
+          base: ["h-12 px-3 py-1.5 text-sm placeholder:text-sm"],
           password: ["[&>span[role=button]]:size-12"],
         },
       },

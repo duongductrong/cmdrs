@@ -49,6 +49,9 @@
       0px 0px 0px 1px hsla(0, 0%, 0%, 0.08),
       0px 0px 0px 1.5px hsla(240, 6%, 90%, 0.6) inset,
       0px 0px 0px 1px hsla(0, 0%, 100%, 1) inset;
+    --section-border: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.04),
+      0px 1px 2px -1px hsla(0, 0%, 0%, 0.08),
+      0px 0px 0px 1px hsla(0, 0%, 0%, 0.08);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
@@ -119,6 +122,11 @@
       0px -1px 0px 0px hsla(0, 0%, 100%, 0.04),
       0px 0px 0px 1.5px hsla(0, 0%, 100%, 0.06) inset,
       0px 0px 0px 1px hsla(240, 6%, 10%, 1) inset;
+    --section-border: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.32),
+      0px 1px 2px 0px hsla(0, 0%, 0%, 0.32),
+      0px 0px 0px 1px hsla(240, 4%, 16%, 1),
+      0px 0px 0px 1px hsla(0, 0%, 100%, 0.06),
+      0px -1px 0px 0px hsla(0, 0%, 100%, 0.06);
 
     --card: 240 4% 14%;
     --card-foreground: 213 31% 91%;

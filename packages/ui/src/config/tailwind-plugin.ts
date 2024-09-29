@@ -121,6 +121,7 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
         boxShadow: {
           input: "var(--input-shadow)",
           section: "var(--section-shadow)",
+          border: "var(--section-border)",
         },
         animation: {
           "accordion-down": "accordion-down 0.2s ease-out",

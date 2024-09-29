@@ -13,7 +13,7 @@ const card = tv(
     },
     variants: {
       bordered: {
-        true: "border-border",
+        true: "border-border shadow-border",
       },
       shadow: {
         true: "shadow-section",

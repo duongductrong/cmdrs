@@ -4,116 +4,28 @@
 
 @layer base {
   :root {
-    /* Backgrounds */
-    --bg-subtle: hsl(210, 20%, 98%);
-    --bg-subtle-hover: hsl(220, 14%, 96%);
-    --bg-subtle-pressed: hsl(220, 13%, 91%);
-    --bg-base: hsl(0, 0%, 100%);
-    --bg-base-hover: hsl(220, 14%, 96%);
-    --bg-base-pressed: hsl(220, 13%, 91%);
-    --bg-component: hsl(210, 20%, 98%);
-    --bg-component-hover: hsl(220, 14%, 96%);
-    --bg-component-pressed: hsl(220, 13%, 91%);
-    --bg-field: hsl(210, 20%, 98%);
-    --bg-field-hover: hsl(220, 14%, 96%);
-    --bg-field-component: hsl(0, 0%, 100%);
-    --bg-field-component-hover: hsl(210, 20%, 98%);
-    --bg-switch-off: hsl(220, 13%, 91%);
-    --bg-switch-off-hover: hsl(220, 11%, 83%);
-    --bg-disabled: hsl(220, 14%, 96%);
-    --bg-overlay: hsla(0, 0%, 0%, 0.4);
-    --bg-highlight: hsl(210, 100%, 97%);
-    --bg-highlight-hover: hsl(210, 100%, 92%);
-    --bg-interactive: hsl(217, 91%, 60%);
+    --bg-base: 0 0% 100%; /** OK */
+    --bg-subtle: 0 0% 98%; /** OK */
 
-    /* Foregrounds */
-    --fg-base: 240 6% 10%;
-    --fg-subtle: hsl(220, 9%, 43%);
-    --fg-muted: hsl(220, 7%, 64%);
-    --fg-disabled: hsl(220, 11%, 83%);
-    --fg-on-color: hsl(0, 0%, 100%);
-    --fg-on-inverted: hsl(0, 0%, 100%);
-    --fg-interactive: hsl(217, 91%, 60%);
-    --fg-interactive-hover: hsl(217, 91%, 53%);
-    --fg-error: hsl(0, 82%, 54%);
-
-    /* Borders */
-    --border-base: hsl(220, 13%, 91%);
-    --border-strong: hsl(220, 11%, 83%);
-    --border-interactive: hsl(217, 91%, 60%);
-    --border-error: hsl(0, 82%, 54%);
-    --border-danger: hsl(0, 82%, 45%);
-    --border-transparent: hsla(0, 0%, 100%, 0);
-    --border-menu-top: hsl(220, 13%, 91%);
-    --border-menu-bot: hsl(0, 0%, 100%);
+    --fg-base: 240 6% 10%; /** OK */
+    --fg-inverted: 0 0% 100%; /** OK */
+    --fg-muted: 240 5% 65%; /** OK */
+    --fg-subtle: 240 5% 34%; /** OK */
 
     /* Buttons */
-    --button-inverted: 240 6% 10%;
-    --button-inverted-hover: 240 5% 26%;
-    --button-inverted-pressed: 240 5% 34%;
-    --button-inverted-shadow: 240 6% 10%;
-    --button-neutral: 0 0% 100%;
-    --button-neutral-hover: 240 5% 96%;
-    --button-neutral-pressed: 240 6% 90%;
-    --button-neutral-shadow: 0 0% 0%;
-    --button-danger: 347 77% 50%;
-    --button-danger-hover: 345 83% 41%;
-    --button-danger-pressed: 343 80% 35%;
-    --button-danger-shadow: 345 83% 41%;
-    --button-transparent: 0 0% 100%;
-    --button-transparent-hover: 240 5% 96%;
-    --button-transparent-pressed: 240 6% 90%;
-
-    /* Contrast */
-    --contrast-fg-primary: hsla(0, 0%, 100%, 0.88);
-    --contrast-fg-secondary: hsla(0, 0%, 100%, 0.56);
-    --contrast-bg-base: hsl(220, 28%, 23%);
-    --contrast-bg-base-hover: hsl(220, 28%, 14%);
-    --contrast-bg-base-pressed: hsl(210, 20%, 5%);
-    --contrast-bg-subtle: hsl(220, 28%, 23%);
-    --contrast-border-base: hsla(0, 0%, 100%, 0.16);
-    --contrast-border-top: hsl(210, 20%, 5%);
-    --contrast-border-bot: hsla(0, 0%, 100%, 0.1);
-
-    /* Tags */
-    --tag-neutral-text: hsl(220, 9%, 43%);
-    --tag-neutral-icon: hsl(220, 7%, 64%);
-    --tag-neutral-border: hsl(220, 13%, 91%);
-    --tag-neutral-bg: hsl(220, 14%, 96%);
-    --tag-neutral-bg-hover: hsl(220, 13%, 91%);
-
-    --tag-blue-text: hsl(217, 91%, 20%);
-    --tag-blue-icon: hsl(217, 91%, 73%);
-    --tag-blue-border: hsl(217, 91%, 80%);
-    --tag-blue-bg: hsl(210, 100%, 97%);
-    --tag-blue-bg-hover: hsl(217, 91%, 80%);
-
-    --tag-purple-text: hsl(270, 82%, 29%);
-    --tag-purple-icon: hsl(270, 82%, 83%);
-    --tag-purple-border: hsl(270, 82%, 89%);
-    --tag-purple-bg: hsl(270, 82%, 95%);
-    --tag-purple-bg-hover: hsl(270, 82%, 89%);
-
-    --tag-green-text: hsl(144, 82%, 29%);
-    --tag-green-icon: hsl(144, 82%, 66%);
-    --tag-green-border: hsl(144, 82%, 89%);
-    --tag-green-bg: hsl(144, 82%, 95%);
-    --tag-green-bg-hover: hsl(144, 82%, 89%);
-
-    --tag-orange-text: hsl(24, 82%, 29%);
-    --tag-orange-icon: hsl(24, 82%, 66%);
-    --tag-orange-border: hsl(24, 82%, 89%);
-    --tag-orange-bg: hsl(24, 82%, 95%);
-    --tag-orange-bg-hover: hsl(24, 82%, 89%);
-
-    --tag-red-text: hsl(0, 82%, 29%);
-    --tag-red-icon: hsl(0, 82%, 66%);
-    --tag-red-border: hsl(0, 82%, 89%);
-    --tag-red-bg: hsl(0, 82%, 95%);
-    --tag-red-bg-hover: hsl(0, 82%, 89%);
-
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --button-glossed: 240 0% 100%; /** OK */
+    --button-inverted: 240 6% 10%; /** OK */
+    --button-inverted-hover: 240 5% 26%; /** OK */
+    --button-inverted-pressed: 240 5% 34%; /** OK */
+    --button-neutral: 0 0% 100%; /** OK */
+    --button-neutral-hover: 240 5% 96%; /** OK */
+    --button-neutral-pressed: 240 6% 90%; /** OK */
+    --button-danger: 347 77% 50%; /** OK */
+    --button-danger-hover: 345 83% 41%; /** OK */
+    --button-danger-pressed: 343 80% 35%; /** OK */
+    --button-transparent: 0 0% 100%; /** OK */
+    --button-transparent-hover: 240 5% 96%; /** OK */
+    --button-transparent-pressed: 240 6% 90%; /** OK */
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -121,8 +33,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 0 0% 85%;
+    --input: 0 0% 98%;
+    --input-hover: 240 5% 96%;
+    --input-shadow: 0 1px 1px 0 hsl(var(--border) / 50%);
+    --input-component: 0, 0%, 100%;
+    --input-component-hover: 0 0% 98%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
@@ -139,119 +55,33 @@
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --ring: 215 20.2% 65.1%;
+    --ring: 217 91% 60%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    /* Backgrounds */
-    --bg-subtle: hsl(210, 20%, 5%);
-    --bg-subtle-hover: hsl(220, 28%, 14%);
-    --bg-subtle-pressed: hsl(220, 28%, 23%);
-    --bg-base: hsl(240, 4%, 14%);
-    --bg-base-hover: hsl(220, 28%, 23%);
-    --bg-base-pressed: hsl(220, 9%, 25%);
-    --bg-component: hsl(220, 28%, 23%);
-    --bg-component-hover: hsla(0, 0%, 100%, 0.1);
-    --bg-component-pressed: hsla(0, 0%, 100%, 0.16);
-    --bg-field: hsla(0, 0%, 100%, 0.04);
-    --bg-field-hover: hsla(0, 0%, 100%, 0.08);
-    --bg-field-component: hsl(220, 28%, 14%);
-    --bg-field-component-hover: hsl(220, 28%, 23%);
-    --bg-switch-off: hsl(220, 9%, 25%);
-    --bg-switch-off-hover: hsl(220, 9%, 30%);
-    --bg-disabled: hsl(220, 28%, 23%);
-    --bg-overlay: hsla(0, 0%, 0%, 0.72);
-    --bg-highlight: hsl(225, 100%, 20%);
-    --bg-highlight-hover: hsl(217, 91%, 20%);
-    --bg-interactive: hsl(207, 92%, 65%);
+    --bg-base: 240 4% 14%; /** OK */
+    --bg-subtle: 240 6% 10%; /** OK */
 
-    /* Foregrounds */
-    --fg-base: hsl(220, 14%, 96%);
-    --fg-subtle: hsl(220, 7%, 64%);
-    --fg-muted: hsl(220, 9%, 45%);
-    --fg-disabled: hsl(220, 9%, 30%);
-    --fg-on-color: hsl(0, 0%, 100%);
-    --fg-on-inverted: hsl(210, 20%, 5%);
-    --fg-interactive: hsl(207, 92%, 65%);
-    --fg-interactive-hover: hsl(207, 92%, 80%);
-    --fg-error: hsl(0, 82%, 66%);
+    --fg-base: 213 31% 91%; /** OK */
+    --fg-inverted: 240 4% 10%; /** OK */
+    --fg-muted: 240 4% 46%; /** OK */
+    --fg-subtle: 240 5% 65%; /** OK */
 
-    /* Borders */
-    --border-base: hsla(0, 0%, 100%, 0.08);
-    --border-strong: hsla(0, 0%, 100%, 0.16);
-    --border-interactive: hsl(207, 92%, 65%);
-    --border-error: hsl(0, 82%, 66%);
-    --border-danger: hsl(0, 82%, 45%);
-    --border-transparent: hsla(0, 0%, 100%, 0);
-    --border-menu-top: hsl(220, 28%, 14%);
-    --border-menu-bot: hsla(0, 0%, 100%, 0.08);
-
-    /* Buttons */
-    --button-inverted: 220 9% 30%;
-    --button-inverted-hover: 220 9% 45%;
-    --button-inverted-pressed: 220 7% 64%;
-    --button-neutral: hsla(0, 0%, 100%, 0.04);
-    --button-neutral-hover: hsla(0, 0%, 100%, 0.08);
-    --button-neutral-pressed: hsla(0, 0%, 100%, 0.12);
-    --button-danger: hsl(0, 82%, 36%);
-    --button-danger-hover: hsl(0, 82%, 45%);
-    --button-danger-pressed: hsl(0, 82%, 54%);
-    --button-transparent: hsla(0, 0%, 100%, 0);
-    --button-transparent-hover: hsla(0, 0%, 100%, 0.08);
-    --button-transparent-pressed: hsla(0, 0%, 100%, 0.12);
-
-    /* Contrast */
-    --contrast-fg-primary: hsla(0, 0%, 100%, 0.88);
-    --contrast-fg-secondary: hsla(0, 0%, 100%, 0.56);
-    --contrast-bg-base: hsl(220, 28%, 23%);
-    --contrast-bg-base-hover: hsl(220, 28%, 14%);
-    --contrast-bg-base-pressed: hsl(210, 20%, 5%);
-    --contrast-bg-subtle: hsla(0, 0%, 100%, 0.04);
-    --contrast-border-base: hsla(0, 0%, 100%, 0.16);
-    --contrast-border-top: hsl(220, 28%, 14%);
-    --contrast-border-bot: hsla(0, 0%, 100%, 0.08);
-
-    /* Tags */
-    --tag-neutral-text: hsl(220, 7%, 64%);
-    --tag-neutral-icon: hsl(220, 9%, 45%);
-    --tag-neutral-border: hsla(0, 0%, 100%, 0.06);
-    --tag-neutral-bg: hsla(0, 0%, 100%, 0.08);
-    --tag-neutral-bg-hover: hsla(0, 0%, 100%, 0.12);
-
-    --tag-blue-text: hsl(207, 92%, 80%);
-    --tag-blue-icon: hsl(207, 92%, 73%);
-    --tag-blue-border: hsl(217, 91%, 20%);
-    --tag-blue-bg: hsl(225, 100%, 20%);
-    --tag-blue-bg-hover: hsl(217, 91%, 20%);
-
-    --tag-purple-text: hsl(270, 82%, 83%);
-    --tag-purple-icon: hsl(270, 82%, 83%);
-    --tag-purple-border: hsl(270, 82%, 29%);
-    --tag-purple-bg: hsl(270, 82%, 22%);
-    --tag-purple-bg-hover: hsl(270, 82%, 29%);
-
-    --tag-green-text: hsl(144, 82%, 66%);
-    --tag-green-icon: hsl(144, 82%, 66%);
-    --tag-green-border: hsl(144, 82%, 29%);
-    --tag-green-bg: hsl(144, 82%, 3%);
-    --tag-green-bg-hover: hsl(144, 82%, 29%);
-
-    --tag-orange-text: hsl(24, 82%, 66%);
-    --tag-orange-icon: hsl(24, 82%, 66%);
-    --tag-orange-border: hsl(24, 82%, 29%);
-    --tag-orange-bg: hsl(24, 82%, 3%);
-    --tag-orange-bg-hover: hsl(24, 82%, 29%);
-
-    --tag-red-text: hsl(0, 82%, 66%);
-    --tag-red-icon: hsl(0, 82%, 66%);
-    --tag-red-border: hsl(0, 82%, 29%);
-    --tag-red-bg: hsl(0, 82%, 3%);
-    --tag-red-bg-hover: hsl(0, 82%, 29%);
-
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
+    --button-glossed: 240 6% 10%; /** OK */
+    --button-inverted: 220 9% 94%; /** OK */
+    --button-inverted-hover: 0 0% 100%; /** OK */
+    --button-inverted-pressed: 220 9% 94%; /** OK */
+    --button-neutral: 230 7% 16%; /** OK */
+    --button-neutral-hover: 223 6% 22%; /** OK */
+    --button-neutral-pressed: 218 6% 25%; /** OK */
+    --button-danger: 343 80% 35%; /** OK */
+    --button-danger-hover: 345 83% 41%; /** OK */
+    --button-danger-pressed: 347 77% 50%; /** OK */
+    --button-transparent: 0 0% 100% / 0%; /** OK */
+    --button-transparent-hover: 230 7% 16%; /** OK */
+    --button-transparent-pressed: 223 7% 19%; /** OK */
 
     --muted: 223 47% 11%;
     --muted-foreground: 215.4 16.3% 56.9%;
@@ -262,8 +92,12 @@
     --popover: 224 71% 4%;
     --popover-foreground: 215 20.2% 65.1%;
 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --border: 240 2% 26%;
+    --input: 230 7% 16%;
+    --input-hover: 223 7% 19%;
+    --input-offset-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+    --input-component: 240 4% 14%;
+    --input-component-hover: 240 4% 16%;
 
     --card: 224 71% 4%;
     --card-foreground: 213 31% 91%;
@@ -277,7 +111,7 @@
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --ring: 216 34% 17%;
+    --ring: 217 91% 60%;
 
     --radius: 0.5rem;
   }
@@ -288,7 +122,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-bg-subtle text-fg-base;
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: "Inter", sans-serif;
   }

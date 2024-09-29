@@ -7,12 +7,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "colors": "node scripts/index.js",
+    "scope": "pnpm --filter=@cmdrs/scope",
+    "scope:dev": "pnpm --filter=@cmdrs/scope dev",
+    "scope:build": "pnpm --filter=@cmdrs/scope build",
+    "icons": "pnpm --filter=@cmdrs/icons",
+    "icons:dev": "pnpm --filter=@cmdrs/icons dev",
+    "icons:build": "pnpm --filter=@cmdrs/icons build",
     "ui": "pnpm --filter=@cmdrs/ui",
     "ui:dev": "pnpm --filter=@cmdrs/ui dev",
     "build:ui": "pnpm --filter=@cmdrs/ui build",
     "playground": "pnpm --filter=@cmdrs/playground",
     "playground:dev": "pnpm --filter=@cmdrs/playground dev",
-    "dev": "npm-run-all --parallel ui:dev playground:dev"
+    "dev": "npm-run-all --parallel ui:dev playground:dev icons:dev"
   },
   "keywords": [],
   "author": "",

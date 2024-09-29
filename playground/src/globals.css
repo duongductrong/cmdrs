@@ -48,15 +48,18 @@
     --border-menu-bot: hsl(0, 0%, 100%);
 
     /* Buttons */
-    --button-inverted: 240 4% 16%;
+    --button-inverted: 240 6% 10%;
     --button-inverted-hover: 240 5% 26%;
     --button-inverted-pressed: 240 5% 34%;
+    --button-inverted-shadow: 240 6% 10%;
     --button-neutral: 0 0% 100%;
     --button-neutral-hover: 240 5% 96%;
     --button-neutral-pressed: 240 6% 90%;
+    --button-neutral-shadow: 0 0% 0%;
     --button-danger: 347 77% 50%;
     --button-danger-hover: 345 83% 41%;
     --button-danger-pressed: 343 80% 35%;
+    --button-danger-shadow: 345 83% 41%;
     --button-transparent: 0 0% 100%;
     --button-transparent-hover: 240 5% 96%;
     --button-transparent-pressed: 240 6% 90%;
@@ -287,5 +290,6 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Inter", sans-serif;
   }
 }

@@ -2,33 +2,46 @@ import { cn } from "@/lib/tw";
 import { forwardRef } from "react";
 import { tv, VariantProps } from "tailwind-variants";
 
-export const buttonStyles = tv(
+export const button = tv(
   {
     base: [
+      "relative overflow-hidden",
       "border border-transparent",
       "rounded-md",
       "flex items-center justify-center gap-2.5",
       "font-medium leading-5",
       "transition-colors duration-200",
-      "disabled:opacity-70 disabled:cursor-not-allowed shadow",
+      "disabled:opacity-70 disabled:cursor-not-allowed",
+      "after:absolute after:inset-0 after:top-0 after:left-0 after:bg-gradient-to-b",
+      "after:from-white after:to-transparent after:opacity-10 after:pointer-events-none",
     ],
     variants: {
       variant: {
         default: [
           "text-contrast-fg-primary bg-button-inverted",
-          "hover:bg-button-inverted-hover focus:bg-button-inverted-pressed",
+          "hover:bg-button-inverted-hover active:bg-button-inverted-pressed",
           "disabled:bg-button-inverted",
+          "[box-shadow:inset_0_1px_0_0_hsla(0,0%,100%,0.2)]",
         ],
         secondary: [
-          "text-contrast-fg-base bg-button-neutral hover:bg-button-neutral-hover focus:bg-button-neutral-pressed",
-          "disabled:bg-button-neutral",
+          "text-contrast-fg-base bg-button-neutral hover:bg-button-neutral-hover active:bg-button-neutral-pressed",
+          "disabled:bg-button-neutral [box-shadow:0_0_0_1px_hsla(var(--button-neutral-shadow)/8%)]",
         ],
         danger: [
-          "text-contrast-fg-primary bg-button-danger hover:bg-button-danger-hover focus:bg-button-danger-pressed",
+          "text-contrast-fg-primary bg-button-danger",
+          "hover:bg-button-danger-hover active:bg-button-danger-pressed",
           "disabled:bg-button-danger",
+          "[box-shadow:inset_0_1px_0_0_hsla(0,0%,100%,0.2)]",
         ],
-        transparent: "",
-        transmuted: "",
+        transparent: [
+          "text-contrast-fg-base bg-button-transparent hover:bg-button-transparent-hover active:bg-button-transparent-pressed",
+          "disabled:bg-button-transparent",
+        ],
+        transmuted: [
+          "text-contrast-fg-base bg-button-transparent hover:bg-button-transparent-hover active:bg-button-transparent-pressed",
+          "disabled:bg-button-transparent",
+          "text-fg-muted",
+        ],
       },
       size: {
         sm: "h-7 text-[0.8125rem] px-2 py-1",
@@ -47,14 +60,14 @@ export const buttonStyles = tv(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonStyles> {}
+    VariantProps<typeof button> {}
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, size, variant, ...props }, ref) => {
     return (
       <button
         {...props}
-        className={cn(buttonStyles({ size, variant, className }))}
+        className={cn(button({ size, variant, className }))}
         ref={ref}
       />
     );

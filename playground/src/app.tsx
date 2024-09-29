@@ -6,7 +6,7 @@ const App = () => {
     <div className="h-screen w-full flex flex-col gap-2 items-center justify-center">
       <div className="flex flex-row gap-2">
         <Button size="sm">Button sm</Button>
-        <Button size="default">Button default</Button>
+        <Button size="default" className="min-w-[200px]">Continue</Button>
         <Button size="lg">Button lg</Button>
         <Button size="xl">Button xl</Button>
       </div>

@@ -29,7 +29,7 @@ const input = tv(
         "disabled:cursor-not-allowed disabled:opacity-50",
       ],
       password: [
-        "group/input",
+        "group/input data-[state=focus]:ring-2 data-[state=focus]:border-ring data-[state=focus]:ring-ring/20",
         "flex border border-border rounded-md shadow-input overflow-hidden",
         "[&>input]:rounded-none [&>input]:border-none [&>input]:shadow-none",
       ],
@@ -130,7 +130,13 @@ const PasswordInput = React.forwardRef<React.ElementRef<"div">, PasswordProps>(
     const { type, setType } = React.useContext(InputContext);
 
     return (
-      <div {...props} className={cn(password({ className }))} ref={ref}>
+      <div
+        {...props}
+        onFocus={(event) => event.currentTarget.setAttribute("data-state", "focus")}
+        onBlur={(event) => event.currentTarget.setAttribute("data-state", "idle")}
+        className={cn(password({ className }))}
+        ref={ref}
+      >
         {children}
 
         <span

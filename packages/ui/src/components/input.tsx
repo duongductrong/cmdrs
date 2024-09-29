@@ -47,9 +47,9 @@ const input = tv(
           icon: "bg-input group-hover/input:bg-input-hover hover:bg-input-hover",
         },
         component: {
-          base: "bg-input-component hover:bg-input-component-hover",
+          base: "bg-bg-component hover:bg-bg-component-hover",
           password: "",
-          icon: "bg-input-component group-hover/input:bg-input-component-hover",
+          icon: "bg-bg-component group-hover/input:bg-bg-component-hover",
         },
       },
       size: {

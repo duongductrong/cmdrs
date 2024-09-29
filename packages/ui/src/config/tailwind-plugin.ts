@@ -53,22 +53,24 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           bg: {
             base: "hsl(var(--bg-base))",
             subtle: "hsl(var(--bg-subtle))",
-
-            switch: {
-              off: "hsl(var(--bg-switch-off))",
-              "off-hover": "hsl(var(--bg-switch-off-hover))",
+            component: {
+              DEFAULT: "hsl(var(--bg-component))",
+              hover: "hsl(var(--bg-component-hover))",
             },
           },
 
           border: "hsl(var(--border))",
+
           input: {
-            DEFAULT: "hsl(var(--input))",
-            hover: "hsl(var(--input-hover))",
-            component: {
-              DEFAULT: "hsl(var(--input-component))",
-              hover: "hsl(var(--input-component-hover))",
-            },
+            DEFAULT: "hsl(var(--bg-input))",
+            hover: "hsl(var(--bg-input-hover))",
           },
+
+          switch: {
+            off: "hsl(var(--bg-switch-off))",
+            "off-hover": "hsl(var(--bg-switch-off-hover))",
+          },
+
           ring: "hsl(var(--ring))",
 
           primary: {
@@ -119,7 +121,7 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           },
         },
         boxShadow: {
-          input: "var(--input-shadow)",
+          input: "var(--bg-input-shadow)",
           section: "var(--section-shadow)",
           border: "var(--section-border)",
         },

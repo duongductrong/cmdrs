@@ -33,7 +33,7 @@ const checkbox = tv({
   variants: {
     variant: {
       default: "bg-input hover:bg-input-hover",
-      component: "bg-input-component hover:bg-input-component-hover",
+      component: "bg-bg-component hover:bg-bg-component-hover",
     },
   },
   defaultVariants: {

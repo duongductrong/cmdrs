@@ -19,7 +19,8 @@ const Register = () => {
     <div className="min-h-screen w-full flex items-center justify-center py-6">
       <Card
         className="flex flex-col gap-2 w-[400px] min-h-[561px] mx-auto mb-6 p-12"
-        shadow
+        variant="background"
+        bordered
       >
         <CardHeader className="text-center mb-4">
           <AcmeLogo />

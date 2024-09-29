@@ -53,13 +53,17 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           bg: {
             base: "hsl(var(--bg-base))",
             subtle: "hsl(var(--bg-subtle))",
-            component: {
-              DEFAULT: "hsl(var(--bg-component))",
-              hover: "hsl(var(--bg-component-hover))",
-            },
+            // component: { -> bg-card instead
+            //   DEFAULT: "hsl(var(--bg-component))",
+            //   hover: "hsl(var(--bg-component-hover))",
+            // },
             input: {
               DEFAULT: "hsl(var(--bg-input))",
               hover: "hsl(var(--bg-input-hover))",
+              component: {
+                DEFAULT: "hsl(var(--bg-input-component))",
+                hover: "hsl(var(--bg-input-component-hover))",
+              },
             },
             switch: {
               off: "hsl(var(--bg-switch-off))",
@@ -97,6 +101,7 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           },
           card: {
             DEFAULT: "hsl(var(--card))",
+            hover: "hsl(var(--card-hover))",
             foreground: "hsl(var(--card-foreground))",
           },
         },

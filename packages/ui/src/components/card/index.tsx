@@ -6,12 +6,16 @@ import { tv, VariantProps } from "tailwind-variants";
 const card = tv(
   {
     slots: {
-      base: "rounded-xl border border-transparent bg-card text-card-foreground",
+      base: "rounded-xl border border-transparent text-fg-base",
       header: "block",
       footer: "block",
       content: "p-0",
     },
     variants: {
+      variant: {
+        background: "bg-bg-base",
+        card: "bg-card",
+      },
       bordered: {
         true: "dark:border-border shadow-border",
       },
@@ -20,8 +24,9 @@ const card = tv(
       },
     },
     defaultVariants: {
+      variant: "card",
       shadow: false,
-      bordered: false,
+      bordered: true,
     },
   },
   { twMerge: false, responsiveVariants: true }
@@ -32,8 +37,8 @@ interface CardProps
     VariantProps<typeof card> {}
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, shadow, bordered, ...props }, ref) => {
-    const { base } = card({ bordered, shadow });
+  ({ className, shadow, bordered, variant, ...props }, ref) => {
+    const { base } = card({ variant, bordered, shadow });
 
     return <div {...props} ref={ref} className={cn(base({ className }))} />;
   }

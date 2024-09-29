@@ -6,22 +6,25 @@ import * as React from "react";
 import { cn } from "@/lib/tw";
 import { tv, VariantProps } from "tailwind-variants";
 
-const label = tv({
-  base: [
-    "text-2xs font-medium leading-none",
-    "peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
-    "text-fg-base",
-  ],
-  variants: {
-    variant: {
-      default: "text-fg-base",
-      subtle: "text-fg-subtle",
+const label = tv(
+  {
+    base: [
+      "text-2xs font-medium leading-none",
+      "peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+      "text-fg-base",
+    ],
+    variants: {
+      variant: {
+        default: "text-fg-base",
+        subtle: "text-fg-subtle",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
     },
   },
-  defaultVariants: {
-    variant: "default",
-  },
-});
+  { twMerge: false, responsiveVariants: true }
+);
 
 interface LabelProps
   extends React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>,

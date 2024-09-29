@@ -1,4 +1,4 @@
-import { Button, Input, Label } from "@cmdrs/ui";
+import { Button, Input, Label, Separator } from "@cmdrs/ui";
 
 const Login = () => {
   return (
@@ -32,11 +32,16 @@ const Login = () => {
             type="password"
             placeholder="Password"
             className="mt-2"
-            value="91238138"
           />
         </Label>
 
         <Button className="mt-4">Continue</Button>
+
+        <Separator className="my-4" variant="dashed" />
+
+        <p className="text-2xs text-fg-subtle font-normal text-center">
+          Forgot your password? - <span className="text-blue-500 cursor-pointer">Reset</span>
+        </p>
       </div>
     </div>
   );

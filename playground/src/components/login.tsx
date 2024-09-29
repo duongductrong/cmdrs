@@ -1,10 +1,22 @@
-import { Button, Input, Label, Separator } from "@cmdrs/ui";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  Input,
+  Label,
+  Separator,
+} from "@cmdrs/ui";
 
 const Login = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center">
-      <div className="flex flex-col gap-2 w-[400px] h-[561px] mx-auto mb-6 p-12 border border-border rounded-xl bg-bg-base">
-        <div className="text-center mb-4">
+      <Card
+        className="flex flex-col gap-2 w-[400px] h-[561px] mx-auto mb-6 p-12"
+        shadow
+      >
+        <CardHeader className="text-center mb-4">
           <div className="size-12 mx-auto grid place-items-center border border-border rounded-lg mb-2 p-px">
             <div className="border-border size-9 grid place-items-center border rounded-md bg-[#EFEFEF]">
               <div className="size-6 rounded-full bg-gradient-to-b from-fg-base/80 to-fg-base"></div>
@@ -16,33 +28,38 @@ const Login = () => {
           <p className="text-2xs text-fg-subtle font-normal">
             Login to access the account area.
           </p>
-        </div>
-        <Label variant="subtle" className="text-2xs mb-2">
-          Email
-          <Input
-            variant="default"
-            placeholder="Enter your email address"
-            className="mt-2"
-          />
-        </Label>
-        <Label variant="subtle" className="text-2xs">
-          Password
-          <Input
-            variant="default"
-            type="password"
-            placeholder="Password"
-            className="mt-2"
-          />
-        </Label>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-2">
+          <Label variant="subtle" className="text-2xs mb-2">
+            Email
+            <Input
+              variant="default"
+              placeholder="Enter your email address"
+              className="mt-2"
+            />
+          </Label>
+          <Label variant="subtle" className="text-2xs">
+            Password
+            <Input
+              variant="default"
+              type="password"
+              placeholder="Password"
+              className="mt-2"
+            />
+          </Label>
 
-        <Button className="mt-4">Continue</Button>
+          <Button className="mt-4">Continue</Button>
+        </CardContent>
 
         <Separator className="my-4" variant="dashed" />
 
-        <p className="text-2xs text-fg-subtle font-normal text-center">
-          Forgot your password? - <span className="text-blue-500 cursor-pointer">Reset</span>
-        </p>
-      </div>
+        <CardFooter>
+          <p className="text-2xs text-fg-subtle font-normal text-center">
+            Forgot your password? -{" "}
+            <span className="text-blue-500 cursor-pointer">Reset</span>
+          </p>
+        </CardFooter>
+      </Card>
     </div>
   );
 };

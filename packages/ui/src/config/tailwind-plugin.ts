@@ -113,6 +113,7 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
         },
         boxShadow: {
           input: "var(--input-shadow)",
+          section: "var(--section-shadow)",
         },
         animation: {
           "accordion-down": "accordion-down 0.2s ease-out",
@@ -127,12 +128,7 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
 export const createPreset = () => {
   return [
     plugin(function ({ addComponents }) {
-      addComponents({
-        ".cc": {
-          backgroundColor: "black",
-          color: "black",
-        },
-      });
+      addComponents({});
     }),
     twAnimate,
   ];

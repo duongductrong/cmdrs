@@ -40,6 +40,12 @@
     --input-component: 0, 0%, 100%;
     --input-component-hover: 0 0% 98%;
 
+    --section-shadow: 0px 16px 32px 0px hsla(0, 0%, 0%, 0.08),
+      0px 8px 16px 0px hsla(0, 0%, 0%, 0.08),
+      0px 0px 0px 1px hsla(0, 0%, 0%, 0.08),
+      0px 0px 0px 1.5px hsla(240, 6%, 90%, 0.6) inset,
+      0px 0px 0px 1px hsla(0, 0%, 100%, 1) inset;
+
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
 
@@ -99,7 +105,14 @@
     --input-component: 240 4% 14%;
     --input-component-hover: 240 4% 16%;
 
-    --card: 224 71% 4%;
+    --section-special-shadow: 0px 8px 16px 0px hsla(0, 0%, 0%, 0.32),
+      0px 4px 8px 0px hsla(0, 0%, 0%, 0.32),
+      0px 0px 0px 1px hsla(0, 0%, 100%, 0.1),
+      0px -1px 0px 0px hsla(0, 0%, 100%, 0.04),
+      0px 0px 0px 1.5px hsla(0, 0%, 100%, 0.06) inset,
+      0px 0px 0px 1px hsla(240, 6%, 10%, 1) inset;
+
+    --card: 240 4% 14%;
     --card-foreground: 213 31% 91%;
 
     --primary: 210 40% 98%;

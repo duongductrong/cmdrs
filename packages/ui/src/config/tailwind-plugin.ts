@@ -51,7 +51,10 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           },
 
           bg: {
-            base: "hsl(var(--bg-base))",
+            base: {
+              DEFAULT: "hsl(var(--bg-base))",
+              hover: "hsl(var(--bg-base-hover))",
+            },
             subtle: "hsl(var(--bg-subtle))",
             // component: { -> bg-card instead
             //   DEFAULT: "hsl(var(--bg-component))",
@@ -104,6 +107,7 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
             hover: "hsl(var(--card-hover))",
             foreground: "hsl(var(--card-foreground))",
           },
+          accordion: {},
         },
         borderRadius: {
           lg: `var(--radius)`,
@@ -127,6 +131,7 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           input: "var(--bg-input-shadow)",
           section: "var(--section-shadow)",
           border: "var(--section-border)",
+          accordion: "var(--accordion-shadow-border)",
         },
         animation: {
           "accordion-down": "accordion-down 0.2s ease-out",

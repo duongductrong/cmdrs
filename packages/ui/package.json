@@ -42,6 +42,7 @@
   "dependencies": {
     "@cmdrs/icons": "workspace:*",
     "@cmdrs/scope": "workspace:*",
+    "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",

@@ -13,6 +13,10 @@ import Textarea from "./components/textarea";
 import Checkbox from "./components/checkbox";
 import Switch from "./components/switch";
 import InputGroup from "./components/input-group";
+import Accordion from "./components/accordion";
+import AccordionItem from "./components/accordion/accordion-item";
+import AccordionTrigger from "./components/accordion/accordion-trigger";
+import AccordionContent from "./components/accordion/accordion-content";
 
 export {
   Button,
@@ -31,6 +35,10 @@ export {
   Checkbox,
   Switch,
   InputGroup,
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -47,6 +55,10 @@ export type { TextareaProps } from "./components/textarea";
 export type { CheckboxProps } from "./components/checkbox";
 export type { SwitchProps } from "./components/switch";
 export type { InputGroupProps } from "./components/input-group";
+export type { AccordionProps } from "./components/accordion";
+export type { AccordionItemProps } from "./components/accordion/accordion-item";
+export type { AccordionTriggerProps } from "./components/accordion/accordion-trigger";
+export type { AccordionContentProps } from "./components/accordion/accordion-content";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";
@@ -57,3 +69,4 @@ export { card } from "./components/card";
 export { textarea } from "./components/textarea";
 export { switchInput } from "./components/switch";
 export { inputGroup } from "./components/input-group";
+export { accordion } from "./components/accordion";

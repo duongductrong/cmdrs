@@ -13,7 +13,7 @@ const card = tv(
     },
     variants: {
       variant: {
-        background: "bg-bg-base",
+        page: "bg-bg-base",
         card: "bg-card",
       },
       bordered: {

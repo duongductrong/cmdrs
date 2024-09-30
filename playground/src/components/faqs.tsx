@@ -1,8 +1,12 @@
+import { CheckMiniIcon } from "@cmdrs/icons";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
+  Alert,
+  AlertDescription,
+  AlertTitle,
 } from "@cmdrs/ui";
 
 type Props = {};
@@ -10,6 +14,14 @@ type Props = {};
 const Faqs = (props: Props) => {
   return (
     <section className="max-w-[768px] mx-auto py-6 px-6 md:px-0">
+      <Alert type="page" className="mb-12">
+        <CheckMiniIcon className="size-4" />
+        <AlertTitle>Heads up!</AlertTitle>
+        <AlertDescription>
+          You can add components to your app using the cli.
+        </AlertDescription>
+      </Alert>
+
       <h2 className="text-center text-fg-base font-semibold text-2xl mb-2">
         Frequently Asked Questions
       </h2>

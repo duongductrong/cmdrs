@@ -14,11 +14,12 @@ type Props = {};
 const Faqs = (props: Props) => {
   return (
     <section className="max-w-[768px] mx-auto py-6 px-6 md:px-0">
-      <Alert type="page" className="mb-12">
+      <Alert type="default" className="mb-12 max-w-[440px]">
         <CheckMiniIcon className="size-4" />
         <AlertTitle>Heads up!</AlertTitle>
         <AlertDescription>
-          You can add components to your app using the cli.
+          Insert the alert description here. It would look better as two lines
+          of text.
         </AlertDescription>
       </Alert>
 

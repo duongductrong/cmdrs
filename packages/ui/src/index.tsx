@@ -20,6 +20,8 @@ import AccordionContent from "./components/accordion/accordion-content";
 import Alert from "./components/alert";
 import AlertDescription from "./components/alert/alert-description";
 import AlertTitle from "./components/alert/alert-title";
+import AlertClose from "./components/alert/alert-close";
+import AlertContent from "./components/alert/alert-content";
 
 export {
   Button,
@@ -45,6 +47,8 @@ export {
   Alert,
   AlertDescription,
   AlertTitle,
+  AlertClose,
+  AlertContent,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -68,6 +72,8 @@ export type { AccordionContentProps } from "./components/accordion/accordion-con
 export type { AlertProps } from "./components/alert";
 export type { AlertDescriptionProps } from "./components/alert/alert-description";
 export type { AlertTitleProps } from "./components/alert/alert-title";
+export type { AlertCloseProps } from "./components/alert/alert-close";
+export type { AlertContentProps } from "./components/alert/alert-content";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";

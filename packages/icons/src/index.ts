@@ -5,6 +5,7 @@ import TriangleRightMiniIcon from "./svgrs/triangle-right-mini-icon";
 import CircleHalfSolidIcon from "./svgrs/circle-half-solid-icon";
 import CircleMiniSolidIcon from "./svgrs/circle-mini-solid-icon";
 import CheckCircleSolidIcon from "./svgrs/check-circle-solid-icon";
+import XMarkIcon from "./svgrs/x-mark-icon";
 
 export {
   CheckMiniIcon,
@@ -14,6 +15,7 @@ export {
   CircleHalfSolidIcon,
   CircleMiniSolidIcon,
   CheckCircleSolidIcon,
+  XMarkIcon,
 };
 
 export default {};

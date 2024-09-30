@@ -1,4 +1,10 @@
+import { CircleHalfSolidIcon } from "@cmdrs/icons";
 import {
+  Alert,
+  AlertClose,
+  AlertContent,
+  AlertDescription,
+  AlertTitle,
   Button,
   Card,
   CardContent,
@@ -14,8 +20,8 @@ const Login = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center">
       <Card
-        className="flex flex-col gap-2 w-[400px] h-[561px] mx-auto mb-6 p-12"
-        variant="page"
+        className="flex flex-col gap-2 w-[400px] min-h-[561px] mx-auto mb-6 p-12"
+        variant="section"
         bordered
       >
         <CardHeader className="text-center mb-4">
@@ -56,6 +62,17 @@ const Login = () => {
             Forgot your password? -{" "}
             <span className="text-blue-500 cursor-pointer">Reset</span>
           </p>
+
+          <Alert type="component" className="max-w-[440px] mt-4">
+            <CircleHalfSolidIcon className="size-4 text-fg-muted" />
+            <AlertContent>
+              <AlertTitle>You should use a password manager</AlertTitle>
+              <AlertDescription>
+                We recommend using a password manager to store your passwords.
+              </AlertDescription>
+            </AlertContent>
+            <AlertClose />
+          </Alert>
         </CardFooter>
       </Card>
     </div>

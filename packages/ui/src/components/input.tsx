@@ -146,9 +146,9 @@ const PasswordInput = React.forwardRef<React.ElementRef<"div">, PasswordProps>(
           onClick={() => setType(type === "password" ? "text" : "password")}
         >
           {type === "password" ? (
-            <EyeIcon className="size-4" />
-          ) : (
             <EyeSlashIcon className="size-4" />
+          ) : (
+            <EyeIcon className="size-4" />
           )}
         </span>
       </div>

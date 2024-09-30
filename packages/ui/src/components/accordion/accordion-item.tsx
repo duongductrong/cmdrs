@@ -12,7 +12,6 @@ const AccordionItem = React.forwardRef<
   AccordionItemProps
 >(({ className, ...props }, ref) => {
   const { variant } = useAccordionContext();
-
   const { item } = accordion({ variant });
   return (
     <AccordionPrimitive.Item

@@ -17,6 +17,9 @@ import Accordion from "./components/accordion";
 import AccordionItem from "./components/accordion/accordion-item";
 import AccordionTrigger from "./components/accordion/accordion-trigger";
 import AccordionContent from "./components/accordion/accordion-content";
+import Alert from "./components/alert";
+import AlertDescription from "./components/alert/alert-description";
+import AlertTitle from "./components/alert/alert-title";
 
 export {
   Button,
@@ -39,6 +42,9 @@ export {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
+  Alert,
+  AlertDescription,
+  AlertTitle,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -59,6 +65,9 @@ export type { AccordionProps } from "./components/accordion";
 export type { AccordionItemProps } from "./components/accordion/accordion-item";
 export type { AccordionTriggerProps } from "./components/accordion/accordion-trigger";
 export type { AccordionContentProps } from "./components/accordion/accordion-content";
+export type { AlertProps } from "./components/alert";
+export type { AlertDescriptionProps } from "./components/alert/alert-description";
+export type { AlertTitleProps } from "./components/alert/alert-title";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";
@@ -70,3 +79,4 @@ export { textarea } from "./components/textarea";
 export { switchInput } from "./components/switch";
 export { inputGroup } from "./components/input-group";
 export { accordion } from "./components/accordion";
+export { alert } from "./components/alert";

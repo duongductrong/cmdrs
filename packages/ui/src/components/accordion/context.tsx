@@ -1,7 +1,9 @@
 import { createContext, useContext } from "react";
+import { VariantProps } from "tailwind-variants";
+import { accordion } from ".";
 
 export interface AccordionContextState {
-  variant: "pills" | "progress" | "pills-group";
+  variant: VariantProps<typeof accordion>["variant"];
 }
 
 export const AccordionContext = createContext<AccordionContextState>(

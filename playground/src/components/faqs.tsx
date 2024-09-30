@@ -1,12 +1,9 @@
-import React from "react";
-
 import {
   Accordion,
+  AccordionContent,
   AccordionItem,
   AccordionTrigger,
-  AccordionContent,
 } from "@cmdrs/ui";
-import { CheckMiniIcon } from "@cmdrs/icons";
 
 type Props = {};
 

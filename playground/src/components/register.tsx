@@ -1,3 +1,4 @@
+import { EyeIcon } from "@cmdrs/icons";
 import {
   Button,
   Card,
@@ -6,6 +7,7 @@ import {
   CardHeader,
   Checkbox,
   Input,
+  InputGroup,
   Label,
   Separator,
   Switch,
@@ -56,6 +58,7 @@ const Register = () => {
               />
             </Label>
           </div>
+
           <Label variant="subtle" className="text-2xs mb-2">
             Email
             <Input
@@ -80,7 +83,15 @@ const Register = () => {
               placeholder="Tell something about you"
               variant="default"
               rows={3}
+              className="mt-2"
             />
+          </Label>
+
+          <Label variant="subtle" className="text-2xs">
+            Website
+            <InputGroup prefixSlot={"https://"} className="mt-2">
+              <Input variant="default" placeholder="Enter your website" />
+            </InputGroup>
           </Label>
 
           <Label

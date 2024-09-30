@@ -105,6 +105,9 @@ importers:
 
   playground:
     dependencies:
+      '@cmdrs/icons':
+        specifier: workspace:*
+        version: link:../packages/icons
       '@cmdrs/ui':
         specifier: workspace:*
         version: link:../packages/ui

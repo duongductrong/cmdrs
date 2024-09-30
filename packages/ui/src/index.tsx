@@ -12,6 +12,7 @@ import Separator from "./components/separator";
 import Textarea from "./components/textarea";
 import Checkbox from "./components/checkbox";
 import Switch from "./components/switch";
+import InputGroup from "./components/input-group";
 
 export {
   Button,
@@ -29,6 +30,7 @@ export {
   Textarea,
   Checkbox,
   Switch,
+  InputGroup,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -44,6 +46,7 @@ export type { SeparatorProps } from "./components/separator";
 export type { TextareaProps } from "./components/textarea";
 export type { CheckboxProps } from "./components/checkbox";
 export type { SwitchProps } from "./components/switch";
+export type { InputGroupProps } from "./components/input-group";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";
@@ -53,3 +56,4 @@ export { separator } from "./components/separator";
 export { card } from "./components/card";
 export { textarea } from "./components/textarea";
 export { switchInput } from "./components/switch";
+export { inputGroup } from "./components/input-group";

@@ -35,7 +35,7 @@ const input = tv(
       ],
       icon: [
         "text-fg-muted shrink-0",
-        "border-l border-l-border/50",
+        "border-l border-l-border/80",
         "flex items-center justify-center",
       ],
     },

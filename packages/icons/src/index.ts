@@ -6,6 +6,13 @@ import CircleHalfSolidIcon from "./svgrs/circle-half-solid-icon";
 import CircleMiniSolidIcon from "./svgrs/circle-mini-solid-icon";
 import CheckCircleSolidIcon from "./svgrs/check-circle-solid-icon";
 import XMarkIcon from "./svgrs/x-mark-icon";
+import MagnifyingGlassIcon from "./svgrs/magnifying-glass-icon";
+import ShoppingCartIcon from "./svgrs/shopping-cart-icon";
+import CurrencyDollarIcon from "./svgrs/currency-dollar-icon";
+import TagIcon from "./svgrs/tag-icon";
+import BuildingsIcon from "./svgrs/buildings-icon";
+import UsersIcon from "./svgrs/users-icon";
+import ReceiptPercentIcon from "./svgrs/receipt-percent-icon";
 
 export {
   CheckMiniIcon,
@@ -16,6 +23,13 @@ export {
   CircleMiniSolidIcon,
   CheckCircleSolidIcon,
   XMarkIcon,
+  MagnifyingGlassIcon,
+  ShoppingCartIcon,
+  CurrencyDollarIcon,
+  TagIcon,
+  BuildingsIcon,
+  UsersIcon,
+  ReceiptPercentIcon,
 };
 
 export default {};

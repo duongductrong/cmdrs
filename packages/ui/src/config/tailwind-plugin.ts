@@ -9,9 +9,9 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
     darkMode: "class",
     content: [
       ...(Array.isArray(extendConfig?.content) ? extendConfig?.content : []),
-      "./src/**/*.{tsx,ts}",
-      "./index.html",
       "node_modules/@cmdrs/ui/**/*.tsx",
+      "./index.html",
+      "./src/**/*.{tsx,jsx,ts,js,html}",
     ],
     theme: {
       extend: {
@@ -132,6 +132,7 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           section: "var(--section-shadow)",
           border: "var(--section-border)",
           accordion: "var(--accordion-shadow-border)",
+          sidebar: "var(--sidebar-shadow-border)",
         },
         animation: {
           "accordion-down": "accordion-down 0.2s ease-out",

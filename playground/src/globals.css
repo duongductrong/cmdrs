@@ -78,6 +78,11 @@
     --ring: 217 91% 60%;
 
     --radius: 0.5rem;
+
+    --sidebar-width: 240px;
+    --sidebar-shadow-border: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.04),
+      0px 1px 2px -1px hsla(0, 0%, 0%, 0.08),
+      0px 0px 0px 1px hsla(0, 0%, 0%, 0.08);
   }
 
   .dark {
@@ -161,6 +166,12 @@
     --ring: 213 94% 68%;
 
     --radius: 0.5rem;
+
+    --sidebar-shadow-border: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.32),
+      0px 1px 2px 0px hsla(0, 0%, 0%, 0.32),
+      0px 0px 0px 1px hsla(240, 4%, 16%, 1),
+      0px 0px 0px 1px hsla(0, 0%, 100%, 0.06),
+      0px -1px 0px 0px hsla(0, 0%, 100%, 0.06);
   }
 }
 

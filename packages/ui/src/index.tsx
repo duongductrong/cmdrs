@@ -22,6 +22,10 @@ import AlertDescription from "./components/alert/alert-description";
 import AlertTitle from "./components/alert/alert-title";
 import AlertClose from "./components/alert/alert-close";
 import AlertContent from "./components/alert/alert-content";
+import Sidebar from "./components/sidebar";
+import SidebarList from "./components/sidebar/sidebar-list";
+import SidebarListItem from "./components/sidebar/sidebar-list-item";
+import SidebarBrand from "./components/sidebar/sidebar-brand";
 
 export {
   Button,
@@ -49,6 +53,10 @@ export {
   AlertTitle,
   AlertClose,
   AlertContent,
+  Sidebar,
+  SidebarList,
+  SidebarListItem,
+  SidebarBrand,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -74,6 +82,10 @@ export type { AlertDescriptionProps } from "./components/alert/alert-description
 export type { AlertTitleProps } from "./components/alert/alert-title";
 export type { AlertCloseProps } from "./components/alert/alert-close";
 export type { AlertContentProps } from "./components/alert/alert-content";
+export type { SidebarProps } from "./components/sidebar";
+export type { SidebarListProps } from "./components/sidebar/sidebar-list";
+export type { SidebarListItemProps } from "./components/sidebar/sidebar-list-item";
+export type { SidebarBrandProps } from "./components/sidebar/sidebar-brand";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";
@@ -86,3 +98,4 @@ export { switchInput } from "./components/switch";
 export { inputGroup } from "./components/input-group";
 export { accordion } from "./components/accordion";
 export { alert } from "./components/alert";
+export { sidebar } from "./components/sidebar/styles";

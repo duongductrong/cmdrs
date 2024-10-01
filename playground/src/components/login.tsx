@@ -15,6 +15,7 @@ import {
   Separator,
 } from "@cmdrs/ui";
 import AcmeLogo from "./logo";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -52,7 +53,9 @@ const Login = () => {
             />
           </Label>
 
-          <Button className="mt-4">Continue</Button>
+          <Link to="/dashboard" className="w-full flex">
+            <Button className="mt-4 w-full">Continue</Button>
+          </Link>
         </CardContent>
 
         <Separator className="my-4" variant="dashed" />

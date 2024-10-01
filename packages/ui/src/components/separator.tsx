@@ -25,6 +25,8 @@ const Separator = forwardRef<React.ElementRef<"svg">, SeparatorProps>(
   ({ className, variant, ...props }, ref) => {
     return (
       <svg
+        role="separator"
+        aria-label="Separator"
         className={separator({ variant, className })}
         xmlns="http://www.w3.org/2000/svg"
         ref={ref}

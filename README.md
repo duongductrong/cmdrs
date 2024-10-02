@@ -2,9 +2,9 @@
   <!-- <img src="logo.svg" width="200px" align="center" alt="Zod logo" /> -->
   <h1 align="center">⌘rs</h1>
   <p align="center">
-    ✨ <a href="https://github.com/duongductrong/craft">⌘rs</a> ✨
+    ✨ <a href="https://github.com/duongductrong/cmdrs">⌘rs</a> ✨
     <br/>
-    a ui open source based on [react](https://reactjs.org/).
+    a ui open source based on https://reactjs.org
   </p>
 </p>
 

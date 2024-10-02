@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const sidebar = tv({
   slots: {
     base: [
-      "w-[var(--sidebar-width)] min-h-lvh bg-bg-subtle border-r border-[hsla(240,6%,90%,1)]",
+      "w-[var(--sidebar-width)] min-h-lvh bg-bg-subtle border-r border-[hsla(240,6%,90%,1)] flex flex-col h-full",
     ],
     brand: ["px-3 h-12 flex items-center"],
   },

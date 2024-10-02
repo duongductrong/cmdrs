@@ -1,15 +1,39 @@
-# cmdrs
+<p align="center">
+  <!-- <img src="logo.svg" width="200px" align="center" alt="Zod logo" /> -->
+  <h1 align="center">⌘rs</h1>
+  <p align="center">
+    ✨ <a href="https://github.com/duongductrong/craft">⌘rs</a> ✨
+    <br/>
+    a ui open source based on [react](https://reactjs.org/).
+  </p>
+</p>
 
-⌘s is a ui open source based on [react](https://reactjs.org/).
+<p align="center">
+  <img src="./thumbnail.png" />
+</p>
 
-## Install
+<p align="center">
+  <a href="https://github.com/duongductrong" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@duongductrong-4BBAAB.svg" alt="Created by Dan"></a>
+</p>
+
+## Getting Started
+
+First, run the development server:
 
 ```bash
-pnpm install
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-## Usage
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-pnpm run dev
-```
+## Contributing
+
+Any contributions are welcome. Please read the [contribution guide](./CONTRIBUTING.md) before you start.
+
+## License
+
+MIT

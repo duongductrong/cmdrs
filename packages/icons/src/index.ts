@@ -15,6 +15,7 @@ import UsersIcon from "./svgrs/users-icon";
 import ReceiptPercentIcon from "./svgrs/receipt-percent-icon";
 import PlusMiniIcon from "./svgrs/plus-mini-icon";
 import MinusMiniIcon from "./svgrs/minus-mini-icon";
+import CogSixToothIcon from "./svgrs/cog-six-tooth-icon";
 
 export {
   CheckMiniIcon,
@@ -34,6 +35,7 @@ export {
   ReceiptPercentIcon,
   PlusMiniIcon,
   MinusMiniIcon,
+  CogSixToothIcon,
 };
 
 export default {};

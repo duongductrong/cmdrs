@@ -5,6 +5,7 @@ import {
   ReceiptPercentIcon,
   ShoppingCartIcon,
   UsersIcon,
+  CogSixToothIcon,
 } from "@cmdrs/icons";
 import {
   Separator,
@@ -18,6 +19,7 @@ import {
   SidebarSeparator,
 } from "@cmdrs/ui";
 import { useState } from "react";
+import AcmeLogo from "./logo";
 
 interface ItemSeparator {
   type: "separator";
@@ -28,6 +30,7 @@ interface ItemRaw {
   value: string;
   icon: React.ReactNode;
   label: string;
+  className?: string;
 }
 
 interface ItemCollapse {
@@ -106,6 +109,16 @@ const items: Item[] = [
       },
     ],
   },
+  {
+    type: "item",
+    value: "settings",
+    icon: <CogSixToothIcon className="size-4" />,
+    label: "Settings",
+    className: "mt-auto",
+  },
+  {
+    type: "separator",
+  },
 ];
 
 const Dashboard = () => {
@@ -113,11 +126,14 @@ const Dashboard = () => {
   return (
     <div>
       <Sidebar defaultSelected={selectedKeys}>
-        <SidebarBrand>ACME</SidebarBrand>
+        <SidebarBrand>
+          <AcmeLogo size="32px" />
+          <span className="text-2xs font-medium ml-2">Acme</span>
+        </SidebarBrand>
         <div className="px-4">
           <Separator variant="dashed" />
         </div>
-        <SidebarList>
+        <SidebarList className="flex-1">
           {items.map((item) => {
             if (item.type === "separator") {
               return <SidebarSeparator />;
@@ -148,6 +164,7 @@ const Dashboard = () => {
                 value={item.value}
                 icon={item.icon}
                 onClick={() => setSelectedKeys([item.value])}
+                className={item?.className}
               >
                 {item.label}
               </SidebarListItem>

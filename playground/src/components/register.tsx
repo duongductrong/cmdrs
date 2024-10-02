@@ -24,8 +24,8 @@ const Register = () => {
         bordered
       >
         <CardHeader className="text-center mb-4">
-          <AcmeLogo />
-          <p className="font-semibold text-xl mb-2 text-fg-base">
+          <AcmeLogo className="mx-auto" />
+          <p className="font-semibold text-xl mb-2 text-fg-base mt-2">
             Register account
           </p>
           <p className="text-2xs text-fg-subtle font-normal">

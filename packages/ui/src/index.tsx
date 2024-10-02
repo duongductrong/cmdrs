@@ -26,7 +26,10 @@ import Sidebar from "./components/sidebar";
 import SidebarList from "./components/sidebar/sidebar-list";
 import SidebarListItem from "./components/sidebar/sidebar-list-item";
 import SidebarBrand from "./components/sidebar/sidebar-brand";
-
+import SidebarCollapse from "./components/sidebar/sidebar-collapse";
+import SidebarCollapseTrigger from "./components/sidebar/sidebar-collapse-trigger";
+import SidebarCollapseContent from "./components/sidebar/sidebar-collapse-content";
+import SidebarSeparator from "./components/sidebar/sidebar-separator";
 export {
   Button,
   ButtonGroup,
@@ -57,6 +60,10 @@ export {
   SidebarList,
   SidebarListItem,
   SidebarBrand,
+  SidebarCollapse,
+  SidebarCollapseTrigger,
+  SidebarCollapseContent,
+  SidebarSeparator,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -86,6 +93,10 @@ export type { SidebarProps } from "./components/sidebar";
 export type { SidebarListProps } from "./components/sidebar/sidebar-list";
 export type { SidebarListItemProps } from "./components/sidebar/sidebar-list-item";
 export type { SidebarBrandProps } from "./components/sidebar/sidebar-brand";
+export type { SidebarCollapseProps } from "./components/sidebar/sidebar-collapse";
+export type { SidebarCollapseTriggerProps } from "./components/sidebar/sidebar-collapse-trigger";
+export type { SidebarCollapseContentProps } from "./components/sidebar/sidebar-collapse-content";
+export type { SidebarSeparatorProps } from "./components/sidebar/sidebar-separator";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";

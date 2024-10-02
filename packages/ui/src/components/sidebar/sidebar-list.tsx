@@ -1,21 +1,26 @@
 import { cn } from "@/lib/tw";
+import * as AccordionPrimitives from "@radix-ui/react-accordion";
 import React, { ElementRef, forwardRef } from "react";
-import { sidebar } from "./styles";
+import { VariantProps } from "tailwind-variants";
+import { sidebarList } from "./styles";
 
-interface SidebarListProps extends React.ComponentPropsWithoutRef<"div"> {}
+interface SidebarListProps
+  extends React.ComponentPropsWithoutRef<"div">,
+    VariantProps<typeof sidebarList> {}
 
 const SidebarList = forwardRef<ElementRef<"div">, SidebarListProps>(
-  ({ className, ...props }, ref) => {
-    const { list } = sidebar();
-
+  ({ className, collapse, ...props }, ref) => {
     return (
-      <div
+      <AccordionPrimitives.Root
+        type="single"
+        collapsible
         role="list"
         aria-label="Sidebar List"
-        {...props}
-        className={cn(list({ className }))}
         ref={ref}
-      />
+        asChild
+      >
+        <div {...props} className={cn(sidebarList({ className }))} ref={ref} />
+      </AccordionPrimitives.Root>
     );
   }
 );

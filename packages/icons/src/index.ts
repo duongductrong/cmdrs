@@ -13,6 +13,8 @@ import TagIcon from "./svgrs/tag-icon";
 import BuildingsIcon from "./svgrs/buildings-icon";
 import UsersIcon from "./svgrs/users-icon";
 import ReceiptPercentIcon from "./svgrs/receipt-percent-icon";
+import PlusMiniIcon from "./svgrs/plus-mini-icon";
+import MinusMiniIcon from "./svgrs/minus-mini-icon";
 
 export {
   CheckMiniIcon,
@@ -30,6 +32,8 @@ export {
   BuildingsIcon,
   UsersIcon,
   ReceiptPercentIcon,
+  PlusMiniIcon,
+  MinusMiniIcon,
 };
 
 export default {};

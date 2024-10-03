@@ -30,6 +30,26 @@ import SidebarCollapse from "./components/sidebar/sidebar-collapse";
 import SidebarCollapseTrigger from "./components/sidebar/sidebar-collapse-trigger";
 import SidebarCollapseContent from "./components/sidebar/sidebar-collapse-content";
 import SidebarSeparator from "./components/sidebar/sidebar-separator";
+import DropdownMenu from "./components/dropdown-menu";
+import DropdownMenuCheckboxItem from "./components/dropdown-menu/dropdown-menu-checkbox";
+import DropdownMenuContent from "./components/dropdown-menu/dropdown-menu-content";
+import DropdownMenuGroup from "./components/dropdown-menu/dropdown-menu-group";
+import DropdownMenuItem from "./components/dropdown-menu/dropdown-menu-item";
+import DropdownMenuLabel from "./components/dropdown-menu/dropdown-menu-label";
+import DropdownMenuPortal from "./components/dropdown-menu/dropdown-menu-portal";
+import DropdownMenuSeparator from "./components/dropdown-menu/dropdown-menu-separator";
+import DropdownMenuShortcut from "./components/dropdown-menu/dropdown-menu-shortcut";
+import DropdownMenuSub from "./components/dropdown-menu/dropdown-menu-sub";
+import DropdownMenuSubContent from "./components/dropdown-menu/dropdown-menu-sub-content";
+import DropdownMenuSubTrigger from "./components/dropdown-menu/dropdown-menu-sub-trigger";
+import DropdownMenuTrigger from "./components/dropdown-menu/dropdown-menu-trigger";
+import DropdownMenuIcon from "./components/dropdown-menu/dropdown-menu-icon";
+import Menu from "./components/menu";
+import MenuTrigger from "./components/menu/menu-trigger";
+import MenuContent from "./components/menu/menu-content";
+
+import { cn as tw } from "./lib/tw";
+
 export {
   Button,
   ButtonGroup,
@@ -64,6 +84,23 @@ export {
   SidebarCollapseTrigger,
   SidebarCollapseContent,
   SidebarSeparator,
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+  DropdownMenuIcon,
+  Menu,
+  MenuTrigger,
+  MenuContent,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -97,7 +134,29 @@ export type { SidebarCollapseProps } from "./components/sidebar/sidebar-collapse
 export type { SidebarCollapseTriggerProps } from "./components/sidebar/sidebar-collapse-trigger";
 export type { SidebarCollapseContentProps } from "./components/sidebar/sidebar-collapse-content";
 export type { SidebarSeparatorProps } from "./components/sidebar/sidebar-separator";
-
+export type { MenuProps } from "./components/menu";
+export type { MenuTriggerProps } from "./components/menu/menu-trigger";
+export type {
+  MenuContentProps,
+  MenuItem,
+  MenuItemGroup,
+  MenuItemLabel,
+  MenuItemRoot,
+} from "./components/menu/menu-content";
+export type { DropdownMenuProps } from "./components/dropdown-menu";
+export type { DropdownMenuCheckboxItemProps } from "./components/dropdown-menu/dropdown-menu-checkbox";
+export type { DropdownMenuContentProps } from "./components/dropdown-menu/dropdown-menu-content";
+export type { DropdownMenuGroupProps } from "./components/dropdown-menu/dropdown-menu-group";
+export type { DropdownMenuItemProps } from "./components/dropdown-menu/dropdown-menu-item";
+export type { DropdownMenuLabelProps } from "./components/dropdown-menu/dropdown-menu-label";
+export type { DropdownMenuPortalProps } from "./components/dropdown-menu/dropdown-menu-portal";
+export type { DropdownMenuSeparatorProps } from "./components/dropdown-menu/dropdown-menu-separator";
+export type { DropdownMenuShortcutProps } from "./components/dropdown-menu/dropdown-menu-shortcut";
+export type { DropdownMenuSubProps } from "./components/dropdown-menu/dropdown-menu-sub";
+export type { DropdownMenuSubContentProps } from "./components/dropdown-menu/dropdown-menu-sub-content";
+export type { DropdownMenuSubTriggerProps } from "./components/dropdown-menu/dropdown-menu-sub-trigger";
+export type { DropdownMenuTriggerProps } from "./components/dropdown-menu/dropdown-menu-trigger";
+export type { DropdownMenuIconProps } from "./components/dropdown-menu/dropdown-menu-icon";
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";
 export { input } from "./components/input";
@@ -110,3 +169,5 @@ export { inputGroup } from "./components/input-group";
 export { accordion } from "./components/accordion";
 export { alert } from "./components/alert";
 export { sidebar } from "./components/sidebar/styles";
+
+export { tw };

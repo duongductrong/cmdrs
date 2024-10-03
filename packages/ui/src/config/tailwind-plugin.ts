@@ -107,6 +107,9 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
             hover: "hsl(var(--card-hover))",
             foreground: "hsl(var(--card-foreground))",
           },
+          menu: {
+            border: "hsl(var(--menu-border))",
+          },
           accordion: {},
         },
         borderRadius: {

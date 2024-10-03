@@ -60,6 +60,8 @@
     --card-hover: 240 5% 96%;
     --card-foreground: 222.2 47.4% 11.2%;
 
+    --menu-border: 240 6% 90%;
+
     --accordion-shadow-border: 0px 0px 0px 1px hsla(0, 0%, 0%, 0.08),
       0px 1px 2px 0px hsla(0, 0%, 0%, 0.12);
 
@@ -147,6 +149,8 @@
     --card: 240 4% 16%;
     --card-hover: 240 4% 17%;
     --card-foreground: 213 31% 91%;
+
+    --menu-border: 240 3% 23%;
 
     --accordion-shadow-border: 0px 2px 2px 0px hsla(0, 0%, 0%, 0.24),
       0px 0px 0px 1.5px hsla(240, 3%, 21%, 100%),

@@ -1,11 +1,11 @@
 import {
   BuildingsIcon,
+  CogSixToothIcon,
   CurrencyDollarIcon,
   MagnifyingGlassIcon,
   ReceiptPercentIcon,
   ShoppingCartIcon,
   UsersIcon,
-  CogSixToothIcon,
 } from "@cmdrs/icons";
 import {
   Separator,
@@ -16,13 +16,15 @@ import {
   SidebarCollapseTrigger,
   SidebarList,
   SidebarListItem,
-  SidebarSeparator,
+  SidebarSeparator
 } from "@cmdrs/ui";
 import { useState } from "react";
+import AcmeMenu from "./acme-menu";
 import AcmeLogo from "./logo";
 
 interface ItemSeparator {
   type: "separator";
+  className?: string;
 }
 
 interface ItemRaw {
@@ -118,6 +120,7 @@ const items: Item[] = [
   },
   {
     type: "separator",
+    className: "mb-0",
   },
 ];
 
@@ -136,7 +139,7 @@ const Dashboard = () => {
         <SidebarList className="flex-1">
           {items.map((item) => {
             if (item.type === "separator") {
-              return <SidebarSeparator />;
+              return <SidebarSeparator className={item.className} />;
             }
 
             if (item.type === "collapse") {
@@ -171,6 +174,7 @@ const Dashboard = () => {
             );
           })}
         </SidebarList>
+        <AcmeMenu />
       </Sidebar>
     </div>
   );

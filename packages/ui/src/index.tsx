@@ -44,9 +44,6 @@ import DropdownMenuSubContent from "./components/dropdown-menu/dropdown-menu-sub
 import DropdownMenuSubTrigger from "./components/dropdown-menu/dropdown-menu-sub-trigger";
 import DropdownMenuTrigger from "./components/dropdown-menu/dropdown-menu-trigger";
 import DropdownMenuIcon from "./components/dropdown-menu/dropdown-menu-icon";
-import Menu from "./components/menu";
-import MenuTrigger from "./components/menu/menu-trigger";
-import MenuContent from "./components/menu/menu-content";
 
 import { cn as tw } from "./lib/tw";
 
@@ -98,9 +95,6 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
   DropdownMenuIcon,
-  Menu,
-  MenuTrigger,
-  MenuContent,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -134,15 +128,7 @@ export type { SidebarCollapseProps } from "./components/sidebar/sidebar-collapse
 export type { SidebarCollapseTriggerProps } from "./components/sidebar/sidebar-collapse-trigger";
 export type { SidebarCollapseContentProps } from "./components/sidebar/sidebar-collapse-content";
 export type { SidebarSeparatorProps } from "./components/sidebar/sidebar-separator";
-export type { MenuProps } from "./components/menu";
-export type { MenuTriggerProps } from "./components/menu/menu-trigger";
-export type {
-  MenuContentProps,
-  MenuItem,
-  MenuItemGroup,
-  MenuItemLabel,
-  MenuItemRoot,
-} from "./components/menu/menu-content";
+
 export type { DropdownMenuProps } from "./components/dropdown-menu";
 export type { DropdownMenuCheckboxItemProps } from "./components/dropdown-menu/dropdown-menu-checkbox";
 export type { DropdownMenuContentProps } from "./components/dropdown-menu/dropdown-menu-content";

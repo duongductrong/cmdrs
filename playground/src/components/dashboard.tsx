@@ -16,7 +16,10 @@ import {
   SidebarCollapseTrigger,
   SidebarList,
   SidebarListItem,
-  SidebarSeparator
+  SidebarSeparator,
+  SidebarSub,
+  SidebarSubContent,
+  SidebarSubTrigger,
 } from "@cmdrs/ui";
 import { useState } from "react";
 import AcmeMenu from "./acme-menu";
@@ -33,6 +36,7 @@ interface ItemRaw {
   icon: React.ReactNode;
   label: string;
   className?: string;
+  items?: Item[];
 }
 
 interface ItemCollapse {
@@ -117,6 +121,14 @@ const items: Item[] = [
     icon: <CogSixToothIcon className="size-4" />,
     label: "Settings",
     className: "mt-auto",
+    items: [
+      {
+        type: "item",
+        value: "s-account",
+        icon: <CogSixToothIcon className="size-4" />,
+        label: "Account",
+      },
+    ],
   },
   {
     type: "separator",
@@ -158,6 +170,75 @@ const Dashboard = () => {
                     ))}
                   </SidebarCollapseContent>
                 </SidebarCollapse>
+              );
+            }
+
+            if (item.items) {
+              return (
+                <SidebarSub>
+                  <SidebarSubTrigger asChild>
+                    <SidebarListItem
+                      key={item.value}
+                      value={item.value}
+                      icon={item.icon}
+                      className={item?.className}
+                    >
+                      {item.label}
+                    </SidebarListItem>
+                  </SidebarSubTrigger>
+                  <SidebarSubContent>
+                    <SidebarList>
+                      <SidebarListItem
+                        icon={<CurrencyDollarIcon className="size-4" />}
+                      >
+                        Sample 1
+                      </SidebarListItem>
+                      <SidebarListItem
+                        icon={<CurrencyDollarIcon className="size-4" />}
+                      >
+                        Sample 2
+                      </SidebarListItem>
+                      <SidebarListItem
+                        icon={<CurrencyDollarIcon className="size-4" />}
+                      >
+                        Sample 3
+                      </SidebarListItem>
+                      <SidebarListItem
+                        icon={<CurrencyDollarIcon className="size-4" />}
+                      >
+                        Sample 4
+                      </SidebarListItem>
+                      <SidebarSub>
+                        <SidebarSubTrigger asChild>
+                          <SidebarListItem
+                            icon={<CogSixToothIcon className="size-4" />}
+                          >
+                            Sample 5
+                          </SidebarListItem>
+                        </SidebarSubTrigger>
+                        <SidebarSubContent>
+                          <SidebarList>
+                            <SidebarListItem
+                              icon={<CurrencyDollarIcon className="size-4" />}
+                            >
+                              Nested Sample 1
+                            </SidebarListItem>
+                            <SidebarListItem
+                              icon={<CurrencyDollarIcon className="size-4" />}
+                            >
+                              Nested Sample 2
+                            </SidebarListItem>
+                            <SidebarListItem
+                              icon={<CurrencyDollarIcon className="size-4" />}
+                            >
+                              Nested Sample 3
+                            </SidebarListItem>
+                          </SidebarList>
+                        </SidebarSubContent>
+                      </SidebarSub>
+                    </SidebarList>
+                  </SidebarSubContent>
+                </SidebarSub>
               );
             }
 

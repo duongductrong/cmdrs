@@ -16,6 +16,7 @@ import ReceiptPercentIcon from "./svgrs/receipt-percent-icon";
 import PlusMiniIcon from "./svgrs/plus-mini-icon";
 import MinusMiniIcon from "./svgrs/minus-mini-icon";
 import CogSixToothIcon from "./svgrs/cog-six-tooth-icon";
+import ArrowUTurnLeftIcon from "./svgrs/arrow-uturn-left-icon";
 
 export {
   CheckMiniIcon,
@@ -36,6 +37,7 @@ export {
   PlusMiniIcon,
   MinusMiniIcon,
   CogSixToothIcon,
+  ArrowUTurnLeftIcon,
 };
 
 export default {};

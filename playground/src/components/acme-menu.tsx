@@ -14,7 +14,6 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-  MenuItem,
   tw,
 } from "@cmdrs/ui";
 import React, { ElementRef, useMemo } from "react";
@@ -22,52 +21,6 @@ import React, { ElementRef, useMemo } from "react";
 export interface AcmeMenuProps {}
 
 const AcmeMenu = (props: AcmeMenuProps) => {
-  const items = useMemo<MenuItem[]>(
-    () => [
-      {
-        type: "custom",
-        component: <AcmeUser />,
-      },
-      {
-        type: "separator",
-      },
-      {
-        type: "item",
-        label: "Documentation",
-        shortcut: "⌘P",
-      },
-      {
-        type: "item",
-        label: "Changelog",
-        shortcut: "⌘B",
-      },
-      {
-        type: "item",
-        label: "Help",
-        shortcut: "⌘A",
-      },
-      {
-        type: "item",
-        label: "Theme",
-        items: [
-          {
-            type: "item",
-            label: "Dark",
-          },
-        ],
-      },
-      {
-        type: "separator",
-      },
-      {
-        type: "item",
-        label: "Log out",
-        shortcut: "⌘Q",
-      },
-    ],
-    []
-  );
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

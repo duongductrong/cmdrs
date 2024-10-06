@@ -290,9 +290,9 @@ const AdminLayout = (props: AdminLayoutProps) => {
       </Sidebar>
 
       <article className="flex-1 ml-[var(--sidebar-width)]">
-        <header className="px-3 h-12 flex items-center border-b border-border">
+        {/* <header className="px-3 h-12 flex items-center border-b border-border">
           Header
-        </header>
+        </header> */}
         <main className="p-3">
           <Outlet />
         </main>

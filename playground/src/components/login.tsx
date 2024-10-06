@@ -19,9 +19,9 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center">
+    <div className="min-h-screen w-full flex items-center justify-center py-4">
       <Card
-        className="flex flex-col gap-2 w-[440px] min-h-[561px] mx-auto mb-6 p-12"
+        className="flex flex-col gap-2 w-[400px] min-h-[400px] mx-auto mb-6"
         variant="section"
         bordered
       >
@@ -35,7 +35,7 @@ const Login = () => {
           </p>
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
-          <Label variant="subtle" className="text-sm mb-2">
+          <Label className="text-sm mb-2">
             Email
             <Input
               variant="default"
@@ -43,7 +43,7 @@ const Login = () => {
               className="mt-2"
             />
           </Label>
-          <Label variant="subtle" className="text-sm">
+          <Label className="text-sm">
             Password
             <Input
               variant="default"
@@ -60,13 +60,13 @@ const Login = () => {
 
         <Separator className="my-4" variant="dashed" />
 
-        <CardFooter>
+        <CardFooter className="flex-col">
           <p className="text-sm text-muted-foreground font-normal text-center">
             Forgot your password? -{" "}
             <span className="text-blue-500 cursor-pointer">Reset</span>
           </p>
 
-          <Alert type="component" className="max-w-[440px] mt-4">
+          {/* <Alert className="max-w-[440px] mt-4">
             <CircleHalfSolidIcon className="size-4 text-muted-foreground" />
             <AlertContent>
               <AlertTitle>You should use a password manager</AlertTitle>
@@ -75,7 +75,7 @@ const Login = () => {
               </AlertDescription>
             </AlertContent>
             <AlertClose />
-          </Alert>
+          </Alert> */}
         </CardFooter>
       </Card>
     </div>

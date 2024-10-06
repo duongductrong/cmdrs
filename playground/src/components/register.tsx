@@ -19,7 +19,7 @@ const Register = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center py-6">
       <Card
-        className="flex flex-col gap-2 w-[440px] min-h-[561px] mx-auto mb-6 p-12"
+        className="flex flex-col gap-2 w-[440px] min-h-[561px] mx-auto mb-6"
         variant="section"
         bordered
       >
@@ -40,7 +40,7 @@ const Register = () => {
               gridTemplateColumns: `repeat(auto-fill, minmax(calc(50% - 16px), 1fr))`,
             }}
           >
-            <Label variant="subtle" className="text-sm mb-2">
+            <Label className="text-sm mb-2">
               First Name
               <Input
                 variant="default"
@@ -48,7 +48,7 @@ const Register = () => {
                 className="mt-2"
               />
             </Label>
-            <Label variant="subtle" className="text-sm mb-2">
+            <Label className="text-sm mb-2">
               First Name
               <Input
                 variant="default"
@@ -58,7 +58,7 @@ const Register = () => {
             </Label>
           </div>
 
-          <Label variant="subtle" className="text-sm mb-2">
+          <Label className="text-sm mb-2">
             Email
             <Input
               variant="default"
@@ -66,7 +66,7 @@ const Register = () => {
               className="mt-2"
             />
           </Label>
-          <Label variant="subtle" className="text-sm">
+          <Label className="text-sm">
             Password
             <Input
               variant="default"
@@ -76,7 +76,7 @@ const Register = () => {
             />
           </Label>
 
-          <Label variant="subtle" className="text-sm">
+          <Label className="text-sm">
             Bio
             <Textarea
               placeholder="Tell something about you"
@@ -86,25 +86,19 @@ const Register = () => {
             />
           </Label>
 
-          <Label variant="subtle" className="text-sm">
+          <Label className="text-sm">
             Website
             <InputGroup prefixSlot={"https://"} className="mt-2">
               <Input variant="default" placeholder="Enter your website" />
             </InputGroup>
           </Label>
 
-          <Label
-            variant="subtle"
-            className="text-sm flex items-center gap-2 mt-2"
-          >
+          <Label className="text-sm flex items-center gap-2 mt-2">
             <Checkbox defaultChecked="indeterminate" />I agree to the terms and
             conditions
           </Label>
 
-          <Label
-            variant="subtle"
-            className="text-sm flex items-center gap-2 mt-2"
-          >
+          <Label className="text-sm flex items-center gap-2 mt-2">
             <Switch /> Enable collection of analytics data
           </Label>
 

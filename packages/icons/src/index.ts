@@ -17,7 +17,7 @@ import PlusMiniIcon from "./svgrs/plus-mini-icon";
 import MinusMiniIcon from "./svgrs/minus-mini-icon";
 import CogSixToothIcon from "./svgrs/cog-six-tooth-icon";
 import ArrowUTurnLeftIcon from "./svgrs/arrow-uturn-left-icon";
-
+import KeyIcon from "./svgrs/key-icon";
 export {
   CheckMiniIcon,
   EyeIcon,
@@ -38,6 +38,7 @@ export {
   MinusMiniIcon,
   CogSixToothIcon,
   ArrowUTurnLeftIcon,
+  KeyIcon,
 };
 
 export default {};

@@ -6,10 +6,10 @@ import { tv, VariantProps } from "tailwind-variants";
 const card = tv(
   {
     slots: {
-      base: "rounded-xl border border-transparent text-foreground",
-      header: "block",
-      footer: "block",
-      content: "p-0",
+      base: "rounded-xl border bg-card text-card-foreground shadow",
+      header: "flex flex-col space-y-1.5 p-6",
+      footer: "flex items-center p-6 pt-0",
+      content: "p-6 pt-0",
     },
     variants: {
       variant: {
@@ -47,6 +47,6 @@ Card.displayName = "Card";
 
 export { card };
 
-  export type { CardProps };
+export type { CardProps };
 
 export default Card;

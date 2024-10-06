@@ -145,7 +145,7 @@ const AdminLayout = (props: AdminLayoutProps) => {
 
   return (
     <section className="flex">
-      <Sidebar defaultSelected={selectedKeys}>
+      <Sidebar className="fixed top-0 left-0" defaultSelected={selectedKeys}>
         <SidebarBrand>
           <AcmeLogo size="32px" />
           <span className="text-sm font-medium ml-2">Acme</span>
@@ -289,11 +289,11 @@ const AdminLayout = (props: AdminLayoutProps) => {
         <AcmeMenu />
       </Sidebar>
 
-      <article className="flex-1">
+      <article className="flex-1 ml-[var(--sidebar-width)]">
         <header className="px-3 h-12 flex items-center border-b border-border">
           Header
         </header>
-        <main className="px-3">
+        <main className="p-3">
           <Outlet />
         </main>
       </article>

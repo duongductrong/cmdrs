@@ -48,6 +48,13 @@ import DropdownMenuSubContent from "./components/dropdown-menu/dropdown-menu-sub
 import DropdownMenuSubTrigger from "./components/dropdown-menu/dropdown-menu-sub-trigger";
 import DropdownMenuTrigger from "./components/dropdown-menu/dropdown-menu-trigger";
 import DropdownMenuIcon from "./components/dropdown-menu/dropdown-menu-icon";
+import ChartContainer, {
+  ChartLegend,
+  ChartLegendContent,
+  ChartStyle,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "./components/chart";
 
 import { cn as tw } from "./lib/tw";
 
@@ -103,6 +110,12 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
   DropdownMenuIcon,
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
+  ChartStyle,
+  ChartTooltip,
+  ChartTooltipContent,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -154,6 +167,7 @@ export type { DropdownMenuSubContentProps } from "./components/dropdown-menu/dro
 export type { DropdownMenuSubTriggerProps } from "./components/dropdown-menu/dropdown-menu-sub-trigger";
 export type { DropdownMenuTriggerProps } from "./components/dropdown-menu/dropdown-menu-trigger";
 export type { DropdownMenuIconProps } from "./components/dropdown-menu/dropdown-menu-icon";
+export type { ChartConfig, ChartContextProps } from "./components/chart";
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";
 export { input } from "./components/input";

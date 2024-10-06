@@ -33,6 +33,7 @@ import SidebarSeparator from "./components/sidebar/sidebar-separator";
 import SidebarSub from "./components/sidebar/sidebar-sub";
 import SidebarSubContent from "./components/sidebar/sidebar-sub-content";
 import SidebarSubTrigger from "./components/sidebar/sidebar-sub-trigger";
+import SidebarSubBack from "./components/sidebar/sidebar-sub-back";
 import DropdownMenu from "./components/dropdown-menu";
 import DropdownMenuCheckboxItem from "./components/dropdown-menu/dropdown-menu-checkbox";
 import DropdownMenuContent from "./components/dropdown-menu/dropdown-menu-content";
@@ -84,6 +85,10 @@ export {
   SidebarCollapseTrigger,
   SidebarCollapseContent,
   SidebarSeparator,
+  SidebarSub,
+  SidebarSubContent,
+  SidebarSubTrigger,
+  SidebarSubBack,
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
@@ -98,9 +103,6 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
   DropdownMenuIcon,
-  SidebarSub,
-  SidebarSubContent,
-  SidebarSubTrigger,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -137,6 +139,7 @@ export type { SidebarSeparatorProps } from "./components/sidebar/sidebar-separat
 export type { SidebarSubProps } from "./components/sidebar/sidebar-sub";
 export type { SidebarSubContentProps } from "./components/sidebar/sidebar-sub-content";
 export type { SidebarSubTriggerProps } from "./components/sidebar/sidebar-sub-trigger";
+export type { SidebarSubBackProps } from "./components/sidebar/sidebar-sub-back";
 export type { DropdownMenuProps } from "./components/dropdown-menu";
 export type { DropdownMenuCheckboxItemProps } from "./components/dropdown-menu/dropdown-menu-checkbox";
 export type { DropdownMenuContentProps } from "./components/dropdown-menu/dropdown-menu-content";

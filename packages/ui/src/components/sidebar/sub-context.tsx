@@ -8,10 +8,16 @@ import {
   useState,
 } from "react";
 
-interface SidebarSubContextState {
-  expanded: boolean;
-  setExpanded: Dispatch<SetStateAction<boolean>>;
+interface SidebarSubState {
+  label: string;
+  state: "open" | "closed";
   selectedKeys?: string[];
+}
+
+interface SidebarSubContextState extends SidebarSubState {
+  setState: Dispatch<SetStateAction<SidebarSubState>>;
+  toggleState: (options: Pick<SidebarSubState, "label">) => void;
+  closeState: () => void;
 }
 
 const SidebarSubContext = createContext<SidebarSubContextState>(
@@ -26,10 +32,27 @@ const SidebarSubProvider = ({
   children,
   selectedKeys,
 }: SidebarSubProviderProps) => {
-  const [expanded, setExpanded] = useState(false);
-  const values = useMemo(
-    () => ({ expanded, setExpanded, selectedKeys }),
-    [selectedKeys, expanded]
+  const [state, setState] = useState<SidebarSubState>({
+    label: "",
+    state: "closed",
+    selectedKeys: [],
+  });
+
+  const toggleState: SidebarSubContextState["toggleState"] = (options) => {
+    setState((previous) => ({
+      ...previous,
+      ...options,
+      state: previous.state === "open" ? "closed" : "open",
+    }));
+  };
+
+  const closeState = () => {
+    setState((previous) => ({ ...previous, state: "closed" }));
+  };
+
+  const values = useMemo<SidebarSubContextState>(
+    () => ({ ...state, setState, toggleState, closeState, selectedKeys }),
+    [selectedKeys, state]
   );
 
   return (

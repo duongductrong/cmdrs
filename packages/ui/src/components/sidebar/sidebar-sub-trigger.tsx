@@ -5,25 +5,25 @@ import React, { ElementRef, forwardRef } from "react";
 import { useSidebarSubContext } from "./sub-context";
 
 interface SidebarSubTriggerProps
-  extends React.ComponentPropsWithoutRef<"button"> {
+  extends Omit<React.ComponentPropsWithoutRef<"button">, "label"> {
   asChild?: boolean;
+  label: string;
 }
 
 const SidebarSubTrigger = forwardRef<
   ElementRef<"button">,
   SidebarSubTriggerProps
->(({ className, children, asChild, onClick, ...props }, ref) => {
+>(({ className, children, asChild, onClick, label, ...props }, ref) => {
   const Comp = asChild ? Slot : "button";
-  const { setExpanded } = useSidebarSubContext();
+  const { toggleState } = useSidebarSubContext();
 
   return (
     <Comp
       {...props}
+      aria-label={label}
       className={cn(className)}
       ref={ref}
-      onClick={composeEventHandlers(onClick, () => {
-        setExpanded((prevExpanded) => !prevExpanded);
-      })}
+      onClick={composeEventHandlers(onClick, () => toggleState({ label }))}
     >
       {children}
     </Comp>

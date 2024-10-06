@@ -4,22 +4,26 @@ import React, { ElementRef, forwardRef } from "react";
 import { VariantProps } from "tailwind-variants";
 import { sidebarList } from "./styles";
 
-interface SidebarListProps
-  extends React.ComponentPropsWithoutRef<"div">,
-    VariantProps<typeof sidebarList> {}
+type SidebarListProps = React.ComponentPropsWithoutRef<
+  typeof AccordionPrimitives.Root
+> &
+  VariantProps<typeof sidebarList>;
 
 const SidebarList = forwardRef<ElementRef<"div">, SidebarListProps>(
-  ({ className, collapse, ...props }, ref) => {
+  ({ className, collapse, type = "multiple", children, ...props }, ref) => {
     return (
       <AccordionPrimitives.Root
-        type="single"
+        {...(props as any)}
+        type={type}
         collapsible
         role="list"
         aria-label="Sidebar List"
-        ref={ref}
+        ref={ref as any}
         asChild
       >
-        <div {...props} className={cn(sidebarList({ className }))} ref={ref} />
+        <div className={cn(sidebarList({ className }))} ref={ref}>
+          {children}
+        </div>
       </AccordionPrimitives.Root>
     );
   }

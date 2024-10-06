@@ -16,7 +16,7 @@ const SidebarCollapseTrigger = forwardRef<
       <SidebarListItem
         hovered={false}
         className={cn(
-          "text-fg-muted [&[aria-selected=false]]:text-fg-muted",
+          "text-fg-muted text-xs [&[aria-selected=false]]:text-fg-muted",
           "[&[data-state=open]_svg[data-type=icon-open]]:hidden",
           "[&[data-state=open]_svg[data-type=icon-close]]:block",
           "[&[data-state=closed]_svg[data-type=icon-close]]:hidden",

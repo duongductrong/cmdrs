@@ -10,7 +10,15 @@ const SidebarCollapseContent = forwardRef<
   SidebarCollapseContentProps
 >(({ className, children, ...props }, ref) => {
   return (
-    <AccordionPrimitive.Content {...props} ref={ref} className={cn(className)}>
+    <AccordionPrimitive.Content
+      {...props}
+      ref={ref}
+      className={cn(
+        "overflow-hidden",
+        "data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+        className
+      )}
+    >
       {children}
     </AccordionPrimitive.Content>
   );

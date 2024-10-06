@@ -20,6 +20,7 @@ import {
   SidebarSub,
   SidebarSubContent,
   SidebarSubTrigger,
+  SidebarSubBack,
 } from "@cmdrs/ui";
 import { useState } from "react";
 import AcmeMenu from "./acme-menu";
@@ -148,7 +149,7 @@ const Dashboard = () => {
         <div className="px-4">
           <Separator variant="dashed" />
         </div>
-        <SidebarList className="flex-1">
+        <SidebarList type="multiple" className="flex-1">
           {items.map((item) => {
             if (item.type === "separator") {
               return <SidebarSeparator className={item.className} />;
@@ -176,7 +177,7 @@ const Dashboard = () => {
             if (item.items) {
               return (
                 <SidebarSub>
-                  <SidebarSubTrigger asChild>
+                  <SidebarSubTrigger label={item.label} asChild>
                     <SidebarListItem
                       key={item.value}
                       value={item.value}
@@ -187,55 +188,81 @@ const Dashboard = () => {
                     </SidebarListItem>
                   </SidebarSubTrigger>
                   <SidebarSubContent>
-                    <SidebarList>
-                      <SidebarListItem
-                        icon={<CurrencyDollarIcon className="size-4" />}
-                      >
-                        Sample 1
-                      </SidebarListItem>
-                      <SidebarListItem
-                        icon={<CurrencyDollarIcon className="size-4" />}
-                      >
-                        Sample 2
-                      </SidebarListItem>
-                      <SidebarListItem
-                        icon={<CurrencyDollarIcon className="size-4" />}
-                      >
-                        Sample 3
-                      </SidebarListItem>
-                      <SidebarListItem
-                        icon={<CurrencyDollarIcon className="size-4" />}
-                      >
-                        Sample 4
-                      </SidebarListItem>
-                      <SidebarSub>
-                        <SidebarSubTrigger asChild>
+                    <SidebarSubBack />
+                    <div className="px-4">
+                      <Separator variant="dashed" />
+                    </div>
+                    <SidebarList
+                      type="multiple"
+                      defaultValue={["general", "developer"]}
+                    >
+                      <SidebarCollapse value="general">
+                        <SidebarCollapseTrigger>General</SidebarCollapseTrigger>
+                        <SidebarCollapseContent>
                           <SidebarListItem
-                            icon={<CogSixToothIcon className="size-4" />}
+                            icon={<CurrencyDollarIcon className="size-4" />}
                           >
-                            Sample 5
+                            Sample 1
                           </SidebarListItem>
-                        </SidebarSubTrigger>
-                        <SidebarSubContent>
-                          <SidebarList>
-                            <SidebarListItem
-                              icon={<CurrencyDollarIcon className="size-4" />}
-                            >
-                              Nested Sample 1
-                            </SidebarListItem>
-                            <SidebarListItem
-                              icon={<CurrencyDollarIcon className="size-4" />}
-                            >
-                              Nested Sample 2
-                            </SidebarListItem>
-                            <SidebarListItem
-                              icon={<CurrencyDollarIcon className="size-4" />}
-                            >
-                              Nested Sample 3
-                            </SidebarListItem>
-                          </SidebarList>
-                        </SidebarSubContent>
-                      </SidebarSub>
+                          <SidebarListItem
+                            icon={<CurrencyDollarIcon className="size-4" />}
+                          >
+                            Sample 2
+                          </SidebarListItem>
+                          <SidebarListItem
+                            icon={<CurrencyDollarIcon className="size-4" />}
+                          >
+                            Sample 3
+                          </SidebarListItem>
+                        </SidebarCollapseContent>
+                      </SidebarCollapse>
+                      <SidebarSeparator />
+                      <SidebarCollapse value="developer">
+                        <SidebarCollapseTrigger>
+                          Developer
+                        </SidebarCollapseTrigger>
+                        <SidebarCollapseContent>
+                          <SidebarListItem
+                            icon={<CurrencyDollarIcon className="size-4" />}
+                          >
+                            Sample 4
+                          </SidebarListItem>
+                          <SidebarSub>
+                            <SidebarSubTrigger label="Sample 5" asChild>
+                              <SidebarListItem
+                                icon={<CogSixToothIcon className="size-4" />}
+                              >
+                                Sample 5
+                              </SidebarListItem>
+                            </SidebarSubTrigger>
+                            <SidebarSubContent>
+                              <SidebarList>
+                                <SidebarListItem
+                                  icon={
+                                    <CurrencyDollarIcon className="size-4" />
+                                  }
+                                >
+                                  Nested Sample 1
+                                </SidebarListItem>
+                                <SidebarListItem
+                                  icon={
+                                    <CurrencyDollarIcon className="size-4" />
+                                  }
+                                >
+                                  Nested Sample 2
+                                </SidebarListItem>
+                                <SidebarListItem
+                                  icon={
+                                    <CurrencyDollarIcon className="size-4" />
+                                  }
+                                >
+                                  Nested Sample 3
+                                </SidebarListItem>
+                              </SidebarList>
+                            </SidebarSubContent>
+                          </SidebarSub>
+                        </SidebarCollapseContent>
+                      </SidebarCollapse>
                     </SidebarList>
                   </SidebarSubContent>
                 </SidebarSub>

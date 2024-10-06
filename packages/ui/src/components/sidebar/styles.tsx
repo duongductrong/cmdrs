@@ -28,7 +28,7 @@ export const sidebarList = tv({
 
 export const sidebarListItem = tv({
   base: [
-    "h-8 p-0.5 w-full flex items-center gap-x-2 text-sm font-medium leading-5",
+    "h-8 p-0.5 w-full flex items-center gap-x-2 text-sm font-normal leading-5",
     "rounded-md cursor-pointer",
     "",
     "[&:not(:has(span))]:pl-2",

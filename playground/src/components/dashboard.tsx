@@ -105,7 +105,11 @@ export function Component() {
 }
 
 const Dashboard = () => {
-  return <Component />;
+  return (
+    <div className="grid grid-cols-3">
+      <Component />
+    </div>
+  );
 };
 
 export default Dashboard;

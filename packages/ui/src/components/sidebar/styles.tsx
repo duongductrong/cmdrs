@@ -11,6 +11,8 @@ export const sidebar = tv({
     subBase: [
       "absolute top-0 left-0 w-[var(--sidebar-width)]",
       "min-h-lvh bg-bg-subtle border-r border-[hsla(240,6%,90%,1)]",
+      "data-[state=open]:animate-in data-[state=open]:slide-in-from-left",
+      "data-[state=closed]:animate-out data-[state=closed]:slide-out-to-left",
     ],
   },
 });

@@ -18,6 +18,12 @@ import MinusMiniIcon from "./svgrs/minus-mini-icon";
 import CogSixToothIcon from "./svgrs/cog-six-tooth-icon";
 import ArrowUTurnLeftIcon from "./svgrs/arrow-uturn-left-icon";
 import KeyIcon from "./svgrs/key-icon";
+import AtSymbolIcon from "./svgrs/at-symbol-icon";
+import BuildingTaxIcon from "./svgrs/building-tax-icon";
+import CircleDottedLineIcon from "./svgrs/circle-dotted-line-icon";
+import MapPinIcon from "./svgrs/map-pin-icon";
+import ComponentIcon from "./svgrs/component-icon";
+
 export {
   CheckMiniIcon,
   EyeIcon,
@@ -39,6 +45,11 @@ export {
   CogSixToothIcon,
   ArrowUTurnLeftIcon,
   KeyIcon,
+  AtSymbolIcon,
+  BuildingTaxIcon,
+  CircleDottedLineIcon,
+  MapPinIcon,
+  ComponentIcon,
 };
 
 export default {};

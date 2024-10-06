@@ -19,10 +19,10 @@ const SidebarSubBack = forwardRef<
         role="button"
         aria-label="Back"
         {...props}
-        className={cn("text-2xs font-medium leading-5 text-fg-base", className)}
+        className={cn("text-sm font-medium leading-5 text-foreground", className)}
         onClick={closeState}
       >
-        <ArrowUTurnLeftIcon className="size-4 mr-2 text-fg-subtle" /> {label}
+        <ArrowUTurnLeftIcon className="size-4 mr-2 text-muted-foreground" /> {label}
       </SidebarBrand>
     </SidebarBrand>
   );

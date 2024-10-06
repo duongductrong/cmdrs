@@ -7,7 +7,7 @@ const inputGroup = tv(
     slots: {
       base: [
         "group/input data-[state=focus]:ring-2 data-[state=focus]:border-ring data-[state=focus]:ring-ring/20",
-        "flex border border-border rounded-md shadow-input overflow-hidden",
+        "flex border border-border rounded-md shadow-sm overflow-hidden",
 
         "[&>*:last-child]:border-none",
 
@@ -19,29 +19,23 @@ const inputGroup = tv(
         "[&>input:focus-visible:last-child]:border-none",
       ],
       iconPrefix: [
-        "text-fg-muted font-normal shrink-0 px-1.5",
+        "text-muted-foreground font-normal shrink-0 px-3",
         "border-r border-r-border/80",
         "flex items-center justify-center",
-        "text-2xs",
+        "text-sm",
       ],
       iconSuffix: [
-        "text-fg-muted font-normal shrink-0 px-1.5",
+        "text-muted-foreground font-normal shrink-0 px-3",
         "border-l border-l-border/80",
         "flex items-center justify-center",
-        "text-2xs",
+        "text-sm",
       ],
     },
     variants: {
       variant: {
         default: {
-          iconPrefix: "bg-bg-input group-hover/input:bg-bg-input-hover",
-          iconSuffix: "bg-bg-input group-hover/input:bg-bg-input-hover",
-        },
-        component: {
-          iconPrefix:
-            "bg-bg-input-component group-hover/input:bg-bg-input-component-hover",
-          iconSuffix:
-            "bg-bg-input-component group-hover/input:bg-bg-input-component-hover",
+          iconPrefix: "bg-background",
+          iconSuffix: "bg-background",
         },
       },
     },

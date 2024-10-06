@@ -20,21 +20,18 @@ const input = tv(
   {
     slots: {
       base: [
-        "flex w-full rounded-md border border-border",
-        "focus-visible:ring-2 focus-visible:border-ring focus-visible:ring-ring/20",
-        "shadow-input transition-colors font-normal",
-
-        "file:border-0 file:bg-transparent file:text-sm file:font-medium",
-        "file:text-fg-base placeholder:text-fg-muted placeholder:font-normal focus-visible:outline-none",
-        "disabled:cursor-not-allowed disabled:opacity-50",
+        "flex w-full font-normal rounded-md border border-input bg-transparent px-3 py-1 text-sm",
+        "shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm",
+        "file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none",
+        "focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
       ],
       password: [
         "group/input data-[state=focus]:ring-2 data-[state=focus]:border-ring data-[state=focus]:ring-ring/20",
-        "flex border border-border rounded-md shadow-input overflow-hidden",
+        "flex border border-input rounded-md shadow-sm overflow-hidden",
         "[&>input]:rounded-none [&>input]:border-none [&>input]:shadow-none",
       ],
       icon: [
-        "text-fg-muted shrink-0",
+        "text-muted-foreground shrink-0",
         "border-l border-l-border/80",
         "flex items-center justify-center",
       ],
@@ -42,32 +39,15 @@ const input = tv(
     variants: {
       variant: {
         default: {
-          base: "bg-bg-input group-hover/input:bg-bg-input-hover hover:bg-bg-input-hover",
+          base: "bg-background",
           password: "",
-          icon: "bg-bg-input group-hover/input:bg-bg-input-hover hover:bg-bg-input-hover",
-        },
-        component: {
-          base: "bg-bg-input-component hover:bg-bg-input-component-hover",
-          password: "",
-          icon: "bg-bg-input-component group-hover/input:bg-bg-input-component-hover",
+          icon: "bg-background",
         },
       },
       size: {
-        sm: {
-          base: ["h-7 px-2 py-1.5 text-2xs placeholder:text-2xs"],
-          password: ["[&>span[role=button]]:size-7"],
-        },
         default: {
-          base: ["h-8 px-2 py-1.5 text-2xs placeholder:text-2xs"],
-          password: ["[&>span[role=button]]:size-8"],
-        },
-        lg: {
-          base: ["h-10 px-3 py-1.5 text-sm placeholder:text-sm"],
-          password: ["[&>span[role=button]]:size-10"],
-        },
-        xl: {
-          base: ["h-12 px-3 py-1.5 text-sm placeholder:text-sm"],
-          password: ["[&>span[role=button]]:size-12"],
+          base: ["h-9 px-3 py-1 text-sm placeholder:text-sm"],
+          password: ["[&>span[role=button]]:size-9"],
         },
       },
     },
@@ -132,8 +112,12 @@ const PasswordInput = React.forwardRef<React.ElementRef<"div">, PasswordProps>(
     return (
       <div
         {...props}
-        onFocus={(event) => event.currentTarget.setAttribute("data-state", "focus")}
-        onBlur={(event) => event.currentTarget.setAttribute("data-state", "idle")}
+        onFocus={(event) =>
+          event.currentTarget.setAttribute("data-state", "focus")
+        }
+        onBlur={(event) =>
+          event.currentTarget.setAttribute("data-state", "idle")
+        }
         className={cn(password({ className }))}
         ref={ref}
       >
@@ -160,6 +144,6 @@ PasswordInput.displayName = "PasswordInput";
 
 export type { InputProps, PasswordProps };
 
-export { input, PasswordInput };
+  export { input, PasswordInput };
 
 export default Input;

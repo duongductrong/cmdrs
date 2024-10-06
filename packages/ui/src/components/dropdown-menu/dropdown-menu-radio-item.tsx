@@ -24,7 +24,6 @@ const DropdownMenuRadioItem = React.forwardRef<
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <DropdownMenuPrimitive.ItemIndicator>
-        <div>Dot</div>
         {/* <DotFilledIcon className="h-4 w-4 fill-current" /> */}
       </DropdownMenuPrimitive.ItemIndicator>
     </span>

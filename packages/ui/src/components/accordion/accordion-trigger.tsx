@@ -56,7 +56,7 @@ const AccordionTrigger = React.forwardRef<
           {PrefixIcon ? (
             <PrefixIcon
               data-type="icon"
-              className="size-4 shrink-0 text-fg-muted transition-transform duration-200 mr-2"
+              className="size-4 shrink-0 text-muted-foreground transition-transform duration-200 mr-2"
             />
           ) : null}
 
@@ -64,7 +64,7 @@ const AccordionTrigger = React.forwardRef<
 
           <TriangleRightMiniIcon
             data-type="chevron"
-            className="size-4 shrink-0 text-fg-muted transition-transform duration-200 ml-auto"
+            className="size-4 shrink-0 text-muted-foreground transition-transform duration-200 ml-auto"
           />
         </AccordionPrimitive.Trigger>
       </AccordionPrimitive.Header>

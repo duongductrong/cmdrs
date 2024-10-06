@@ -4,13 +4,13 @@ export const sidebar = tv({
   slots: {
     base: [
       "relative",
-      "w-[var(--sidebar-width)] min-h-lvh bg-bg-subtle border-r border-[hsla(240,6%,90%,1)]",
+      "w-[var(--sidebar-width)] min-h-lvh bg-background border-r border-border",
       "flex flex-col h-full",
     ],
     brand: ["px-3 h-12 flex items-center"],
     subBase: [
       "absolute top-0 left-0 w-[var(--sidebar-width)]",
-      "min-h-lvh bg-bg-subtle border-r border-[hsla(240,6%,90%,1)]",
+      "min-h-lvh bg-background border-r border-border",
       "data-[state=open]:animate-in data-[state=open]:slide-in-from-left",
       "data-[state=closed]:animate-out data-[state=closed]:slide-out-to-left",
     ],
@@ -28,19 +28,19 @@ export const sidebarList = tv({
 
 export const sidebarListItem = tv({
   base: [
-    "h-7 p-0.5 w-full flex items-center gap-x-2 text-2xs font-medium leading-5",
+    "h-8 p-0.5 w-full flex items-center gap-x-2 text-sm font-medium leading-5",
     "rounded-md cursor-pointer",
     "",
     "[&:not(:has(span))]:pl-2",
     "[&>span[role=presentation]]:size-6 [&>span[role=presentation]]:flex",
     "[&>span[role=presentation]]:items-center [&>span[role=presentation]]:justify-center",
-    "[&>span[role=presentation]]:text-fg-subtle",
-    "[&[aria-selected=false]]:text-fg-subtle",
-    "[&[aria-selected=true]]:bg-bg-base [&[aria-selected=true]]:text-fg-base [&[aria-selected=true]]:shadow-sidebar",
+    "[&>span[role=presentation]]:text-muted-foreground",
+    "[&[aria-selected=false]]:text-muted-foreground",
+    "[&[aria-selected=true]]:bg-secondary [&[aria-selected=true]]:text-foreground",
   ],
   variants: {
     hovered: {
-      true: "hover:bg-bg-base hover:shadow-sidebar",
+      true: "hover:bg-secondary",
     },
   },
   defaultVariants: {

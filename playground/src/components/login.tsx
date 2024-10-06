@@ -21,21 +21,21 @@ const Login = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center">
       <Card
-        className="flex flex-col gap-2 w-[400px] min-h-[561px] mx-auto mb-6 p-12"
+        className="flex flex-col gap-2 w-[440px] min-h-[561px] mx-auto mb-6 p-12"
         variant="section"
         bordered
       >
         <CardHeader className="text-center mb-4">
           <AcmeLogo className="mx-auto" />
-          <p className="font-semibold text-xl mb-2 text-fg-base mt-2">
+          <p className="font-semibold text-xl mb-2 text-foreground mt-2">
             Welcome to ACME
           </p>
-          <p className="text-2xs text-fg-subtle font-normal">
+          <p className="text-sm text-muted-foreground font-normal">
             Login to access the account area.
           </p>
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
-          <Label variant="subtle" className="text-2xs mb-2">
+          <Label variant="subtle" className="text-sm mb-2">
             Email
             <Input
               variant="default"
@@ -43,7 +43,7 @@ const Login = () => {
               className="mt-2"
             />
           </Label>
-          <Label variant="subtle" className="text-2xs">
+          <Label variant="subtle" className="text-sm">
             Password
             <Input
               variant="default"
@@ -61,13 +61,13 @@ const Login = () => {
         <Separator className="my-4" variant="dashed" />
 
         <CardFooter>
-          <p className="text-2xs text-fg-subtle font-normal text-center">
+          <p className="text-sm text-muted-foreground font-normal text-center">
             Forgot your password? -{" "}
             <span className="text-blue-500 cursor-pointer">Reset</span>
           </p>
 
           <Alert type="component" className="max-w-[440px] mt-4">
-            <CircleHalfSolidIcon className="size-4 text-fg-muted" />
+            <CircleHalfSolidIcon className="size-4 text-muted-foreground" />
             <AlertContent>
               <AlertTitle>You should use a password manager</AlertTitle>
               <AlertDescription>

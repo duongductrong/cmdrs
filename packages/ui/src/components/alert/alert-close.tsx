@@ -14,13 +14,13 @@ const AlertClose = forwardRef<ElementRef<"span">, AlertCloseProps>(
         data-type="close-button"
         {...props}
         className={cn(
-          "size-5 absolute top-3 right-4 items-center justify-center flex text-fg-muted shrink-0",
+          "size-5 absolute top-3 right-4 items-center justify-center flex text-muted-foreground shrink-0",
           className
         )}
         ref={ref}
         onClick={() => setOpen(false)}
       >
-        <XMarkIcon className="size-4 text-fg-muted shrink-0" />
+        <XMarkIcon className="size-4 text-muted-foreground shrink-0" />
       </span>
     );
   }

@@ -9,14 +9,13 @@ import { tv, VariantProps } from "tailwind-variants";
 const label = tv(
   {
     base: [
-      "text-2xs font-medium leading-none",
-      "peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
-      "text-fg-base",
+      "text-sm font-medium leading-none",
+      "peer-disabled:cursor-not-allowed",
+      "peer-disabled:opacity-70",
     ],
     variants: {
       variant: {
-        default: "text-fg-base",
-        subtle: "text-fg-subtle",
+        default: "text-current",
       },
     },
     defaultVariants: {

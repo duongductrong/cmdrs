@@ -23,61 +23,101 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           },
         },
         fontSize: {
-          "2xs": "0.8125rem",
+          "2xs": "0.875rem",
+          // "2xs": "0.8125rem",
         },
         colors: {
-          "button-glossed": "hsl(var(--button-glossed))",
-          "button-inverted": "hsl(var(--button-inverted))",
-          "button-inverted-hover": "hsl(var(--button-inverted-hover))",
-          "button-inverted-pressed": "hsl(var(--button-inverted-pressed))",
-          "button-neutral": "hsl(var(--button-neutral))",
-          "button-neutral-hover": "hsl(var(--button-neutral-hover))",
-          "button-neutral-pressed": "hsl(var(--button-neutral-pressed))",
-          "button-danger": "hsl(var(--button-danger))",
-          "button-danger-hover": "hsl(var(--button-danger-hover))",
-          "button-danger-pressed": "hsl(var(--button-danger-pressed))",
-          "button-transparent": "hsla(var(--button-transparent))",
-          "button-transparent-hover": "hsla(var(--button-transparent-hover))",
-          "button-transparent-pressed":
-            "hsla(var(--button-transparent-pressed))",
+          // "button-glossed": "hsl(var(--button-glossed))",
+          // "button-inverted": "hsl(var(--button-inverted))",
+          // "button-inverted-hover": "hsl(var(--button-inverted-hover))",
+          // "button-inverted-pressed": "hsl(var(--button-inverted-pressed))",
+          // "button-neutral": "hsl(var(--button-neutral))",
+          // "button-neutral-hover": "hsl(var(--button-neutral-hover))",
+          // "button-neutral-pressed": "hsl(var(--button-neutral-pressed))",
+          // "button-danger": "hsl(var(--button-danger))",
+          // "button-danger-hover": "hsl(var(--button-danger-hover))",
+          // "button-danger-pressed": "hsl(var(--button-danger-pressed))",
+          // "button-transparent": "hsla(var(--button-transparent))",
+          // "button-transparent-hover": "hsla(var(--button-transparent-hover))",
+          // "button-transparent-pressed":
+          //   "hsla(var(--button-transparent-pressed))",
 
-          fg: {
-            base: "hsl(var(--fg-base))",
-            inverted: "hsl(var(--fg-inverted))",
-            muted: "hsl(var(--fg-muted))",
-            subtle: "hsl(var(--fg-subtle))",
-            interactive: "hsl(var(--fg-interactive))",
-            "on-interactive": "hsl(var(--fg-on-interactive))",
-          },
+          // fg: {
+          //   base: "hsl(var(--fg-base))",
+          //   inverted: "hsl(var(--fg-inverted))",
+          //   muted: "hsl(var(--fg-muted))",
+          //   subtle: "hsl(var(--fg-subtle))",
+          //   interactive: "hsl(var(--fg-interactive))",
+          //   "on-interactive": "hsl(var(--fg-on-interactive))",
+          // },
 
-          bg: {
-            base: {
-              DEFAULT: "hsl(var(--bg-base))",
-              hover: "hsl(var(--bg-base-hover))",
-            },
-            subtle: "hsl(var(--bg-subtle))",
-            // component: { -> bg-card instead
-            //   DEFAULT: "hsl(var(--bg-component))",
-            //   hover: "hsl(var(--bg-component-hover))",
-            // },
-            input: {
-              DEFAULT: "hsl(var(--bg-input))",
-              hover: "hsl(var(--bg-input-hover))",
-              component: {
-                DEFAULT: "hsl(var(--bg-input-component))",
-                hover: "hsl(var(--bg-input-component-hover))",
-              },
-            },
-            switch: {
-              off: "hsl(var(--bg-switch-off))",
-              "off-hover": "hsl(var(--bg-switch-off-hover))",
-            },
-          },
+          // bg: {
+          //   base: {
+          //     DEFAULT: "hsl(var(--bg-base))",
+          //     hover: "hsl(var(--bg-base-hover))",
+          //   },
+          //   subtle: "hsl(var(--bg-subtle))",
+          //   // component: { -> bg-card instead
+          //   //   DEFAULT: "hsl(var(--bg-component))",
+          //   //   hover: "hsl(var(--bg-component-hover))",
+          //   // },
+          //   input: {
+          //     DEFAULT: "hsl(var(--bg-input))",
+          //     hover: "hsl(var(--bg-input-hover))",
+          //     component: {
+          //       DEFAULT: "hsl(var(--bg-input-component))",
+          //       hover: "hsl(var(--bg-input-component-hover))",
+          //     },
+          //   },
+          //   switch: {
+          //     off: "hsl(var(--bg-switch-off))",
+          //     "off-hover": "hsl(var(--bg-switch-off-hover))",
+          //   },
+          // },
+
+          // border: "hsl(var(--border))",
+
+          // ring: "hsl(var(--ring))",
+
+          // primary: {
+          //   DEFAULT: "hsl(var(--primary))",
+          //   foreground: "hsl(var(--primary-foreground))",
+          // },
+          // secondary: {
+          //   DEFAULT: "hsl(var(--secondary))",
+          //   foreground: "hsl(var(--secondary-foreground))",
+          // },
+          // destructive: {
+          //   DEFAULT: "hsl(var(--destructive))",
+          //   foreground: "hsl(var(--destructive-foreground))",
+          // },
+          // muted: {
+          //   DEFAULT: "hsl(var(--muted))",
+          //   foreground: "hsl(var(--muted-foreground))",
+          // },
+          // accent: {
+          //   DEFAULT: "hsl(var(--accent))",
+          //   foreground: "hsl(var(--accent-foreground))",
+          // },
+          // popover: {
+          //   DEFAULT: "hsl(var(--popover))",
+          //   foreground: "hsl(var(--popover-foreground))",
+          // },
+          // card: {
+          //   DEFAULT: "hsl(var(--card))",
+          //   hover: "hsl(var(--card-hover))",
+          //   foreground: "hsl(var(--card-foreground))",
+          // },
+          // menu: {
+          //   border: "hsl(var(--menu-border))",
+          // },
+          // accordion: {},
 
           border: "hsl(var(--border))",
-
+          input: "hsl(var(--input))",
           ring: "hsl(var(--ring))",
-
+          background: "hsl(var(--background))",
+          foreground: "hsl(var(--foreground))",
           primary: {
             DEFAULT: "hsl(var(--primary))",
             foreground: "hsl(var(--primary-foreground))",
@@ -104,13 +144,8 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
           },
           card: {
             DEFAULT: "hsl(var(--card))",
-            hover: "hsl(var(--card-hover))",
             foreground: "hsl(var(--card-foreground))",
           },
-          menu: {
-            border: "hsl(var(--menu-border))",
-          },
-          accordion: {},
         },
         borderRadius: {
           lg: `var(--radius)`,

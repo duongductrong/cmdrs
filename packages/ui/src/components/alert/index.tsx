@@ -7,7 +7,7 @@ import { AlertContext, AlertContextState } from "./context";
 const alert = tv(
   {
     base: [
-      "relative w-full h-full rounded-lg p-3 text-2xs border border-border",
+      "relative w-full h-full rounded-lg p-3 text-sm border border-border",
       "[&>svg]:absolute [&>svg]:left-4 [&>svg~*:not([data-type=close-button])]:pl-7 [&>svg~*:not([data-type=close-button])]:pr-7",
       "[&>svg]:top-3.5 [&>svg]:text-foreground",
       "transition-all duration-300",
@@ -19,8 +19,7 @@ const alert = tv(
           "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
       },
       type: {
-        default: "bg-bg-base",
-        component: "bg-card",
+        default: "bg-background",
       },
 
       closed: {
@@ -67,6 +66,6 @@ Alert.displayName = "Alert";
 
 export type { AlertProps };
 
-  export { alert };
+export { alert };
 
 export default Alert;

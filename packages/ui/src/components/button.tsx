@@ -1,83 +1,58 @@
+import { Slot } from "@radix-ui/react-slot";
+import * as React from "react";
+
 import { cn } from "@/lib/tw";
-import { forwardRef } from "react";
 import { tv, VariantProps } from "tailwind-variants";
 
-export const button = tv(
-  {
-    base: [
-      "relative overflow-hidden",
-      "border border-transparent",
-      "rounded-md",
-      "flex items-center justify-center gap-2.5",
-      "font-medium leading-5",
-      "transition-colors duration-200",
-      "disabled:opacity-70 disabled:cursor-not-allowed",
-      "after:absolute after:inset-0 after:top-0 after:left-0 after:bg-gradient-to-b",
-      "after:pointer-events-none",
-    ],
-    variants: {
-      variant: {
-        default: [
-          "bg-button-inverted text-fg-inverted",
-          "hover:bg-button-inverted-hover active:bg-button-inverted-pressed",
-          "disabled:bg-button-inverted",
-          "[box-shadow:inset_0_1px_0_0_hsla(0,0%,100%,0.2),0_1px_2px_hsla(var(--button-inverted)/10%)]",
-          "after:from-button-glossed after:from-10% after:to-transparent after:opacity-10",
-        ],
-        secondary: [
-          "text-fg-base",
-          "bg-button-neutral hover:bg-button-neutral-hover active:bg-button-neutral-pressed",
-          "disabled:bg-button-neutral",
-          "[box-shadow:0_0_0_1px_hsla(0,0%,0%,8%),0_1px_2px_hsla(var(--button-neutral)/10%)]",
-          "after:from-button-glossed after:from-10% after:to-transparent after:opacity-10",
-        ],
-        danger: [
-          "bg-button-danger text-fg-inverted",
-          "hover:bg-button-danger-hover active:bg-button-danger-pressed",
-          "disabled:bg-button-danger",
-          "[box-shadow:inset_0_1px_0_0_hsla(0,0%,100%,0.2),0_1px_2px_hsla(var(--button-danger)/10%)]",
-          "after:from-button-glossed after:from-10% after:to-transparent after:opacity-10",
-        ],
-        transparent: [
-          "text-contrast-fg-base bg-button-transparent hover:bg-button-transparent-hover active:bg-button-transparent-pressed",
-          "disabled:bg-button-transparent",
-        ],
-        transmuted: [
-          "text-contrast-fg-base bg-button-transparent hover:bg-button-transparent-hover active:bg-button-transparent-pressed",
-          "disabled:bg-button-transparent",
-          "text-fg-muted",
-        ],
-      },
-      size: {
-        sm: "h-7 text-2xs px-2 py-1",
-        default: "h-8 text-2xs px-2 py-1 ",
-        lg: "h-10 text-sm px-3 py-2.5",
-        xl: "h-12 text-sm px-4 py-3.5",
-        icon: "size-8 text-[0.125rem]",
-      },
+const button = tv({
+  base: "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  variants: {
+    variant: {
+      default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+      destructive:
+        "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+      outline:
+        "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+      secondary:
+        "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+      ghost: "hover:bg-accent hover:text-accent-foreground",
+      link: "text-primary underline-offset-4 hover:underline",
     },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
+    size: {
+      sm: "h-8 rounded-md px-3 text-xs",
+      default: "h-9 px-4 py-2",
+      lg: "h-10 rounded-md px-8",
+      icon: "h-9 w-9",
     },
   },
-  { twMerge: false, responsiveVariants: true }
-);
+  defaultVariants: {
+    variant: "default",
+    size: "default",
+  },
+});
 
-export interface ButtonProps
-  extends React.ComponentPropsWithoutRef<"button">,
-    VariantProps<typeof button> {}
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof button> {
+  asChild?: boolean;
+}
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, size, variant, ...props }, ref) => {
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
     return (
-      <button
-        {...props}
-        className={cn(button({ size, variant, className }))}
+      <Comp
+        className={cn(button({ variant, size, className }))}
         ref={ref}
+        {...props}
       />
     );
   }
 );
+Button.displayName = "Button";
+
+export { button };
+
+  export type { ButtonProps };
 
 export default Button;

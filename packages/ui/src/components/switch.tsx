@@ -10,19 +10,14 @@ const switchInput = tv(
   {
     slots: {
       base: [
-        "peer inline-flex h-[1.125rem] w-8 shrink-0 cursor-pointer items-center",
-        "rounded-full border-2 border-transparent shadow-sm transition-colors border border-border",
-        "focus-visible:outline-none focus-visible:border-ring",
-        "focus-visible:ring-2 focus-visible:ring-ring/20",
-        "focus:ring-2 focus:border-ring focus:ring-ring/20",
-        "disabled:cursor-not-allowed disabled:opacity-50",
-        "data-[state=checked]:bg-fg-interactive",
-        "data-[state=checked]:border-fg-on-interactive/20",
-        "data-[state=unchecked]:bg-bg-switch-off",
-        "data-[state=unchecked]:hover:bg-bg-switch-off-hover",
+        "peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full",
+        "border-2 border-transparent shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2",
+        "focus-visible:ring-ring focus-visible:ring-offset-2",
+        "focus-visible:ring-offset-background disabled:cursor-not-allowed",
+        "disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
       ],
       thumb: [
-        "pointer-events-none block size-3.5 rounded-full bg-bg-base",
+        "pointer-events-none block size-3.5 rounded-full bg-background",
         "shadow-lg ring-0 transition-transform",
         "data-[state=checked]:translate-x-[0.9375rem]",
         "data-[state=unchecked]:translate-x-px",

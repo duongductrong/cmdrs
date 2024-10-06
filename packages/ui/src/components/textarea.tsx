@@ -12,17 +12,8 @@ const textarea = tv(
     },
     variants: {
       size: {
-        sm: {
-          base: "px-2 py-1.5 text-2xs placeholder:text-2xs",
-        },
         default: {
-          base: "px-2 py-1.5 text-2xs placeholder:text-2xs",
-        },
-        lg: {
-          base: "px-3 py-1.5 text-sm placeholder:text-sm",
-        },
-        xl: {
-          base: "px-3 py-1.5 text-sm placeholder:text-sm",
+          base: "px-3 py-2 text-sm",
         },
       },
     },
@@ -46,6 +37,6 @@ Textarea.displayName = "Textarea";
 
 export type { TextareaProps };
 
-export { textarea };
+  export { textarea };
 
 export default Textarea;

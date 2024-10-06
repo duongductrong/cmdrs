@@ -12,7 +12,7 @@ const DropdownMenuIcon = forwardRef<ElementRef<"span">, DropdownMenuIconProps>(
         aria-hidden="true"
         aria-label="Icon"
         ref={ref}
-        className={cn("inline-block mr-2 text-fg-subtle", className)}
+        className={cn("inline-block mr-2 text-muted-foreground", className)}
       >
         {children}
       </span>

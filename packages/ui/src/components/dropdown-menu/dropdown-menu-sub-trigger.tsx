@@ -2,7 +2,7 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import * as React from "react";
 
 import { cn } from "@/lib/tw";
-import { CircleHalfSolidIcon, TriangleRightMiniIcon } from "@cmdrs/icons";
+import { TriangleRightMiniIcon } from "@cmdrs/icons";
 
 interface DropdownMenuSubTriggerProps
   extends DropdownMenuPrimitive.DropdownMenuSubTriggerProps {
@@ -16,15 +16,14 @@ const DropdownMenuSubTrigger = React.forwardRef<
   <DropdownMenuPrimitive.SubTrigger
     ref={ref}
     className={cn(
-      "flex cursor-default select-none items-center rounded-md px-2 py-1.5",
-      "text-2xs outline-none focus:bg-card-hover data-[state=open]:bg-card-hover",
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
       className
     )}
     {...props}
   >
     {children}
-    <TriangleRightMiniIcon className="ml-auto h-4 w-4 text-fg-muted" />
+    <TriangleRightMiniIcon className="ml-auto h-4 w-4 text-muted-foreground" />
   </DropdownMenuPrimitive.SubTrigger>
 ));
 DropdownMenuSubTrigger.displayName =

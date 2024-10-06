@@ -23,10 +23,10 @@ const Faqs = (props: Props) => {
         </AlertDescription>
       </Alert>
 
-      <h2 className="text-center text-fg-base font-semibold text-2xl mb-2">
+      <h2 className="text-center text-foreground font-semibold text-2xl mb-2">
         Frequently Asked Questions
       </h2>
-      <p className="text-center text-2xs text-fg-subtle mb-6">
+      <p className="text-center text-sm text-muted-foreground mb-6">
         Here are some of the most common questions we receive from our users.
       </p>
 
@@ -66,10 +66,10 @@ const Faqs = (props: Props) => {
         </AccordionItem>
       </Accordion>
 
-      <h2 className="text-center text-fg-base font-semibold text-2xl mb-2 mt-12">
+      <h2 className="text-center text-foreground font-semibold text-2xl mb-2 mt-12">
         Frequently Asked Questions 2
       </h2>
-      <p className="text-center text-2xs text-fg-subtle mb-6">
+      <p className="text-center text-sm text-muted-foreground mb-6">
         Here are some of the most common questions we receive from our users.
       </p>
 
@@ -109,10 +109,10 @@ const Faqs = (props: Props) => {
         </AccordionItem>
       </Accordion>
 
-      <h2 className="text-center text-fg-base font-semibold text-2xl mb-2 mt-12">
+      <h2 className="text-center text-foreground font-semibold text-2xl mb-2 mt-12">
         Frequently Asked Questions 3
       </h2>
-      <p className="text-center text-2xs text-fg-subtle mb-6">
+      <p className="text-center text-sm text-muted-foreground mb-6">
         Here are some of the most common questions we receive from our users.
       </p>
 

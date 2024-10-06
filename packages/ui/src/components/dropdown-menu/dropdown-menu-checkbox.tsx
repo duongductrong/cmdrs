@@ -4,6 +4,7 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import * as React from "react";
 
 import { cn } from "@/lib/tw";
+import { CheckMiniIcon } from "@cmdrs/icons";
 
 interface DropdownMenuCheckboxItemProps
   extends React.ComponentPropsWithoutRef<
@@ -27,7 +28,7 @@ const DropdownMenuCheckboxItem = React.forwardRef<
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <DropdownMenuPrimitive.ItemIndicator>
-        <div>Check</div>
+        <CheckMiniIcon />
         {/* <CheckIcon className="h-4 w-4" /> */}
       </DropdownMenuPrimitive.ItemIndicator>
     </span>

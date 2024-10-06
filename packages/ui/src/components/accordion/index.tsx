@@ -17,9 +17,9 @@ const accordion = tv(
       contentItem: ["pb-4"],
       trigger: [
         "w-full p-3 rounded-md",
-        "flex flex-1 items-center text-fg-base",
-        "[&[data-state=open]>svg[data-type=chevron]]:rotate-90 [&[data-state=open]>svg[data-type=icon]]:text-fg-interactive",
-        "text-2xs font-medium transition-all",
+        "flex flex-1 items-center text-foreground",
+        "[&[data-state=open]>svg[data-type=chevron]]:rotate-90 [&[data-state=open]>svg[data-type=icon]]:text-foreground",
+        "text-sm font-medium transition-all",
       ],
     },
     variants: {
@@ -27,8 +27,8 @@ const accordion = tv(
         pills: {
           base: "gap-y-4",
           trigger: [
-            "bg-bg-base hover:bg-bg-base-hover",
-            "shadow-accordion",
+            "bg-background hover:bg-background-hover",
+            "border-border border",
             "min-h-12",
             "text-left",
           ],
@@ -46,8 +46,8 @@ const accordion = tv(
         "pills-group": {
           base: "gap-y-4",
           item: [
-            "bg-bg-base hover:bg-bg-base-hover flex flex-col justify-center",
-            "shadow-accordion",
+            "bg-background hover:bg-background-hover flex flex-col justify-center",
+            "border-border border",
             "min-h-12",
             "rounded-md",
           ],

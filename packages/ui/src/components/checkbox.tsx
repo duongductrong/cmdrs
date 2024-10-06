@@ -11,19 +11,14 @@ const checkbox = tv(
   {
     slots: {
       base: [
-        "peer size-4 shrink-0 rounded-sm",
-        "border border-border shadow-input",
-        "focus-visible:ring-2 focus-visible:border-ring focus-visible:ring-ring/20 focus-visible:outline-none",
-        "focus:ring-2 focus:border-ring focus:ring-ring/20 focus:outline-none",
-        "disabled:opacity-50 disabled:cursor-not-allowed",
-        "data-[state=checked]:border-fg-on-interactive/20 data-[state=checked]:bg-fg-interactive",
-        "data-[state=checked]:text-fg-inverted",
-        "data-[state=indeterminate]:border-fg-on-interactive/50 data-[state=indeterminate]:bg-fg-interactive",
-        "data-[state=indeterminate]:text-fg-inverted",
-        "[&[data-state=checked]_path]:[box-shadow:0_0_0_5px_hsl(var(--fg-on-interactive)/50%)]",
+        "relative",
+        "peer h-4 w-4 shrink-0 rounded-sm",
+        "border border-primary shadow focus-visible:outline-none focus-visible:ring-1",
+        "focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
+        "",
       ],
       indicator: [
-        "flex relative items-center justify-center text-current",
+        "flex items-center justify-center text-current",
         "[&[data-state=indeterminate]_svg]:invisible",
         "[&[data-state=indeterminate]]:after:absolute",
         "[&[data-state=indeterminate]]:after:w-[65%] [&[data-state=indeterminate]]:after:h-[1.5px]",
@@ -33,8 +28,8 @@ const checkbox = tv(
     },
     variants: {
       variant: {
-        default: "bg-bg-input hover:bg-bg-input-hover",
-        component: "bg-bg-input-component hover:bg-bg-input-component-hover",
+        default:
+          "data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
       },
     },
     defaultVariants: {
@@ -69,6 +64,6 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName;
 
 export type { CheckboxProps };
 
-export { checkbox };
+  export { checkbox };
 
 export default Checkbox;

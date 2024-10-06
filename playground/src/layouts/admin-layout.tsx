@@ -144,11 +144,11 @@ const AdminLayout = (props: AdminLayoutProps) => {
   const [selectedKeys, setSelectedKeys] = useState<string[]>(["products"]);
 
   return (
-    <section>
+    <section className="flex">
       <Sidebar defaultSelected={selectedKeys}>
         <SidebarBrand>
           <AcmeLogo size="32px" />
-          <span className="text-2xs font-medium ml-2">Acme</span>
+          <span className="text-sm font-medium ml-2">Acme</span>
         </SidebarBrand>
         <div className="px-4">
           <Separator variant="dashed" />
@@ -289,9 +289,14 @@ const AdminLayout = (props: AdminLayoutProps) => {
         <AcmeMenu />
       </Sidebar>
 
-      <main>
-        <Outlet />
-      </main>
+      <article className="flex-1">
+        <header className="px-3 h-12 flex items-center border-b border-border">
+          Header
+        </header>
+        <main className="px-3">
+          <Outlet />
+        </main>
+      </article>
     </section>
   );
 };

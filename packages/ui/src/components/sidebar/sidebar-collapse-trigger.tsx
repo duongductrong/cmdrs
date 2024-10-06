@@ -16,7 +16,7 @@ const SidebarCollapseTrigger = forwardRef<
       <SidebarListItem
         hovered={false}
         className={cn(
-          "text-fg-muted text-xs [&[aria-selected=false]]:text-fg-muted",
+          "text-muted-foreground text-xs [&[aria-selected=false]]:text-muted-foreground",
           "[&[data-state=open]_svg[data-type=icon-open]]:hidden",
           "[&[data-state=open]_svg[data-type=icon-close]]:block",
           "[&[data-state=closed]_svg[data-type=icon-close]]:hidden",
@@ -27,11 +27,11 @@ const SidebarCollapseTrigger = forwardRef<
         <span role="presentation" aria-label="Toggle Icon" className="ml-auto">
           <MinusMiniIcon
             data-type="icon-close"
-            className="size-4 text-fg-muted"
+            className="size-4 text-muted-foreground"
           />
           <PlusMiniIcon
             data-type="icon-open"
-            className="size-4 text-fg-muted"
+            className="size-4 text-muted-foreground"
           />
         </span>
       </SidebarListItem>

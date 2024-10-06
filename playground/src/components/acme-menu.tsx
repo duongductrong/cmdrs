@@ -17,10 +17,13 @@ import {
   tw,
 } from "@cmdrs/ui";
 import React, { ElementRef, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 
 export interface AcmeMenuProps {}
 
 const AcmeMenu = (props: AcmeMenuProps) => {
+  const navigate = useNavigate();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -69,7 +72,9 @@ const AcmeMenu = (props: AcmeMenuProps) => {
           </DropdownMenuSubContent>
         </DropdownMenuSub>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Log out</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => navigate("/login")}>
+          Log out
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
@@ -93,8 +98,8 @@ const AcmeUser = React.forwardRef<
         className="size-8 border border-border p-px rounded-full"
       />
       <div className="flex flex-col gap-px">
-        <p className="text-2xs font-medium">Ludvig Rask</p>
-        <p className="text-2xs font-normal text-fg-subtle">
+        <p className="text-sm font-medium">Ludvig Rask</p>
+        <p className="text-sm font-normal text-muted-foreground">
           ludvig@medusajs.com
         </p>
       </div>

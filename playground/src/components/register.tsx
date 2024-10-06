@@ -19,16 +19,16 @@ const Register = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center py-6">
       <Card
-        className="flex flex-col gap-2 w-[400px] min-h-[561px] mx-auto mb-6 p-12"
+        className="flex flex-col gap-2 w-[440px] min-h-[561px] mx-auto mb-6 p-12"
         variant="section"
         bordered
       >
         <CardHeader className="text-center mb-4">
           <AcmeLogo className="mx-auto" />
-          <p className="font-semibold text-xl mb-2 text-fg-base mt-2">
+          <p className="font-semibold text-xl mb-2 text-foreground mt-2">
             Register account
           </p>
-          <p className="text-2xs text-fg-subtle font-normal">
+          <p className="text-sm text-muted-foreground font-normal">
             Register account to access the account area.
           </p>
         </CardHeader>
@@ -40,7 +40,7 @@ const Register = () => {
               gridTemplateColumns: `repeat(auto-fill, minmax(calc(50% - 16px), 1fr))`,
             }}
           >
-            <Label variant="subtle" className="text-2xs mb-2">
+            <Label variant="subtle" className="text-sm mb-2">
               First Name
               <Input
                 variant="default"
@@ -48,7 +48,7 @@ const Register = () => {
                 className="mt-2"
               />
             </Label>
-            <Label variant="subtle" className="text-2xs mb-2">
+            <Label variant="subtle" className="text-sm mb-2">
               First Name
               <Input
                 variant="default"
@@ -58,7 +58,7 @@ const Register = () => {
             </Label>
           </div>
 
-          <Label variant="subtle" className="text-2xs mb-2">
+          <Label variant="subtle" className="text-sm mb-2">
             Email
             <Input
               variant="default"
@@ -66,7 +66,7 @@ const Register = () => {
               className="mt-2"
             />
           </Label>
-          <Label variant="subtle" className="text-2xs">
+          <Label variant="subtle" className="text-sm">
             Password
             <Input
               variant="default"
@@ -76,7 +76,7 @@ const Register = () => {
             />
           </Label>
 
-          <Label variant="subtle" className="text-2xs">
+          <Label variant="subtle" className="text-sm">
             Bio
             <Textarea
               placeholder="Tell something about you"
@@ -86,7 +86,7 @@ const Register = () => {
             />
           </Label>
 
-          <Label variant="subtle" className="text-2xs">
+          <Label variant="subtle" className="text-sm">
             Website
             <InputGroup prefixSlot={"https://"} className="mt-2">
               <Input variant="default" placeholder="Enter your website" />
@@ -95,7 +95,7 @@ const Register = () => {
 
           <Label
             variant="subtle"
-            className="text-2xs flex items-center gap-2 mt-2"
+            className="text-sm flex items-center gap-2 mt-2"
           >
             <Checkbox defaultChecked="indeterminate" />I agree to the terms and
             conditions
@@ -103,7 +103,7 @@ const Register = () => {
 
           <Label
             variant="subtle"
-            className="text-2xs flex items-center gap-2 mt-2"
+            className="text-sm flex items-center gap-2 mt-2"
           >
             <Switch /> Enable collection of analytics data
           </Label>
@@ -114,7 +114,7 @@ const Register = () => {
         <Separator className="my-4" variant="dashed" />
 
         <CardFooter>
-          <p className="text-2xs text-fg-subtle font-normal text-center">
+          <p className="text-sm text-muted-foreground font-normal text-center">
             Your already have an account? -{" "}
             <Link to="/login" className="text-blue-500 cursor-pointer">
               Login

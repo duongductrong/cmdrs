@@ -53,7 +53,7 @@ const Login = () => {
             />
           </Label>
 
-          <Link to="/dashboard" className="w-full flex">
+          <Link to="/admin/dashboard" className="w-full flex">
             <Button className="mt-4 w-full">Continue</Button>
           </Link>
         </CardContent>

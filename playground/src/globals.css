@@ -4,87 +4,7 @@
 
 @layer base {
   :root {
-    --bg-base: 0 0% 100%; /** OK */
-    --bg-base-hover: 240 5% 96%;
-    --bg-subtle: 0 0% 98%; /** OK */
-    --bg-switch-off: 240 6% 90%;
-    --bg-switch-off-hover: 240 5% 84%;
-    /* --bg-component: 0 0% 98%; -> bg-card instead
-    --bg-component-hover: 240 5% 96%; */
-    --bg-input: 0 0% 98%;
-    --bg-input-hover: 240 5% 96%;
-    --bg-input-shadow: 0 1px 1px 0 hsl(var(--border) / 50%);
-    --bg-input-component: 0 0% 100%;
-    --bg-input-component-hover: 0 0% 98%;
-
-    --fg-base: 240 6% 10%; /** OK */
-    --fg-inverted: 0 0% 100%; /** OK */
-    --fg-muted: 240 5% 65%; /** OK */
-    --fg-subtle: 240 5% 34%; /** OK */
-    --fg-interactive: 217 91% 60%; /** OK */
-    --fg-on-interactive: 224 64% 33%;
-
-    /* Buttons */
-    --button-glossed: 240 0% 100%; /** OK */
-    --button-inverted: 240 6% 10%; /** OK */
-    --button-inverted-hover: 240 5% 26%; /** OK */
-    --button-inverted-pressed: 240 5% 34%; /** OK */
-    --button-neutral: 0 0% 100%; /** OK */
-    --button-neutral-hover: 240 5% 96%; /** OK */
-    --button-neutral-pressed: 240 6% 90%; /** OK */
-    --button-danger: 347 77% 50%; /** OK */
-    --button-danger-hover: 345 83% 41%; /** OK */
-    --button-danger-pressed: 343 80% 35%; /** OK */
-    --button-transparent: 0 0% 100%; /** OK */
-    --button-transparent-hover: 240 5% 96%; /** OK */
-    --button-transparent-pressed: 240 6% 90%; /** OK */
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-
-    --border: 0 0% 85%;
-
-    --section-shadow: 0px 16px 32px 0px hsla(0, 0%, 0%, 0.08),
-      0px 8px 16px 0px hsla(0, 0%, 0%, 0.08),
-      0px 0px 0px 1px hsla(0, 0%, 0%, 0.08),
-      0px 0px 0px 1.5px hsla(240, 6%, 90%, 0.6) inset,
-      0px 0px 0px 1px hsla(0, 0%, 100%, 1) inset;
-    --section-border: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.04),
-      0px 1px 2px -1px hsla(0, 0%, 0%, 0.08),
-      0px 0px 0px 1px hsla(0, 0%, 0%, 0.08);
-
-    --card: 0 0% 98%;
-    --card-hover: 240 5% 96%;
-    --card-foreground: 222.2 47.4% 11.2%;
-
-    --menu-border: 240 6% 90%;
-
-    --accordion-shadow-border: 0px 0px 0px 1px hsla(0, 0%, 0%, 0.08),
-      0px 1px 2px 0px hsla(0, 0%, 0%, 0.12);
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 217 91% 60%;
-
-    --radius: 0.5rem;
-
     --sidebar-width: 260px;
-    --sidebar-shadow-border: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.04),
-      0px 1px 2px -1px hsla(0, 0%, 0%, 0.08),
-      0px 0px 0px 1px hsla(0, 0%, 0%, 0.08);
 
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -114,95 +34,6 @@
   }
 
   .dark {
-    --bg-base: 240 4% 14%; /** OK */
-    --bg-base-hover: 240 4% 16%;
-    --bg-subtle: 240 6% 10%; /** OK */
-    --bg-switch-off: 240 5% 26%;
-    --bg-switch-off-hover: 240 5% 34%;
-    /* --bg-component: 240 4% 16%; -> bg-card instead
-    --bg-component-hover: 240 4% 17%; */
-    --bg-input: 230 7% 16%;
-    --bg-input-hover: 223 7% 19%;
-    --bg-input-offset-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
-    --bg-input-component: 240 4% 14%;
-    --bg-input-component-hover: 240 4% 16%;
-
-    --fg-base: 213 31% 91%; /** OK */
-    --fg-inverted: 240 4% 10%; /** OK */
-    --fg-muted: 240 4% 46%; /** OK */
-    --fg-subtle: 240 5% 65%; /** OK */
-    --fg-interactive: 213 94% 68%; /** OK */
-    --fg-on-interactive: 214 95 93%;
-
-    --button-glossed: 240 6% 10%; /** OK */
-    --button-inverted: 220 9% 94%; /** OK */
-    --button-inverted-hover: 0 0% 100%; /** OK */
-    --button-inverted-pressed: 220 9% 94%; /** OK */
-    --button-neutral: 230 7% 16%; /** OK */
-    --button-neutral-hover: 223 6% 22%; /** OK */
-    --button-neutral-pressed: 218 6% 25%; /** OK */
-    --button-danger: 343 80% 35%; /** OK */
-    --button-danger-hover: 345 83% 41%; /** OK */
-    --button-danger-pressed: 347 77% 50%; /** OK */
-    --button-transparent: 0 0% 100% / 0%; /** OK */
-    --button-transparent-hover: 230 7% 16%; /** OK */
-    --button-transparent-pressed: 223 7% 19%; /** OK */
-
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
-
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
-
-    --border: 240 2% 26%;
-
-    --section-shadow: 0px 8px 16px 0px hsla(0, 0%, 0%, 0.32),
-      0px 4px 8px 0px hsla(0, 0%, 0%, 0.32),
-      0px 0px 0px 1px hsla(0, 0%, 100%, 0.1),
-      0px -1px 0px 0px hsla(0, 0%, 100%, 0.04),
-      0px 0px 0px 1.5px hsla(0, 0%, 100%, 0.06) inset,
-      0px 0px 0px 1px hsla(240, 6%, 10%, 1) inset;
-    --section-border: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.32),
-      0px 1px 2px 0px hsla(0, 0%, 0%, 0.32),
-      0px 0px 0px 1px hsla(240, 4%, 16%, 1),
-      0px 0px 0px 1px hsla(0, 0%, 100%, 0.06),
-      0px -1px 0px 0px hsla(0, 0%, 100%, 0.06);
-
-    --card: 240 4% 14%;
-    --card: 240 4% 16%;
-    --card-hover: 240 4% 17%;
-    --card-foreground: 213 31% 91%;
-
-    --menu-border: 240 3% 23%;
-
-    --accordion-shadow-border: 0px 2px 2px 0px hsla(0, 0%, 0%, 0.24),
-      0px 0px 0px 1.5px hsla(240, 3%, 21%, 100%),
-      0px 0px 0px 1px hsla(240, 4%, 16%, 1),
-      0px 0px 0px 1px hsla(0, 0%, 100%, 0.06),
-      0px -1px 0px 0px hsla(0, 0%, 100%, 0.06);
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
-
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 213 94% 68%;
-
-    --radius: 0.5rem;
-
-    --sidebar-shadow-border: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.32),
-      0px 1px 2px 0px hsla(0, 0%, 0%, 0.32),
-      0px 0px 0px 1px hsla(240, 4%, 16%, 1),
-      0px 0px 0px 1px hsla(0, 0%, 100%, 0.06),
-      0px -1px 0px 0px hsla(0, 0%, 100%, 0.06);
-
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
@@ -230,16 +61,11 @@
   }
 }
 
-/* 0px 0px 0px 1px hsla(0, 0%, 0%, 0.08), 0px 1px 2px 0px hsla(0, 0%, 0%, 0.12); */
-
-/* 0px 2px 2px 0px hsla(0, 0%, 0%, 0.24), 0px 0px 1px 1.5px hsla(0, 0%, 0%, 0.24), 0px 0px 0px 1px hsla(240, 4%, 16%, 1), 0px 0px 0px 1px hsla(0, 0%, 100%, 0.06),0px -1px 0px 0px hsla(0, 0%, 100%, 0.06) */
-
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    /* @apply bg-bg-subtle text-foreground; */
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: "Inter", sans-serif;

@@ -586,7 +586,7 @@ export default function Dashboard() {
         </Card>
       </div>
       <div className="grid w-full flex-1 gap-6">
-        <Card className="max-w-xs" x-chunk="charts-01-chunk-5">
+        <Card className="max-w-full" x-chunk="charts-01-chunk-5">
           <CardContent className="flex gap-4 p-4">
             <div className="grid items-center gap-2">
               <div className="grid flex-1 auto-rows-min gap-0.5">
@@ -674,7 +674,7 @@ export default function Dashboard() {
             </ChartContainer>
           </CardContent>
         </Card>
-        <Card className="max-w-xs" x-chunk="charts-01-chunk-6">
+        <Card className="max-w-full" x-chunk="charts-01-chunk-6">
           <CardHeader className="p-4 pb-0">
             <CardTitle>Active Energy</CardTitle>
             <CardDescription>
@@ -755,7 +755,7 @@ export default function Dashboard() {
             </ChartContainer>
           </CardContent>
         </Card>
-        <Card className="max-w-xs" x-chunk="charts-01-chunk-7">
+        <Card className="max-w-full" x-chunk="charts-01-chunk-7">
           <CardHeader className="space-y-0 pb-0">
             <CardDescription>Time in Bed</CardDescription>
             <CardTitle className="flex items-baseline gap-1 text-4xl tabular-nums">

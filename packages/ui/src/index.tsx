@@ -61,6 +61,13 @@ import ChartContainer, {
   ChartTooltip,
   ChartTooltipContent,
 } from "./components/chart";
+import Breadcrumb from "./components/breadcrumb";
+import BreadcrumbList from "./components/breadcrumb/breadcrumb-list";
+import BreadcrumbItem from "./components/breadcrumb/breadcrumb-item";
+import BreadcrumbLink from "./components/breadcrumb/breadcrumb-link";
+import BreadcrumbPage from "./components/breadcrumb/breadcrumb-page";
+import BreadcrumbSeparator from "./components/breadcrumb/breadcrumb-separator";
+import BreadcrumbEllipsis from "./components/breadcrumb/breadcrumb-ellipsis";
 
 import { cn as tw } from "./lib/tw";
 
@@ -128,6 +135,13 @@ export {
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  BreadcrumbEllipsis,
 };
 
 export type { ButtonProps } from "./components/button";

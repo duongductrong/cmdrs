@@ -10,10 +10,15 @@ import {
   ShoppingCartIcon,
   SidebarLeftIcon,
   SidebarRightIcon,
-  UsersIcon,
+  UsersIcon
 } from "@cmdrs/icons";
 import {
   AppShell,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
   Button,
   Page,
   PageBody,
@@ -306,10 +311,23 @@ const AdminLayout = (props: AdminLayoutProps) => {
         <Page>
           <PageHeader>
             <SidebarToggleButton
+              className="mr-4"
               collapseIcon={<SidebarRightIcon className="size-4" />}
             >
               <SidebarLeftIcon className="size-4" />
             </SidebarToggleButton>
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/admin/dashboard">Dashboard</BreadcrumbLink>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+
             <div className="ml-auto flex items-center gap-x-1">
               <Button size="icon" variant="ghost">
                 <BellAlertIcon className="size-4 text-muted-foreground" />

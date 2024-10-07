@@ -1,6 +1,6 @@
 import { cn } from "@/lib/tw";
 import React, { ElementRef, forwardRef } from "react";
-import { useSidebarContext } from "./context";
+import { useAppShellContext } from "./context";
 import { sidebarListItem } from "./styles";
 import { VariantProps } from "tailwind-variants";
 
@@ -13,7 +13,7 @@ interface SidebarListItemProps
 
 const SidebarListItem = forwardRef<ElementRef<"div">, SidebarListItemProps>(
   ({ className, children, icon, value, hovered, ...props }, ref) => {
-    const { selectedKeys } = useSidebarContext();
+    const { selectedKeys } = useAppShellContext();
 
     return (
       <div

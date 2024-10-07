@@ -16,18 +16,20 @@ import {
   DropdownMenuTrigger,
   tw,
 } from "@cmdrs/ui";
-import React, { ElementRef, useMemo } from "react";
+import React, { ElementRef, ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 
-export interface AcmeMenuProps {}
+export interface AcmeMenuProps {
+  children?: ReactNode;
+}
 
-const AcmeMenu = (props: AcmeMenuProps) => {
+const AcmeMenu = ({ children }: AcmeMenuProps) => {
   const navigate = useNavigate();
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <AcmeUser />
+        {children || <AcmeUser />}
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <AcmeUser className="px-2" />
@@ -80,7 +82,7 @@ const AcmeMenu = (props: AcmeMenuProps) => {
   );
 };
 
-const AcmeUser = React.forwardRef<
+export const AcmeUser = React.forwardRef<
   ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => {
@@ -88,14 +90,14 @@ const AcmeUser = React.forwardRef<
     <div
       {...props}
       className={tw(
-        "flex items-center gap-2 px-4 py-1 mb-2 cursor-pointer",
+        "flex items-center gap-2 px-4 py-1 mb-2 cursor-pointer shrink-0",
         className
       )}
       ref={ref}
     >
       <img
         src="https://avatars.githubusercontent.com/u/39333905?v=4"
-        className="size-8 border border-border p-px rounded-full"
+        className="size-8 border border-border p-px rounded-full shrink-0"
       />
       <div className="flex flex-col gap-px">
         <p className="text-sm font-medium">Ludvig Rask</p>

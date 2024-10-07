@@ -22,18 +22,24 @@ import AlertDescription from "./components/alert/alert-description";
 import AlertTitle from "./components/alert/alert-title";
 import AlertClose from "./components/alert/alert-close";
 import AlertContent from "./components/alert/alert-content";
-import Sidebar from "./components/sidebar";
-import SidebarList from "./components/sidebar/sidebar-list";
-import SidebarListItem from "./components/sidebar/sidebar-list-item";
-import SidebarBrand from "./components/sidebar/sidebar-brand";
-import SidebarCollapse from "./components/sidebar/sidebar-collapse";
-import SidebarCollapseTrigger from "./components/sidebar/sidebar-collapse-trigger";
-import SidebarCollapseContent from "./components/sidebar/sidebar-collapse-content";
-import SidebarSeparator from "./components/sidebar/sidebar-separator";
-import SidebarSub from "./components/sidebar/sidebar-sub";
-import SidebarSubContent from "./components/sidebar/sidebar-sub-content";
-import SidebarSubTrigger from "./components/sidebar/sidebar-sub-trigger";
-import SidebarSubBack from "./components/sidebar/sidebar-sub-back";
+import { AppShellContext } from "./components/layout/context";
+import AppShell from "./components/layout/app-shell";
+import PageHeader from "./components/layout/page-header";
+import Page from "./components/layout/page";
+import PageBody from "./components/layout/page-body";
+import Sidebar from "./components/layout";
+import SidebarList from "./components/layout/sidebar-list";
+import SidebarListItem from "./components/layout/sidebar-list-item";
+import SidebarBrand from "./components/layout/sidebar-brand";
+import SidebarCollapse from "./components/layout/sidebar-collapse";
+import SidebarCollapseTrigger from "./components/layout/sidebar-collapse-trigger";
+import SidebarCollapseContent from "./components/layout/sidebar-collapse-content";
+import SidebarSeparator from "./components/layout/sidebar-separator";
+import SidebarSub from "./components/layout/sidebar-sub";
+import SidebarSubContent from "./components/layout/sidebar-sub-content";
+import SidebarSubTrigger from "./components/layout/sidebar-sub-trigger";
+import SidebarSubBack from "./components/layout/sidebar-sub-back";
+import SidebarToggleButton from "./components/layout/sidebar-toggle-button";
 import DropdownMenu from "./components/dropdown-menu";
 import DropdownMenuCheckboxItem from "./components/dropdown-menu/dropdown-menu-checkbox";
 import DropdownMenuContent from "./components/dropdown-menu/dropdown-menu-content";
@@ -84,6 +90,11 @@ export {
   AlertTitle,
   AlertClose,
   AlertContent,
+  AppShell,
+  AppShellContext,
+  Page,
+  PageBody,
+  PageHeader,
   Sidebar,
   SidebarList,
   SidebarListItem,
@@ -96,6 +107,7 @@ export {
   SidebarSubContent,
   SidebarSubTrigger,
   SidebarSubBack,
+  SidebarToggleButton,
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
@@ -141,18 +153,20 @@ export type { AlertDescriptionProps } from "./components/alert/alert-description
 export type { AlertTitleProps } from "./components/alert/alert-title";
 export type { AlertCloseProps } from "./components/alert/alert-close";
 export type { AlertContentProps } from "./components/alert/alert-content";
-export type { SidebarProps } from "./components/sidebar";
-export type { SidebarListProps } from "./components/sidebar/sidebar-list";
-export type { SidebarListItemProps } from "./components/sidebar/sidebar-list-item";
-export type { SidebarBrandProps } from "./components/sidebar/sidebar-brand";
-export type { SidebarCollapseProps } from "./components/sidebar/sidebar-collapse";
-export type { SidebarCollapseTriggerProps } from "./components/sidebar/sidebar-collapse-trigger";
-export type { SidebarCollapseContentProps } from "./components/sidebar/sidebar-collapse-content";
-export type { SidebarSeparatorProps } from "./components/sidebar/sidebar-separator";
-export type { SidebarSubProps } from "./components/sidebar/sidebar-sub";
-export type { SidebarSubContentProps } from "./components/sidebar/sidebar-sub-content";
-export type { SidebarSubTriggerProps } from "./components/sidebar/sidebar-sub-trigger";
-export type { SidebarSubBackProps } from "./components/sidebar/sidebar-sub-back";
+export type { AppShellContextState } from "./components/layout/context";
+export type { SidebarProps } from "./components/layout";
+export type { SidebarListProps } from "./components/layout/sidebar-list";
+export type { SidebarListItemProps } from "./components/layout/sidebar-list-item";
+export type { SidebarBrandProps } from "./components/layout/sidebar-brand";
+export type { SidebarCollapseProps } from "./components/layout/sidebar-collapse";
+export type { SidebarCollapseTriggerProps } from "./components/layout/sidebar-collapse-trigger";
+export type { SidebarCollapseContentProps } from "./components/layout/sidebar-collapse-content";
+export type { SidebarSeparatorProps } from "./components/layout/sidebar-separator";
+export type { SidebarSubProps } from "./components/layout/sidebar-sub";
+export type { SidebarSubContentProps } from "./components/layout/sidebar-sub-content";
+export type { SidebarSubTriggerProps } from "./components/layout/sidebar-sub-trigger";
+export type { SidebarSubBackProps } from "./components/layout/sidebar-sub-back";
+export type { SidebarToggleButtonProps } from "./components/layout/sidebar-toggle-button";
 export type { DropdownMenuProps } from "./components/dropdown-menu";
 export type { DropdownMenuCheckboxItemProps } from "./components/dropdown-menu/dropdown-menu-checkbox";
 export type { DropdownMenuContentProps } from "./components/dropdown-menu/dropdown-menu-content";
@@ -179,6 +193,6 @@ export { switchInput } from "./components/switch";
 export { inputGroup } from "./components/input-group";
 export { accordion } from "./components/accordion";
 export { alert } from "./components/alert";
-export { sidebar } from "./components/sidebar/styles";
+export { sidebar } from "./components/layout/styles";
 
 export { tw };

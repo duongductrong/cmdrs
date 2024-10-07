@@ -7,5 +7,11 @@ export default defineConfig({
   splitting: true,
   sourcemap: true,
   clean: true,
-  external: ["react", "react-dom", "tailwindcss", "recharts"],
+  external: [
+    "react",
+    "react-dom",
+    "tailwindcss",
+    "recharts",
+    "@medusajs/icons",
+  ],
 });

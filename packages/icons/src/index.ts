@@ -23,7 +23,9 @@ import BuildingTaxIcon from "./svgrs/building-tax-icon";
 import CircleDottedLineIcon from "./svgrs/circle-dotted-line-icon";
 import MapPinIcon from "./svgrs/map-pin-icon";
 import ComponentIcon from "./svgrs/component-icon";
-
+import SidebarLeftIcon from "./svgrs/sidebar-left-icon";
+import SidebarRightIcon from "./svgrs/sidebar-right-icon";
+import BellAlertIcon from "./svgrs/bell-alert-icon";
 export {
   CheckMiniIcon,
   EyeIcon,
@@ -50,6 +52,9 @@ export {
   CircleDottedLineIcon,
   MapPinIcon,
   ComponentIcon,
+  SidebarLeftIcon,
+  SidebarRightIcon,
+  BellAlertIcon,
 };
 
 export default {};

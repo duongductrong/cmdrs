@@ -123,6 +123,9 @@ importers:
       '@cmdrs/ui':
         specifier: workspace:*
         version: link:../packages/ui
+      '@medusajs/icons':
+        specifier: ^1.2.2
+        version: 1.2.2(react@18.3.1)
       '@types/react':
         specifier: ^18.3.10
         version: 18.3.10
@@ -583,6 +586,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@medusajs/icons@1.2.2':
+    resolution: {integrity: sha512-yCaEvCJg1GqbJ8eySqe+y3zS8tiE0cK/XNOsgmCHZ3dsu8i6lKvrsGzPVdjAtKlUJ9F2CnBO8dm4oXrg5w+6CA==}
+    peerDependencies:
+      react: ^16.x || ^17.x || ^18.x
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2686,6 +2694,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@medusajs/icons@1.2.2(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

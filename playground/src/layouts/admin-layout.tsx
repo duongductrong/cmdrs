@@ -1,5 +1,6 @@
 import AcmeMenu from "@/components/acme-menu";
 import AcmeLogo from "@/components/logo";
+import SpotlightSearch from "@/components/spotlight-search";
 import {
   BellAlertIcon,
   BuildingsIcon,
@@ -20,14 +21,6 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
   Button,
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
   Page,
   PageBody,
   PageHeader,
@@ -44,9 +37,8 @@ import {
   SidebarSubBack,
   SidebarSubContent,
   SidebarSubTrigger,
-  SidebarToggleButton
+  SidebarToggleButton,
 } from "@cmdrs/ui";
-import { CalendarIcon, RocketIcon } from "lucide-react";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
@@ -348,57 +340,17 @@ const AdminLayout = (props: AdminLayoutProps) => {
               <Button size="icon" variant="ghost">
                 <BellAlertIcon className="size-4 text-muted-foreground" />
               </Button>
-              <Button
-                size="icon"
-                variant="ghost"
-                onClick={() => setOpen((prev) => !prev)}
-              >
-                <MagnifyingGlassIcon className="size-4 shrink-0 text-muted-foreground" />
-              </Button>
+              <SpotlightSearch>
+                <Button size="icon" variant="ghost">
+                  <MagnifyingGlassIcon className="size-4 shrink-0 text-muted-foreground" />
+                </Button>
+              </SpotlightSearch>
               <AcmeMenu>
                 <img
                   src="https://avatars.githubusercontent.com/u/39333905?v=4"
                   className="size-8 border border-border p-px rounded-full cursor-pointer"
                 />
               </AcmeMenu>
-              <CommandDialog open={open} onOpenChange={setOpen}>
-                <CommandInput placeholder="Type a command or search..." />
-                <CommandList>
-                  <CommandEmpty>No results found.</CommandEmpty>
-                  <CommandGroup heading="Suggestions">
-                    <CommandItem>
-                      <CalendarIcon className="mr-2 h-4 w-4" />
-                      <span>Calendar</span>
-                    </CommandItem>
-                    <CommandItem>
-                      {/* <FaceIcon className="mr-2 h-4 w-4" /> */}
-                      <span>Search Emoji</span>
-                    </CommandItem>
-                    <CommandItem>
-                      <RocketIcon className="mr-2 h-4 w-4" />
-                      <span>Launch</span>
-                    </CommandItem>
-                  </CommandGroup>
-                  <CommandSeparator />
-                  <CommandGroup heading="Settings">
-                    <CommandItem>
-                      {/* <PersonIcon className="mr-2 h-4 w-4" /> */}
-                      <span>Profile</span>
-                      <CommandShortcut>⌘P</CommandShortcut>
-                    </CommandItem>
-                    <CommandItem>
-                      {/* <EnvelopeClosedIcon className="mr-2 h-4 w-4" /> */}
-                      <span>Mail</span>
-                      <CommandShortcut>⌘B</CommandShortcut>
-                    </CommandItem>
-                    <CommandItem>
-                      {/* <GearIcon className="mr-2 h-4 w-4" /> */}
-                      <span>Settings</span>
-                      <CommandShortcut>⌘S</CommandShortcut>
-                    </CommandItem>
-                  </CommandGroup>
-                </CommandList>
-              </CommandDialog>
             </div>
           </PageHeader>
           <PageBody>

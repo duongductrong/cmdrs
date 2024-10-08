@@ -40,7 +40,7 @@ import SidebarSubContent from "./components/layout/sidebar-sub-content";
 import SidebarSubTrigger from "./components/layout/sidebar-sub-trigger";
 import SidebarSubBack from "./components/layout/sidebar-sub-back";
 import SidebarToggleButton from "./components/layout/sidebar-toggle-button";
-import DropdownMenu from "./components/dropdown-menu";
+import DropdownMenu from "./components/dropdown-menu/dropdown-menu";
 import DropdownMenuCheckboxItem from "./components/dropdown-menu/dropdown-menu-checkbox";
 import DropdownMenuContent from "./components/dropdown-menu/dropdown-menu-content";
 import DropdownMenuGroup from "./components/dropdown-menu/dropdown-menu-group";
@@ -61,13 +61,38 @@ import ChartContainer, {
   ChartTooltip,
   ChartTooltipContent,
 } from "./components/chart";
-import Breadcrumb from "./components/breadcrumb";
+import Breadcrumb from "./components/breadcrumb/breadcrumb";
 import BreadcrumbList from "./components/breadcrumb/breadcrumb-list";
 import BreadcrumbItem from "./components/breadcrumb/breadcrumb-item";
 import BreadcrumbLink from "./components/breadcrumb/breadcrumb-link";
 import BreadcrumbPage from "./components/breadcrumb/breadcrumb-page";
 import BreadcrumbSeparator from "./components/breadcrumb/breadcrumb-separator";
 import BreadcrumbEllipsis from "./components/breadcrumb/breadcrumb-ellipsis";
+import ScrollBar from "./components/scroll-area/scroll-bar";
+import ScrollArea from "./components/scroll-area/scroll-area";
+import Collapsible from "./components/collapsible/collapsible";
+import CollapsibleContent from "./components/collapsible/collapsible-content";
+import CollapsibleTrigger from "./components/collapsible/collapsible-trigger";
+import Command from "./components/command/command";
+import CommandDialog from "./components/command/command-dialog";
+import CommandGroup from "./components/command/command-group";
+import CommandInput from "./components/command/command-input";
+import CommandItem from "./components/command/command-item";
+import CommandList from "./components/command/command-list";
+import CommandSeparator from "./components/command/command-separator";
+import CommandShortcut from "./components/command/command-shortcut";
+import CommandEmpty from "./components/command/command-empty";
+import Dialog from "./components/dialog/dialog";
+import DialogClose from "./components/dialog/dialog-close";
+import DialogOverlay from "./components/dialog/dialog-overlay";
+import DialogContent from "./components/dialog/dialog-content";
+import DialogHeader from "./components/dialog/dialog-header";
+import DialogFooter from "./components/dialog/dialog-footer";
+import DialogTitle from "./components/dialog/dialog-title";
+import DialogDescription from "./components/dialog/dialog-description";
+import DialogTrigger from "./components/dialog/dialog-trigger";
+import DialogPortal from "./components/dialog/dialog-portal";
+import Kbd from "./components/kbd";
 
 import { cn as tw } from "./lib/tw";
 
@@ -142,6 +167,31 @@ export {
   BreadcrumbPage,
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
+  ScrollArea,
+  ScrollBar,
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+  Command,
+  CommandDialog,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+  CommandEmpty,
+  Dialog,
+  DialogClose,
+  DialogOverlay,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogDescription,
+  DialogTrigger,
+  DialogPortal,
+  Kbd,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -196,6 +246,39 @@ export type { DropdownMenuSubTriggerProps } from "./components/dropdown-menu/dro
 export type { DropdownMenuTriggerProps } from "./components/dropdown-menu/dropdown-menu-trigger";
 export type { DropdownMenuIconProps } from "./components/dropdown-menu/dropdown-menu-icon";
 export type { ChartConfig, ChartContextProps } from "./components/chart";
+export type { BreadcrumbProps } from "./components/breadcrumb/breadcrumb";
+export type { BreadcrumbListProps } from "./components/breadcrumb/breadcrumb-list";
+export type { BreadcrumbItemProps } from "./components/breadcrumb/breadcrumb-item";
+export type { BreadcrumbLinkProps } from "./components/breadcrumb/breadcrumb-link";
+export type { BreadcrumbPageProps } from "./components/breadcrumb/breadcrumb-page";
+export type { BreadcrumbSeparatorProps } from "./components/breadcrumb/breadcrumb-separator";
+export type { BreadcrumbEllipsisProps } from "./components/breadcrumb/breadcrumb-ellipsis";
+export type { CollapsibleProps } from "./components/collapsible";
+export type { CollapsibleContentProps } from "./components/collapsible/collapsible-content";
+export type { CollapsibleTriggerProps } from "./components/collapsible/collapsible-trigger";
+export type { CommandProps } from "./components/command/command";
+export type { CommandDialogProps } from "./components/command/command-dialog";
+export type { CommandGroupProps } from "./components/command/command-group";
+export type { CommandInputProps } from "./components/command/command-input";
+export type { CommandItemProps } from "./components/command/command-item";
+export type { CommandListProps } from "./components/command/command-list";
+export type { CommandSeparatorProps } from "./components/command/command-separator";
+export type { CommandShortcutProps } from "./components/command/command-shortcut";
+export type { CommandEmptyProps } from "./components/command/command-empty";
+export type { DialogTriggerProps } from "./components/dialog/dialog-trigger";
+export type { DialogPortalProps } from "./components/dialog/dialog-portal";
+export type { DialogProps } from "./components/dialog/dialog";
+export type { DialogCloseProps } from "./components/dialog/dialog-close";
+export type { DialogOverlayProps } from "./components/dialog/dialog-overlay";
+export type { DialogContentProps } from "./components/dialog/dialog-content";
+export type { DialogHeaderProps } from "./components/dialog/dialog-header";
+export type { DialogFooterProps } from "./components/dialog/dialog-footer";
+export type { DialogTitleProps } from "./components/dialog/dialog-title";
+export type { DialogDescriptionProps } from "./components/dialog/dialog-description";
+export type { KbdProps } from "./components/kbd";
+export type { ScrollAreaProps } from "./components/scroll-area/scroll-area";
+export type { ScrollBarProps } from "./components/scroll-area/scroll-bar";
+
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";
 export { input } from "./components/input";

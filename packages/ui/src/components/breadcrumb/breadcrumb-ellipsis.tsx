@@ -3,10 +3,12 @@ import * as React from "react";
 
 import { cn } from "@/lib/tw";
 
+interface BreadcrumbEllipsisProps extends React.ComponentProps<"span"> {}
+
 const BreadcrumbEllipsis = ({
   className,
   ...props
-}: React.ComponentProps<"span">) => (
+}: BreadcrumbEllipsisProps) => (
   <span
     role="presentation"
     aria-hidden="true"
@@ -18,4 +20,7 @@ const BreadcrumbEllipsis = ({
   </span>
 );
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
+
+export type { BreadcrumbEllipsisProps };
+
 export default BreadcrumbEllipsis;

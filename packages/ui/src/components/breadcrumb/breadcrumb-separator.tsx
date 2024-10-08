@@ -4,11 +4,14 @@ import * as React from "react";
 import { cn } from "@/lib/tw";
 import { TriangleRightMiniIcon } from "@cmdrs/icons";
 
+interface BreadcrumbSeparatorProps
+  extends React.ComponentPropsWithoutRef<"li"> {}
+
 const BreadcrumbSeparator = ({
   children,
   className,
   ...props
-}: React.ComponentProps<"li">) => (
+}: BreadcrumbSeparatorProps) => (
   <li
     role="presentation"
     aria-hidden="true"
@@ -19,5 +22,7 @@ const BreadcrumbSeparator = ({
   </li>
 );
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
+
+export type { BreadcrumbSeparatorProps };
 
 export default BreadcrumbSeparator;

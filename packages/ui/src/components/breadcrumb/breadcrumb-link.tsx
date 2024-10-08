@@ -4,22 +4,25 @@ import { Slot } from "@radix-ui/react-slot";
 
 import { cn } from "@/lib/tw";
 
-const BreadcrumbLink = React.forwardRef<
-  HTMLAnchorElement,
-  React.ComponentPropsWithoutRef<"a"> & {
-    asChild?: boolean;
-  }
->(({ asChild, className, ...props }, ref) => {
-  const Comp = asChild ? Slot : "a";
+interface BreadcrumbLinkProps extends React.ComponentPropsWithoutRef<"a"> {
+  asChild?: boolean;
+}
 
-  return (
-    <Comp
-      ref={ref}
-      className={cn("transition-colors hover:text-foreground", className)}
-      {...props}
-    />
-  );
-});
+const BreadcrumbLink = React.forwardRef<HTMLAnchorElement, BreadcrumbLinkProps>(
+  ({ asChild, className, ...props }, ref) => {
+    const Comp = asChild ? Slot : "a";
+
+    return (
+      <Comp
+        ref={ref}
+        className={cn("transition-colors hover:text-foreground", className)}
+        {...props}
+      />
+    );
+  }
+);
 BreadcrumbLink.displayName = "BreadcrumbLink";
+
+export type { BreadcrumbLinkProps };
 
 export default BreadcrumbLink;

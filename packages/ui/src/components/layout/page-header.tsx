@@ -10,7 +10,7 @@ const PageHeader = forwardRef<ElementRef<"header">, PageHeaderProps>(
         {...props}
         ref={ref}
         className={cn(
-          "sticky top-0 z-50 px-3 h-12 flex items-center border-b border-border bg-background",
+          "sticky top-0 z-50 px-4 h-12 flex items-center border-b border-border bg-background",
           className
         )}
       />

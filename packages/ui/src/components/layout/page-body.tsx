@@ -5,7 +5,7 @@ interface PageBodyProps extends React.ComponentPropsWithoutRef<"main"> {}
 
 const PageBody = forwardRef<ElementRef<"main">, PageBodyProps>(
   ({ className, ...props }, ref) => {
-    return <main {...props} ref={ref} className={cn("p-3", className)} />;
+    return <main {...props} ref={ref} className={cn("p-4", className)} />;
   }
 );
 

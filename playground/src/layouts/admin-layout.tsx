@@ -10,7 +10,7 @@ import {
   ShoppingCartIcon,
   SidebarLeftIcon,
   SidebarRightIcon,
-  UsersIcon
+  UsersIcon,
 } from "@cmdrs/icons";
 import {
   AppShell,
@@ -20,6 +20,14 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
   Button,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
   Page,
   PageBody,
   PageHeader,
@@ -36,8 +44,9 @@ import {
   SidebarSubBack,
   SidebarSubContent,
   SidebarSubTrigger,
-  SidebarToggleButton,
+  SidebarToggleButton
 } from "@cmdrs/ui";
+import { CalendarIcon, RocketIcon } from "lucide-react";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
@@ -156,6 +165,7 @@ export interface AdminLayoutProps {}
 
 const AdminLayout = (props: AdminLayoutProps) => {
   const [selectedKeys, setSelectedKeys] = useState<string[]>(["products"]);
+  const [open, setOpen] = useState(false);
 
   return (
     <AppShell>
@@ -225,17 +235,17 @@ const AdminLayout = (props: AdminLayoutProps) => {
                             <SidebarListItem
                               icon={<CurrencyDollarIcon className="size-4" />}
                             >
-                              Sample 1
+                              Accounts
                             </SidebarListItem>
                             <SidebarListItem
                               icon={<CurrencyDollarIcon className="size-4" />}
                             >
-                              Sample 2
+                              Policy
                             </SidebarListItem>
                             <SidebarListItem
                               icon={<CurrencyDollarIcon className="size-4" />}
                             >
-                              Sample 3
+                              Billings
                             </SidebarListItem>
                           </SidebarCollapseContent>
                         </SidebarCollapse>
@@ -248,17 +258,21 @@ const AdminLayout = (props: AdminLayoutProps) => {
                             <SidebarListItem
                               icon={<CurrencyDollarIcon className="size-4" />}
                             >
-                              Sample 4
+                              API Keys
                             </SidebarListItem>
                             <SidebarSub>
-                              <SidebarSubTrigger label="Sample 5" asChild>
+                              <SidebarSubTrigger label="Developers" asChild>
                                 <SidebarListItem
                                   icon={<CogSixToothIcon className="size-4" />}
                                 >
-                                  Sample 5
+                                  Developers
                                 </SidebarListItem>
                               </SidebarSubTrigger>
                               <SidebarSubContent>
+                                <SidebarSubBack />
+                                <div className="px-4">
+                                  <Separator variant="dashed" />
+                                </div>
                                 <SidebarList type="multiple">
                                   <SidebarListItem
                                     icon={
@@ -323,7 +337,9 @@ const AdminLayout = (props: AdminLayoutProps) => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="/admin/dashboard">Dashboard</BreadcrumbLink>
+                  <BreadcrumbLink href="/admin/dashboard">
+                    Dashboard
+                  </BreadcrumbLink>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -332,8 +348,12 @@ const AdminLayout = (props: AdminLayoutProps) => {
               <Button size="icon" variant="ghost">
                 <BellAlertIcon className="size-4 text-muted-foreground" />
               </Button>
-              <Button size="icon" variant="ghost">
-                <MagnifyingGlassIcon className="size-4 text-muted-foreground" />
+              <Button
+                size="icon"
+                variant="ghost"
+                onClick={() => setOpen((prev) => !prev)}
+              >
+                <MagnifyingGlassIcon className="size-4 shrink-0 text-muted-foreground" />
               </Button>
               <AcmeMenu>
                 <img
@@ -341,6 +361,44 @@ const AdminLayout = (props: AdminLayoutProps) => {
                   className="size-8 border border-border p-px rounded-full cursor-pointer"
                 />
               </AcmeMenu>
+              <CommandDialog open={open} onOpenChange={setOpen}>
+                <CommandInput placeholder="Type a command or search..." />
+                <CommandList>
+                  <CommandEmpty>No results found.</CommandEmpty>
+                  <CommandGroup heading="Suggestions">
+                    <CommandItem>
+                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      <span>Calendar</span>
+                    </CommandItem>
+                    <CommandItem>
+                      {/* <FaceIcon className="mr-2 h-4 w-4" /> */}
+                      <span>Search Emoji</span>
+                    </CommandItem>
+                    <CommandItem>
+                      <RocketIcon className="mr-2 h-4 w-4" />
+                      <span>Launch</span>
+                    </CommandItem>
+                  </CommandGroup>
+                  <CommandSeparator />
+                  <CommandGroup heading="Settings">
+                    <CommandItem>
+                      {/* <PersonIcon className="mr-2 h-4 w-4" /> */}
+                      <span>Profile</span>
+                      <CommandShortcut>⌘P</CommandShortcut>
+                    </CommandItem>
+                    <CommandItem>
+                      {/* <EnvelopeClosedIcon className="mr-2 h-4 w-4" /> */}
+                      <span>Mail</span>
+                      <CommandShortcut>⌘B</CommandShortcut>
+                    </CommandItem>
+                    <CommandItem>
+                      {/* <GearIcon className="mr-2 h-4 w-4" /> */}
+                      <span>Settings</span>
+                      <CommandShortcut>⌘S</CommandShortcut>
+                    </CommandItem>
+                  </CommandGroup>
+                </CommandList>
+              </CommandDialog>
             </div>
           </PageHeader>
           <PageBody>

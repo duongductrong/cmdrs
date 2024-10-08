@@ -17,7 +17,7 @@ const switchInput = tv(
         "disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
       ],
       thumb: [
-        "pointer-events-none block size-3.5 rounded-full bg-background",
+        "pointer-events-none block size-4 rounded-full bg-background",
         "shadow-lg ring-0 transition-transform",
         "data-[state=checked]:translate-x-[0.9375rem]",
         "data-[state=unchecked]:translate-x-px",

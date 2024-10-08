@@ -6,9 +6,9 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut
+  CommandShortcut,
+  Slot,
 } from "@cmdrs/ui";
-import { Slot } from "@radix-ui/react-slot";
 import {
   CalendarIcon,
   GitCompareArrowsIcon,

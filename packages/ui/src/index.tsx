@@ -93,6 +93,7 @@ import DialogDescription from "./components/dialog/dialog-description";
 import DialogTrigger from "./components/dialog/dialog-trigger";
 import DialogPortal from "./components/dialog/dialog-portal";
 import Kbd from "./components/kbd";
+import { Slot, Slottable, Root as SlotRoot } from "@radix-ui/react-slot";
 
 import { cn as tw } from "./lib/tw";
 
@@ -192,6 +193,9 @@ export {
   DialogTrigger,
   DialogPortal,
   Kbd,
+  Slot,
+  Slottable,
+  SlotRoot,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -278,6 +282,7 @@ export type { DialogDescriptionProps } from "./components/dialog/dialog-descript
 export type { KbdProps } from "./components/kbd";
 export type { ScrollAreaProps } from "./components/scroll-area/scroll-area";
 export type { ScrollBarProps } from "./components/scroll-area/scroll-bar";
+export type { SlotProps, } from "@radix-ui/react-slot";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";

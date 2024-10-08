@@ -34,7 +34,7 @@ import {
 
 export const description = "A collection of health charts.";
 
-export default function Dashboard() {
+export default function CustomersView() {
   return (
     <div className="chart-wrapper mx-auto flex flex-col flex-wrap items-start justify-center gap-4 sm:flex-row">
       <div className="grid w-full gap-4 sm:grid-cols-2 lg:max-w-[22rem] lg:grid-cols-1 xl:max-w-[25rem]">

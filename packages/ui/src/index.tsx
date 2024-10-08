@@ -94,6 +94,11 @@ import DialogTrigger from "./components/dialog/dialog-trigger";
 import DialogPortal from "./components/dialog/dialog-portal";
 import Kbd from "./components/kbd";
 import { Slot, Slottable, SlotRoot } from "./components/slot";
+import Calendar from "./components/calendar";
+import Popover from "./components/popover/popover";
+import PopoverAnchor from "./components/popover/popover-anchor";
+import PopoverContent from "./components/popover/popover-content";
+import PopoverTrigger from "./components/popover/popover-trigger";
 
 import { cn as tw } from "./lib/tw";
 
@@ -196,6 +201,11 @@ export {
   Slot,
   Slottable,
   SlotRoot,
+  Calendar,
+  Popover,
+  PopoverAnchor,
+  PopoverContent,
+  PopoverTrigger,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -283,6 +293,11 @@ export type { KbdProps } from "./components/kbd";
 export type { ScrollAreaProps } from "./components/scroll-area/scroll-area";
 export type { ScrollBarProps } from "./components/scroll-area/scroll-bar";
 export type { SlotProps } from "./components/slot";
+export type { CalendarProps } from "./components/calendar";
+export type { PopoverProps } from "./components/popover/popover";
+export type { PopoverAnchorProps } from "./components/popover/popover-anchor";
+export type { PopoverContentProps } from "./components/popover/popover-content";
+export type { PopoverTriggerProps } from "./components/popover/popover-trigger";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";

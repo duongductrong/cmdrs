@@ -31,6 +31,7 @@ export default function CustomersView() {
     { accessorKey: "name", header: "Name" },
     { accessorKey: "email", header: "Email", size: 300 },
     { accessorKey: "phone", header: "Phone" },
+    { accessorKey: "status", header: "Status" },
     {
       accessorKey: "createdAt",
       header: "createdAt",
@@ -124,6 +125,7 @@ export default function CustomersView() {
             email: `customer${i + 1}@example.com`,
             phone: `123-456-789${i % 10}`,
             createdAt: new Date(),
+            status: i % 2 === 0 ? "active" : "inactive",
           })),
         ]}
         rowSelection={rowsSelection}

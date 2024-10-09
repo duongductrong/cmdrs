@@ -70,7 +70,7 @@ function DataTableFacetedFilter<TData, TValue>({
           {label}
           {selectedValues?.size > 0 && (
             <>
-              <Separator orientation="vertical" className="mx-2 h-4" />
+              <Separator orientation="vertical" className="mx-2 max-w-[0.625rem] h-4" />
               <Badge
                 variant="secondary"
                 className="rounded-sm px-1 font-normal lg:hidden"

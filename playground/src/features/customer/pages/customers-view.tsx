@@ -1,6 +1,19 @@
 "use client";
 
+import { PlusMiniIcon } from "@cmdrs/icons";
 import {
+  ButtonGroup,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTrigger,
+  Input,
+  Label,
+} from "@cmdrs/ui";
+import { Dialog } from "@cmdrs/ui";
+import {
+  Button,
   ColumnDef,
   DataTable,
   DataTableDateRangeFilter,
@@ -30,7 +43,52 @@ export default function CustomersView() {
   const { rowsSelection, setRowsSelection } = useDataTableRowsSelection();
 
   return (
-    <div>
+    <section>
+      <div className="mb-4 flex items-center">
+        <h2 className="text-2xl font-medium">Customers</h2>
+        <div className="ml-auto">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button>
+                Add Customer <PlusMiniIcon className="size-4 text-black ml-2" />
+              </Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>Add Customer</DialogHeader>
+              {/* <DialogDescription>
+                Add a new customer to the system.
+              </DialogDescription> */}
+              <div className="grid grid-cols-2 gap-4">
+                <Label>
+                  First name
+                  <Input placeholder="First name" className="mt-4" />
+                </Label>
+                <Label>
+                  Last name
+                  <Input placeholder="Last name" className="mt-4" />
+                </Label>
+              </div>
+              <Label>
+                Phone
+                <Input placeholder="Email" className="mt-4" />
+              </Label>
+              <Label>
+                Email
+                <Input placeholder="Email" className="mt-4" />
+              </Label>
+
+              <div className="flex items-center gap-4 justify-end">
+                <DialogClose asChild>
+                  <Button variant="ghost">Cancel</Button>
+                </DialogClose>
+                <DialogClose asChild>
+                  <Button variant="default">Add</Button>
+                </DialogClose>
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
+      </div>
       <DataTable
         header={
           <DataTableToolbar>
@@ -52,7 +110,10 @@ export default function CustomersView() {
                 ]}
               />
 
-              <DataTableDateRangeFilter column="createdAt" />
+              <DataTableDateRangeFilter
+                column="createdAt"
+                placeholder="Select created date"
+              />
             </DataTableStacked>
           </DataTableToolbar>
         }
@@ -69,6 +130,6 @@ export default function CustomersView() {
         onRowSelectionChange={setRowsSelection}
         rowSelectionEnable
       />
-    </div>
+    </section>
   );
 }

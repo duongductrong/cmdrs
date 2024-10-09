@@ -69,7 +69,7 @@ export const page = tv({
   variants: {
     collapse: {
       true: "ml-[var(--sidebar-width-mini)]",
-      false: "ml-[var(--sidebar-width)]",
+      false: "ml-[var(--sidebar-width)] overflow-auto",
     },
   },
 });

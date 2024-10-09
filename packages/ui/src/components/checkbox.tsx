@@ -13,12 +13,11 @@ const checkbox = tv(
       base: [
         "relative",
         "peer h-4 w-4 shrink-0 rounded-sm",
-        "border border-primary shadow focus-visible:outline-none focus-visible:ring-1",
+        "border border-muted-foreground hover:bg-input focus-visible:outline-none focus-visible:ring-1",
         "focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
-        "",
       ],
       indicator: [
-        "flex items-center justify-center text-current",
+        "flex items-center justify-center",
         "[&[data-state=indeterminate]_svg]:invisible",
         "[&[data-state=indeterminate]]:after:absolute",
         "[&[data-state=indeterminate]]:after:w-[65%] [&[data-state=indeterminate]]:after:h-[1.5px]",
@@ -28,8 +27,15 @@ const checkbox = tv(
     },
     variants: {
       variant: {
-        default:
-          "data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+        default: {
+          base: [
+            "data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+            "data-[state=checked]:border-primary",
+            "[&[data-state=indeterminate]]:bg-primary",
+            "[&[data-state=indeterminate]]:border-primary",
+          ],
+          indicator: "text-primary-foreground"
+        },
       },
     },
     defaultVariants: {
@@ -64,6 +70,6 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName;
 
 export type { CheckboxProps };
 
-  export { checkbox };
+export { checkbox };
 
 export default Checkbox;

@@ -12,7 +12,7 @@ const SidebarLeftIcon = React.forwardRef<
     {...props}
     ref={ref}
   >
-    <g clip-path="url(#clip0_4024_6727)">
+    <g clipPath="url(#clip0_4024_6727)">
       <path
         d="M12.4165 1.75H3.0832C2.10136 1.75 1.30542 2.5738 1.30542 3.59V11.41C1.30542 12.4262 2.10136 13.25 3.0832 13.25H12.4165C13.3984 13.25 14.1943 12.4262 14.1943 11.41V3.59C14.1943 2.5738 13.3984 1.75 12.4165 1.75Z"
         stroke="currentColor"

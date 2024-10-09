@@ -12,7 +12,7 @@ const CreditCardIcon = React.forwardRef<
     {...props}
     ref={ref}
   >
-    <g clip-path="url(#clip0_716_678)">
+    <g clipPath="url(#clip0_716_678)">
       <path
         d="M1.30542 5.94446H14.1943"
         stroke="currentColor"

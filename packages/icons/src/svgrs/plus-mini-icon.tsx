@@ -14,14 +14,14 @@ const PlusMiniIcon = React.forwardRef<
   >
     <path
       d="M7.5 3V13"
-      stroke="#A1A1AA"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M2.5 8H12.5"
-      stroke="#A1A1AA"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"

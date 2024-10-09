@@ -5,6 +5,8 @@ import { DayPicker } from "react-day-picker";
 
 import { button } from "@/components/button";
 import { cn } from "@/lib/tw";
+import ChevronLeftIcon from "./icons/chevron-left-icon";
+import ChevronRightIcon from "./icons/chevron-right-icon";
 
 type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
@@ -60,42 +62,10 @@ function Calendar({
       }}
       components={{
         IconLeft: ({ ...props }) => (
-          <svg
-            width="16"
-            height="15"
-            viewBox="0 0 16 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            {...props}
-            className={cn("size-4", props.className)}
-          >
-            <path
-              d="M10.6389 13.0554L5.08333 7.49989L10.6389 1.94434"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <ChevronLeftIcon className={cn("size-3", props.className)} />
         ),
         IconRight: ({ ...props }) => (
-          <svg
-            width="16"
-            height="15"
-            viewBox="0 0 16 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            {...props}
-            className={cn("size-4", props.className)}
-          >
-            <path
-              d="M6.02774 1.94434L11.5833 7.49989L6.02774 13.0554"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <ChevronRightIcon className={cn("size-3", props.className)} />
         ),
       }}
       {...props}

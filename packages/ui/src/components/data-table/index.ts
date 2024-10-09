@@ -1,9 +1,8 @@
-export * from "./data-table-filters";
-
 export { default as DataTable } from "./data-table";
 export { default as DataTableBaseProvider } from "./data-table-base-provider";
 export { default as DataTableFooter } from "./data-table-footer";
-export { default as DataTableToolbar } from "./data-table";
+
+export * from "./data-table-filters";
 
 export type * from "./data-table";
 export type * from "./data-table-base";

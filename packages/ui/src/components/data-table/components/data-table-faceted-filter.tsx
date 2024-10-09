@@ -51,7 +51,7 @@ function DataTableFacetedFilter<TData, TValue>({
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="outline" size="sm" className="border-dashed">
+        <Button variant="outline" size="sm" className="h-9 border-dashed">
           <svg
             width="15"
             height="15"

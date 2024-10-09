@@ -35,6 +35,7 @@ import TriangleRightMiniIcon from "./svgrs/triangle-right-mini-icon";
 import UsersIcon from "./svgrs/users-icon";
 import XMarkIcon from "./svgrs/x-mark-icon";
 import XMarkMiniIcon from "./svgrs/x-mark-mini-icon";
+import CalendarIcon from "./svgrs/calendar-icon";
 
 export {
   ArrowUTurnLeftIcon,
@@ -74,6 +75,7 @@ export {
   UsersIcon,
   XMarkIcon,
   XMarkMiniIcon,
+  CalendarIcon,
 };
 
 export default {};

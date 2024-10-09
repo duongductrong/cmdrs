@@ -99,6 +99,23 @@ import Popover from "./components/popover/popover";
 import PopoverAnchor from "./components/popover/popover-anchor";
 import PopoverContent from "./components/popover/popover-content";
 import PopoverTrigger from "./components/popover/popover-trigger";
+import {
+  DataTable,
+  DataTableBase,
+  DataTableBaseProvider,
+  DataTableFacetedFilter,
+  DataTableFooter,
+  DataTableBaseContext,
+  DataTableResetFilter,
+  DataTableSearcher,
+  DataTableSelectionImpact,
+  DataTableStacked,
+  DataTableToolbar,
+  useDataTableBase,
+  useDataTablePagination,
+  useDataTableSorting,
+  useDataTableRowsSelection,
+} from "./components/data-table";
 
 import { cn as tw } from "./lib/tw";
 
@@ -206,6 +223,19 @@ export {
   PopoverAnchor,
   PopoverContent,
   PopoverTrigger,
+  DataTable,
+  DataTableBaseProvider,
+  DataTableFacetedFilter,
+  DataTableFooter,
+  DataTableResetFilter,
+  DataTableSearcher,
+  DataTableSelectionImpact,
+  DataTableStacked,
+  DataTableToolbar,
+  useDataTableBase,
+  useDataTablePagination,
+  useDataTableSorting,
+  useDataTableRowsSelection,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -298,6 +328,8 @@ export type { PopoverProps } from "./components/popover/popover";
 export type { PopoverAnchorProps } from "./components/popover/popover-anchor";
 export type { PopoverContentProps } from "./components/popover/popover-content";
 export type { PopoverTriggerProps } from "./components/popover/popover-trigger";
+export type { BadgeProps } from "./components/badge";
+export type * from './components/data-table'
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";

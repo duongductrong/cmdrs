@@ -13,5 +13,6 @@ export default defineConfig({
     "tailwindcss",
     "recharts",
     "@medusajs/icons",
+    "date-fns",
   ],
 });

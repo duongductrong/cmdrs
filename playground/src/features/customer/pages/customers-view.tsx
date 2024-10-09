@@ -1,22 +1,33 @@
 "use client";
 
 import {
+  ColumnDef,
   DataTable,
   DataTableDateRangeFilter,
   DataTableFacetedFilter,
   DataTableSearcher,
   DataTableStacked,
   DataTableToolbar,
+  useDataTableRowsSelection,
 } from "@cmdrs/ui";
 
 export const description = "A collection of health charts.";
 
 export default function CustomersView() {
-  const columns = [
+  const columns: ColumnDef<any>[] = [
     { accessorKey: "name", header: "Name" },
     { accessorKey: "email", header: "Email", size: 300 },
     { accessorKey: "phone", header: "Phone" },
+    {
+      accessorKey: "createdAt",
+      header: "createdAt",
+      size: 300,
+      cell: ({ row }) => row.original.createdAt.toISOString(),
+      enableSorting: false,
+    },
   ];
+
+  const { rowsSelection, setRowsSelection } = useDataTableRowsSelection();
 
   return (
     <div>
@@ -51,8 +62,12 @@ export default function CustomersView() {
             name: `Customer ${i + 1}`,
             email: `customer${i + 1}@example.com`,
             phone: `123-456-789${i % 10}`,
+            createdAt: new Date(),
           })),
         ]}
+        rowSelection={rowsSelection}
+        onRowSelectionChange={setRowsSelection}
+        rowSelectionEnable
       />
     </div>
   );

@@ -35,11 +35,15 @@ import React, {
   ReactNode,
   Ref,
   useEffect,
+  useId,
   useImperativeHandle,
   useMemo,
   useState,
 } from "react";
 import Checkbox from "../checkbox";
+import ChevronsUpDownIcon from "../icons/chevrons-up-down-icon";
+import MoveDownIcon from "../icons/move-down-icon";
+import MoveUpIcon from "../icons/move-up-icon";
 import {
   Table,
   TableBody,
@@ -84,7 +88,7 @@ export interface DataTableBasePagination {
 export interface DataTableBaseSelection<TColumn> {
   rowId?: keyof TColumn;
   rowSelection?: RowSelectionState;
-  rowSelectionEnable?: (row: Row<TColumn>) => boolean;
+  rowSelectionEnable?: boolean | ((row: Row<TColumn>) => boolean);
   onRowSelectionChange?: (state: RowSelectionState) => void;
 }
 
@@ -157,6 +161,7 @@ export const DataTableBase = <TData, TColumn>({
   emptyText = "There are no data.",
   ...props
 }: DataTableBaseProps<TData, TColumn>) => {
+  const id = useId();
   const [selfPagination, setSelfPagination] = useState<PaginationState>({
     pageIndex: manualPagination.pageIndex,
     pageSize: manualPagination.pageSize,
@@ -180,31 +185,37 @@ export const DataTableBase = <TData, TColumn>({
   const isManualSorting = manualSorting;
   const isManualFiltering = manualFiltering;
 
-  const rootColumns = [
-    {
-      accessorKey: "__selection__",
-      id: "__selection__",
-      size: 50,
-      cell: ({ row }) => (
-        <Checkbox
-          checked={row.getIsSelected()}
-          disabled={!row.getCanSelect()}
-          onCheckedChange={(checked) => row.toggleSelected(!!checked)}
-        />
-      ),
-      header: ({ table }) => (
-        <Checkbox
-          checked={
-            table.getIsSomeRowsSelected()
-              ? "indeterminate"
-              : table.getIsAllRowsSelected()
-          }
-          onCheckedChange={(checked) => table.toggleAllRowsSelected(!!checked)}
-        />
-      ),
-    } as ColumnDef<any>,
-    ...columns,
-  ];
+  const selectionColumnKey = `__selection__${id}`;
+  const rootColumns = rowSelectionEnable
+    ? [
+        {
+          accessorKey: selectionColumnKey,
+          id: selectionColumnKey,
+          size: 50,
+          enableSorting: false,
+          cell: ({ row }) => (
+            <Checkbox
+              checked={row.getIsSelected()}
+              disabled={!row.getCanSelect()}
+              onCheckedChange={(checked) => row.toggleSelected(!!checked)}
+            />
+          ),
+          header: ({ table }) => (
+            <Checkbox
+              checked={
+                table.getIsSomeRowsSelected()
+                  ? "indeterminate"
+                  : table.getIsAllRowsSelected()
+              }
+              onCheckedChange={(checked) =>
+                table.toggleAllRowsSelected(!!checked)
+              }
+            />
+          ),
+        } as ColumnDef<any>,
+        ...columns,
+      ]
+    : columns;
 
   const rootState = {
     pagination: isManualPagination ? manualPagination : selfPagination,
@@ -423,43 +434,17 @@ export const DataTableBase = <TData, TColumn>({
                           headerItem.getContext()
                         )}
                         {{
-                          asc: (
-                            <svg
-                              width="16"
-                              height="15"
-                              viewBox="0 0 16 15"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                              className=""
-                            >
-                              <path
-                                d="M2.52777 9.7223L8.08333 4.16675L13.6389 9.7223"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
+                          asc: <MoveUpIcon className="size-3 ml-2" />,
+                          desc: <MoveDownIcon className="size-3 ml-2" />,
+                          default: (
+                            <ChevronsUpDownIcon className="size-3 ml-2" />
                           ),
-                          desc: (
-                            <svg
-                              width="16"
-                              height="15"
-                              viewBox="0 0 16 15"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="shrink-0"
-                            >
-                              <path
-                                d="M13.4722 5.27783L7.91664 10.8334L2.36108 5.27783"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          ),
-                        }[headerItem.column.getIsSorted() as string] ?? null}
+                        }[
+                          headerItem.column.getIsSorted() === false &&
+                          headerItem.column.getCanSort()
+                            ? "default"
+                            : (headerItem.column.getIsSorted() as string)
+                        ] ?? null}
                       </div>
                     </TableHead>
                   ))}

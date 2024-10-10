@@ -132,7 +132,19 @@ import {
 } from "./components/sheet";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "./components/avatar";
-
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  AlertDialogPortal,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "./components/alert-dialog";
 import { cn as tw } from "./lib/tw";
 
 export {
@@ -271,6 +283,16 @@ export {
   Avatar,
   AvatarFallback,
   AvatarImage,
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  AlertDialogPortal,
+  AlertDialogTitle,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -368,6 +390,7 @@ export type * from "./components/sheet";
 export type * from "./components/tabs";
 export type * from "./components/data-table";
 export type * from "./components/avatar";
+export type * from "./components/alert-dialog";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";

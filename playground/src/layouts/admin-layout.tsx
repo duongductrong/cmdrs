@@ -171,14 +171,16 @@ const AdminLayout = (props: AdminLayoutProps) => {
             <Separator variant="dashed" />
           </div>
           <SidebarList type="multiple" className="flex-1">
-            {items.map((item) => {
+            {items.map((item, idx) => {
               if (item.type === "separator") {
-                return <SidebarSeparator className={item.className} />;
+                return (
+                  <SidebarSeparator key={idx} className={item.className} />
+                );
               }
 
               if (item.type === "collapse") {
                 return (
-                  <SidebarCollapse value={item.value}>
+                  <SidebarCollapse key={idx} value={item.value}>
                     <SidebarCollapseTrigger>
                       {item.label}
                     </SidebarCollapseTrigger>
@@ -199,7 +201,7 @@ const AdminLayout = (props: AdminLayoutProps) => {
 
               if (item.items?.length) {
                 return (
-                  <SidebarSub>
+                  <SidebarSub key={idx}>
                     <SidebarSubTrigger label={item.label} asChild>
                       <SidebarListItem
                         key={item.value}

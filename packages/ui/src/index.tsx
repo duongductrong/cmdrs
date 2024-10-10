@@ -117,6 +117,7 @@ import {
   useDataTableRowsSelection,
   DataTableDateRangeFilter,
 } from "./components/data-table";
+import Badge from "./components/badge";
 
 import { cn as tw } from "./lib/tw";
 
@@ -238,6 +239,7 @@ export {
   useDataTablePagination,
   useDataTableSorting,
   useDataTableRowsSelection,
+  Badge,
 };
 
 export type { ButtonProps } from "./components/button";

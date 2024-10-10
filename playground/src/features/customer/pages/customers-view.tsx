@@ -2,25 +2,23 @@
 
 import { PlusMiniIcon } from "@cmdrs/icons";
 import {
-  ButtonGroup,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTrigger,
-  Input,
-  Label,
-} from "@cmdrs/ui";
-import { Dialog } from "@cmdrs/ui";
-import {
+  Badge,
   Button,
   ColumnDef,
   DataTable,
   DataTableDateRangeFilter,
   DataTableFacetedFilter,
+  DataTableResetFilter,
   DataTableSearcher,
   DataTableStacked,
   DataTableToolbar,
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogHeader,
+  DialogTrigger,
+  Input,
+  Label,
   useDataTableRowsSelection,
 } from "@cmdrs/ui";
 
@@ -31,7 +29,11 @@ export default function CustomersView() {
     { accessorKey: "name", header: "Name" },
     { accessorKey: "email", header: "Email", size: 300 },
     { accessorKey: "phone", header: "Phone" },
-    { accessorKey: "status", header: "Status" },
+    {
+      accessorKey: "status",
+      header: "Status",
+      cell: ({ row }) => <Badge variant="outline">{row.original.status}</Badge>,
+    },
     {
       accessorKey: "createdAt",
       header: "createdAt",
@@ -113,8 +115,10 @@ export default function CustomersView() {
 
               <DataTableDateRangeFilter
                 column="createdAt"
-                placeholder="Select created date"
+                placeholder="Created at"
               />
+
+              <DataTableResetFilter />
             </DataTableStacked>
           </DataTableToolbar>
         }

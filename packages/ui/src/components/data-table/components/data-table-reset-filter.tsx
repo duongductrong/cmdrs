@@ -2,6 +2,7 @@
 
 import Button from "@/components/button";
 import { useDataTableBase } from "../use-data-table-base";
+import XIcon from "@/components/icons/x-icon";
 
 export interface DataTableResetFilterProps {
   label?: string;
@@ -21,8 +22,7 @@ const DataTableResetFilter = ({
       onClick={() => table.resetColumnFilters()}
     >
       {label}
-      Cross 2 Icon
-      {/* <Cross2Icon className="ml-2 h-4 w-4" /> */}
+      <XIcon className="ml-2 size-4" />
     </Button>
   );
 };

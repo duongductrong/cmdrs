@@ -129,6 +129,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./components/sheet";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/tabs";
 import Badge from "./components/badge";
 
 import { cn as tw } from "./lib/tw";
@@ -262,6 +263,10 @@ export {
   SheetPortal,
   SheetTitle,
   SheetTrigger,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
 };
 
 export type { ButtonProps } from "./components/button";

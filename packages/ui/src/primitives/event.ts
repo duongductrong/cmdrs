@@ -7,3 +7,10 @@ export const composeEventHandlers = <E extends React.SyntheticEvent>(
     newEventHandler?.(event);
   };
 };
+
+export const withPreventDefault =
+  (callback: (e: React.SyntheticEvent) => void) =>
+  (e: React.SyntheticEvent) => {
+    e?.preventDefault();
+    callback(e);
+  };

@@ -1,6 +1,6 @@
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
-
+import { Prompter } from "@pmdrs/prompt";
 const App = () => {
   {
     /* <div className="flex flex-col gap-2">
@@ -106,7 +106,12 @@ const App = () => {
   </div> */
   }
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      <Prompter />
+    </>
+  );
 };
 
 export default App;

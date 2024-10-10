@@ -30,6 +30,27 @@ importers:
         specifier: ^8.3.0
         version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
 
+  packages/prompt:
+    dependencies:
+      '@pmdrs/ui':
+        specifier: workspace:*
+        version: link:../ui
+      '@types/react':
+        specifier: ^18.3.10
+        version: 18.3.10
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tsup:
+        specifier: ^8.3.0
+        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
+
   packages/scope:
     dependencies:
       '@types/react':
@@ -168,6 +189,9 @@ importers:
       '@pmdrs/icons':
         specifier: workspace:*
         version: link:../packages/icons
+      '@pmdrs/prompt':
+        specifier: workspace:*
+        version: link:../packages/prompt
       '@pmdrs/ui':
         specifier: workspace:*
         version: link:../packages/ui

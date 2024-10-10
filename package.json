@@ -15,9 +15,12 @@
     "ui": "pnpm --filter=@pmdrs/ui",
     "ui:dev": "pnpm --filter=@pmdrs/ui dev",
     "build:ui": "pnpm --filter=@pmdrs/ui build",
+    "prompt": "pnpm --filter=@pmdrs/prompt",
+    "prompt:dev": "pnpm --filter=@pmdrs/prompt dev",
+    "build:prompt": "pnpm --filter=@pmdrs/prompt build",
     "playground": "pnpm --filter=@pmdrs/playground",
     "playground:dev": "pnpm --filter=@pmdrs/playground dev",
-    "dev": "npm-run-all --parallel ui:dev playground:dev icons:dev"
+    "dev": "npm-run-all --parallel ui:dev playground:dev icons:dev prompt:dev"
   },
   "keywords": [],
   "author": "",

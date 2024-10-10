@@ -1,0 +1,35 @@
+{
+  "name": "@pmdrs/prompt",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Trong Duong",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.0",
+    "@pmdrs/ui": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "keywords": [
+    "cmdrs",
+    "scope"
+  ]
+}

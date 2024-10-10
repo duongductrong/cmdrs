@@ -1,0 +1,21 @@
+export { default as Sheet } from "./sheet";
+export { default as SheetClose } from "./sheet-close";
+export { default as SheetContent } from "./sheet-content";
+export { default as SheetDescription } from "./sheet-description";
+export { default as SheetFooter } from "./sheet-footer";
+export { default as SheetHeader } from "./sheet-header";
+export { default as SheetOverlay } from "./sheet-overlay";
+export { default as SheetPortal } from "./sheet-portal";
+export { default as SheetTitle } from "./sheet-title";
+export { default as SheetTrigger } from "./sheet-trigger";
+
+export type { SheetProps } from "./sheet";
+export type { SheetCloseProps } from "./sheet-close";
+export type { SheetContentProps } from "./sheet-content";
+export type { SheetDescriptionProps } from "./sheet-description";
+export type { SheetFooterProps } from "./sheet-footer";
+export type { SheetHeaderProps } from "./sheet-header";
+export type { SheetOverlayProps } from "./sheet-overlay";
+export type { SheetPortalProps } from "./sheet-portal";
+export type { SheetTitleProps } from "./sheet-title";
+export type { SheetTriggerProps } from "./sheet-trigger";

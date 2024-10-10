@@ -11,7 +11,7 @@ import {
   Separator,
   Switch,
   Textarea,
-} from "@cmdrs/ui";
+} from "@pmdrs/ui";
 import { Link } from "react-router-dom";
 import AcmeLogo from "./logo";
 

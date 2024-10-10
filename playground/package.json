@@ -1,5 +1,5 @@
 {
-  "name": "@cmdrs/playground",
+  "name": "@pmdrs/playground",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cmdrs/icons": "workspace:*",
-    "@cmdrs/ui": "workspace:*",
+    "@pmdrs/icons": "workspace:*",
+    "@pmdrs/ui": "workspace:*",
     "@medusajs/icons": "^1.2.2",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",

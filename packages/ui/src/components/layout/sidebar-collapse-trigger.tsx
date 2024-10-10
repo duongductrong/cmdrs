@@ -1,5 +1,5 @@
 import { cn } from "@/lib/tw";
-import { MinusMiniIcon, PlusMiniIcon } from "@cmdrs/icons";
+import { MinusMiniIcon, PlusMiniIcon } from "@pmdrs/icons";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import React, { ElementRef, forwardRef } from "react";
 import SidebarListItem from "./sidebar-list-item";

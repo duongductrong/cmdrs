@@ -1,15 +1,16 @@
+import { withTV } from "tailwind-variants/dist/transformer.js";
 import { Config } from "tailwindcss";
 import twAnimate from "tailwindcss-animate";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
-  return {
+  return withTV({
     ...extendConfig,
     darkMode: "class",
     content: [
       ...(Array.isArray(extendConfig?.content) ? extendConfig?.content : []),
-      "node_modules/@cmdrs/ui/**/*.tsx",
+      "node_modules/@pmdrs/ui/**/*.tsx",
       "./index.html",
       "./src/**/*.{tsx,jsx,ts,js,html}",
     ],
@@ -179,7 +180,7 @@ export const withcmdrs: (extendConfig: Config) => Config = (extendConfig) => {
       },
     },
     plugins: [...createPreset(), ...(extendConfig?.plugins || [])],
-  };
+  });
 };
 
 export const createPreset = () => {

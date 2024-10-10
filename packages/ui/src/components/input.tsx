@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { EyeIcon, EyeSlashIcon } from "@cmdrs/icons";
+import { EyeIcon, EyeSlashIcon } from "@pmdrs/icons";
 
 import { cn } from "@/lib/tw";
 import { tv, VariantProps } from "tailwind-variants";

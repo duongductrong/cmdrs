@@ -1,5 +1,5 @@
 import { cn } from "@/lib/tw";
-import { ArrowUTurnLeftIcon } from "@cmdrs/icons";
+import { ArrowUTurnLeftIcon } from "@pmdrs/icons";
 import React, { ElementRef, forwardRef } from "react";
 import SidebarBrand from "./sidebar-brand";
 import { useSidebarSubContext } from "./sub-context";

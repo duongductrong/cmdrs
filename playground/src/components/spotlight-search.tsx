@@ -8,7 +8,7 @@ import {
   CommandSeparator,
   CommandShortcut,
   Slot,
-} from "@cmdrs/ui";
+} from "@pmdrs/ui";
 import {
   CalendarIcon,
   GitCompareArrowsIcon,

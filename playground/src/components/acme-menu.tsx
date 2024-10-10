@@ -2,7 +2,7 @@ import {
   CircleHalfSolidIcon,
   CircleMiniSolidIcon,
   UsersIcon,
-} from "@cmdrs/icons";
+} from "@pmdrs/icons";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,7 +15,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
   tw,
-} from "@cmdrs/ui";
+} from "@pmdrs/ui";
 import React, { ElementRef, ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 

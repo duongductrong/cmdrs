@@ -2,7 +2,7 @@ import * as React from "react";
 // import { ChevronRightIcon, DotsHorizontalIcon } from "@radix-ui/react-icons"
 
 import { cn } from "@/lib/tw";
-import { TriangleRightMiniIcon } from "@cmdrs/icons";
+import { TriangleRightMiniIcon } from "@pmdrs/icons";
 
 interface BreadcrumbSeparatorProps
   extends React.ComponentPropsWithoutRef<"li"> {}

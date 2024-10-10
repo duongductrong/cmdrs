@@ -1,4 +1,4 @@
-import { CheckMiniIcon } from "@cmdrs/icons";
+import { CheckMiniIcon } from "@pmdrs/icons";
 import {
   Accordion,
   AccordionContent,
@@ -7,7 +7,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@cmdrs/ui";
+} from "@pmdrs/ui";
 
 type Props = {};
 

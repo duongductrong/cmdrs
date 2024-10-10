@@ -7,7 +7,7 @@ import {
   CircleHalfSolidIcon,
   CircleMiniSolidIcon,
   TriangleRightMiniIcon,
-} from "@cmdrs/icons";
+} from "@pmdrs/icons";
 import { accordion } from ".";
 import { useAccordionContext } from "./context";
 

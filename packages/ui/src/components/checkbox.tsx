@@ -4,7 +4,7 @@ import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import * as React from "react";
 
 import { cn } from "@/lib/tw";
-import { CheckMiniIcon } from "@cmdrs/icons";
+import { CheckMiniIcon } from "@pmdrs/icons";
 import { tv, VariantProps } from "tailwind-variants";
 
 const checkbox = tv(

@@ -1,6 +1,6 @@
 "use client";
 
-import { PlusMiniIcon } from "@cmdrs/icons";
+import { PlusMiniIcon } from "@pmdrs/icons";
 import {
   Badge,
   Button,
@@ -20,7 +20,7 @@ import {
   Input,
   Label,
   useDataTableRowsSelection,
-} from "@cmdrs/ui";
+} from "@pmdrs/ui";
 
 export const description = "A collection of health charts.";
 

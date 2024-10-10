@@ -1,5 +1,5 @@
 import { cn } from "@/lib/tw";
-import { XMarkIcon } from "@cmdrs/icons";
+import { XMarkIcon } from "@pmdrs/icons";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import * as React from "react";
 import DialogOverlay from "./dialog-overlay";

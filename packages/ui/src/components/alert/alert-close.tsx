@@ -1,5 +1,5 @@
 import { cn } from "@/lib/tw";
-import { XMarkIcon } from "@cmdrs/icons";
+import { XMarkIcon } from "@pmdrs/icons";
 import React, { ElementRef, forwardRef } from "react";
 import { useAlertContext } from "./context";
 

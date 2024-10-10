@@ -30,7 +30,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   Separator,
-} from "@cmdrs/ui";
+} from "@pmdrs/ui";
 
 export const description = "A collection of health charts.";
 

@@ -12,7 +12,7 @@ import {
   SidebarLeftIcon,
   SidebarRightIcon,
   UsersIcon,
-} from "@cmdrs/icons";
+} from "@pmdrs/icons";
 import {
   AppShell,
   Breadcrumb,
@@ -38,7 +38,7 @@ import {
   SidebarSubContent,
   SidebarSubTrigger,
   SidebarToggleButton,
-} from "@cmdrs/ui";
+} from "@pmdrs/ui";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 

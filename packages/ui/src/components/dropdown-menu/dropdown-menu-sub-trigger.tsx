@@ -2,7 +2,7 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import * as React from "react";
 
 import { cn } from "@/lib/tw";
-import { TriangleRightMiniIcon } from "@cmdrs/icons";
+import { TriangleRightMiniIcon } from "@pmdrs/icons";
 
 interface DropdownMenuSubTriggerProps
   extends DropdownMenuPrimitive.DropdownMenuSubTriggerProps {

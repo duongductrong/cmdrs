@@ -4,7 +4,7 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import * as React from "react";
 
 import { cn } from "@/lib/tw";
-import { CheckMiniIcon } from "@cmdrs/icons";
+import { CheckMiniIcon } from "@pmdrs/icons";
 
 interface DropdownMenuCheckboxItemProps
   extends React.ComponentPropsWithoutRef<

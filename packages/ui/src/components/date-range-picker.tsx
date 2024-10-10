@@ -6,7 +6,7 @@ import * as React from "react";
 import { DateRange } from "react-day-picker";
 
 import { cn } from "@/lib/tw";
-import { CalendarIcon } from "@cmdrs/icons";
+import { CalendarIcon } from "@pmdrs/icons";
 import { PopoverClose } from "@radix-ui/react-popover";
 import { addMilliseconds } from "date-fns/addMilliseconds";
 import { addMinutes } from "date-fns/addMinutes";

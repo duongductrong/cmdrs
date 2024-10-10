@@ -1,4 +1,4 @@
-import { CircleHalfSolidIcon } from "@cmdrs/icons";
+import { CircleHalfSolidIcon } from "@pmdrs/icons";
 import {
   Alert,
   AlertClose,
@@ -13,7 +13,7 @@ import {
   Input,
   Label,
   Separator,
-} from "@cmdrs/ui";
+} from "@pmdrs/ui";
 import AcmeLogo from "./logo";
 import { Link } from "react-router-dom";
 

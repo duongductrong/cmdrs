@@ -117,6 +117,18 @@ import {
   useDataTableRowsSelection,
   DataTableDateRangeFilter,
 } from "./components/data-table";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetOverlay,
+  SheetPortal,
+  SheetTitle,
+  SheetTrigger,
+} from "./components/sheet";
 import Badge from "./components/badge";
 
 import { cn as tw } from "./lib/tw";
@@ -240,6 +252,16 @@ export {
   useDataTableSorting,
   useDataTableRowsSelection,
   Badge,
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetOverlay,
+  SheetPortal,
+  SheetTitle,
+  SheetTrigger,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -333,6 +355,7 @@ export type { PopoverAnchorProps } from "./components/popover/popover-anchor";
 export type { PopoverContentProps } from "./components/popover/popover-content";
 export type { PopoverTriggerProps } from "./components/popover/popover-trigger";
 export type { BadgeProps } from "./components/badge";
+export type * from "./components/sheet";
 export type * from "./components/data-table";
 
 export { button } from "./components/button";

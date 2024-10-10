@@ -1,6 +1,6 @@
 "use client";
 
-import { MagnifyingGlassIcon } from "@cmdrs/icons";
+import { MagnifyingGlassIcon } from "@pmdrs/icons";
 import { Command as CommandPrimitive } from "cmdk";
 import * as React from "react";
 

@@ -1,4 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@pmdrs/ui";
+import ProfileForm from "../components/profile-form";
 
 export interface SettingsViewProps {}
 
@@ -18,6 +19,8 @@ const SettingsView = (props: SettingsViewProps) => {
         </TabsList>
         <TabsContent value="account"></TabsContent>
       </Tabs>
+
+      <ProfileForm />
     </section>
   );
 };

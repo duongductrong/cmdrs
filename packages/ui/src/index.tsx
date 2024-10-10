@@ -145,6 +145,18 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "./components/alert-dialog";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue
+} from "./components/select";
 import { cn as tw } from "./lib/tw";
 
 export {
@@ -293,6 +305,17 @@ export {
   AlertDialogOverlay,
   AlertDialogPortal,
   AlertDialogTitle,
+  AlertDialogTrigger,
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue
 };
 
 export type { ButtonProps } from "./components/button";
@@ -391,6 +414,7 @@ export type * from "./components/tabs";
 export type * from "./components/data-table";
 export type * from "./components/avatar";
 export type * from "./components/alert-dialog";
+export type * from "./components/select";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";

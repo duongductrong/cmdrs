@@ -1,11 +1,14 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
 
-import Faqs from "./components/faqs";
-import Login from "./components/login";
-import Register from "./components/register";
-import CustomersView from "./features/customer/pages/customers-view";
-import DashboardView from "./features/dashboard/pages/dashboard-view";
-import AdminLayout from "./layouts/admin-layout";
+import { lazy, Suspense } from "react";
+
+const Faqs = lazy(() => import("./components/faqs"));
+const Login = lazy(() => import("./components/login"));
+const Register = lazy(() => import("./components/register"));
+const CustomersView = lazy(() => import("./features/customer/pages/customers-view"));
+const DashboardView = lazy(() => import("./features/dashboard/pages/dashboard-view"));
+const AdminLayout = lazy(() => import("./layouts/admin-layout"));
+const SettingsView = lazy(() => import("./features/settings/pages/settings-view"));
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "customers",
         element: <CustomersView />,
+      },
+      {
+        path: "settings",
+        element: <SettingsView />,
       },
     ],
   },

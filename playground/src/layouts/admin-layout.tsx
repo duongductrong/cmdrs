@@ -39,6 +39,7 @@ import {
   SidebarSubTrigger,
   SidebarToggleButton,
 } from "@pmdrs/ui";
+import { ScrollIcon, WalletCardsIcon } from "lucide-react";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
@@ -157,7 +158,6 @@ export interface AdminLayoutProps {}
 
 const AdminLayout = (props: AdminLayoutProps) => {
   const [selectedKeys, setSelectedKeys] = useState<string[]>(["products"]);
-  const [open, setOpen] = useState(false);
 
   return (
     <AppShell>
@@ -197,7 +197,7 @@ const AdminLayout = (props: AdminLayoutProps) => {
                 );
               }
 
-              if (item.items) {
+              if (item.items?.length) {
                 return (
                   <SidebarSub>
                     <SidebarSubTrigger label={item.label} asChild>
@@ -225,17 +225,17 @@ const AdminLayout = (props: AdminLayoutProps) => {
                           </SidebarCollapseTrigger>
                           <SidebarCollapseContent>
                             <SidebarListItem
-                              icon={<CurrencyDollarIcon className="size-4" />}
+                              icon={<UsersIcon className="size-4" />}
                             >
                               Accounts
                             </SidebarListItem>
                             <SidebarListItem
-                              icon={<CurrencyDollarIcon className="size-4" />}
+                              icon={<ScrollIcon className="size-4" />}
                             >
                               Policy
                             </SidebarListItem>
                             <SidebarListItem
-                              icon={<CurrencyDollarIcon className="size-4" />}
+                              icon={<WalletCardsIcon className="size-4" />}
                             >
                               Billings
                             </SidebarListItem>

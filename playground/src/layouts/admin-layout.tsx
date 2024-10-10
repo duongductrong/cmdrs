@@ -160,7 +160,7 @@ const AdminLayout = (props: AdminLayoutProps) => {
   const [selectedKeys, setSelectedKeys] = useState<string[]>(["products"]);
 
   return (
-    <AppShell>
+    <AppShell selectedKeys={selectedKeys}>
       <section className="flex">
         <Sidebar className="fixed top-0 left-0" defaultSelected={selectedKeys}>
           <SidebarBrand>

@@ -99,6 +99,7 @@ import Popover from "./components/popover/popover";
 import PopoverAnchor from "./components/popover/popover-anchor";
 import PopoverContent from "./components/popover/popover-content";
 import PopoverTrigger from "./components/popover/popover-trigger";
+import Badge from "./components/badge";
 import {
   DataTable,
   // DataTableBase,
@@ -130,7 +131,7 @@ import {
   SheetTrigger,
 } from "./components/sheet";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/tabs";
-import Badge from "./components/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "./components/avatar";
 
 import { cn as tw } from "./lib/tw";
 
@@ -267,6 +268,9 @@ export {
   TabsContent,
   TabsList,
   TabsTrigger,
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
 };
 
 export type { ButtonProps } from "./components/button";
@@ -363,6 +367,7 @@ export type { BadgeProps } from "./components/badge";
 export type * from "./components/sheet";
 export type * from "./components/tabs";
 export type * from "./components/data-table";
+export type * from "./components/avatar";
 
 export { button } from "./components/button";
 export { buttonGroup } from "./components/button-group";

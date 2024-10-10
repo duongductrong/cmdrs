@@ -361,6 +361,7 @@ export type { PopoverContentProps } from "./components/popover/popover-content";
 export type { PopoverTriggerProps } from "./components/popover/popover-trigger";
 export type { BadgeProps } from "./components/badge";
 export type * from "./components/sheet";
+export type * from "./components/tabs";
 export type * from "./components/data-table";
 
 export { button } from "./components/button";
